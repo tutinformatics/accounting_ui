@@ -1,0 +1,46 @@
+
+<template>
+  <require from="./login.css"></require>
+
+    <div class="box">
+      <form class="login-form" >
+        <h1>Login</h1>
+
+        <div class="inputs">
+          <input type="text"
+                 id="username"
+                 name="username"
+                 placeholder="Username"
+
+          >
+        </div>
+
+        <div class="inputs">
+          <input type="password"
+                 id="password"
+                 name="password"
+                 placeholder="Password"
+
+          >
+        </div>
+
+        <div class="login-button">
+          <button type="submit">Login</button>
+
+        </div>
+
+        <div class="bottom-text" >
+          Don`t have an account?
+          <a class="forgot-password" routerLink="/register">
+            Sign Up!
+          </a>
+        </div>
+
+
+
+      </form>
+    </div>
+
+
+
+</template>
