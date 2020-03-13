@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+
+  aurelia_front:
+    container_name: aurelia_front
+    build:
+      context: .
+    restart: unless-stopped
+    ports:
+      - "6060:6060"
