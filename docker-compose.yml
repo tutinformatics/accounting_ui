@@ -8,6 +8,4 @@ services:
       context: .
     restart: unless-stopped
     ports:
-      - "8443:8443"
-      - "4567:4567"
-      - "6060:6060"
+      - "80:80"
