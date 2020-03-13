@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/proxy/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/config/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proxy/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy/config" />
       <recent name="$PROJECT_DIR$/accounting_frontend" />
     </key>
   </component>
@@ -61,7 +64,10 @@
       <updated>1584005051451</updated>
       <workItem from="1584005053059" duration="1280000" />
       <workItem from="1584089542616" duration="2847000" />
-      <workItem from="1584094320942" duration="3355000" />
+      <workItem from="1584094320942" duration="3562000" />
+      <workItem from="1584098228374" duration="121000" />
+      <workItem from="1584098420583" duration="410000" />
+      <workItem from="1584119021049" duration="1251000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -91,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584094706447</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Small tweaks to nginx">
+      <created>1584097884374</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584097884374</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,21 +116,22 @@
     <MESSAGE value="Fix nginx not starting" />
     <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix wrong port" />
+    <MESSAGE value="Small tweaks to nginx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small tweaks to nginx" />
   </component>
   <component name="WindowStateProjectService">
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584089580372">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
-    <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2" timestamp="1584094706163">
+    <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2" timestamp="1584097884284">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584094706163" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584094708563">
+    <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584097884284" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1584097885324">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584094708563" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584097885324" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

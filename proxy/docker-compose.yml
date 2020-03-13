@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  proxy:
+    container_name: proxy
+    build:
+      context: .
+    restart: unless-stopped
+
+    network_mode: host
+    ports:
+      - "80:80"
