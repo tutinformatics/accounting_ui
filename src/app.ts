@@ -12,19 +12,26 @@ export class app {
     console.log('configureRouter');
     this.router = router;
     config.title = "Router Test";
+    config.options.pushState = true;
+    config.options.root = '/';
     config.map([
-      {route:'', name: 'login', moduleId: PLATFORM.moduleName('login/login'), title:'login'}
+      {route:[ "", "login"], name: 'login', moduleId: PLATFORM.moduleName('login/login'), nav: false, title:'Login'},
+      {route:["ostuarve_sisestamine"], name: 'ostuarve_sisestamine', moduleId: PLATFORM.moduleName('ostuarve_sisestamine/ostuarve_sisestamine'), nav: true, title:'arve'},
+      {route:["ostuarve_vaade"], name: 'ostuarve_sisestamine', moduleId: PLATFORM.moduleName('ostuarve_vaade/ostuarve_vaade'), nav: true, title:'arve'}
     ]);
+
+    this.router = router;
+    this.router.refreshNavigation();
 
   }
   constructor(private service: Service) {
-    console.log("this.data");
-    this.getData();
+    //console.log("this.data");
+    //this.getData();
   }
 
   public getData() {
-    this.data = this.service.getAll();
-    console.log(this.data);
+    //this.data = this.service.getAll();
+    //console.log(this.data);
   }
 
 }

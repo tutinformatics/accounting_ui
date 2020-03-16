@@ -1,0 +1,59 @@
+table {
+    padding: 5px;
+    margin: 0;
+    border: #333 solid 1px;
+}
+
+tr {
+    padding: 0 5px;
+    margin: 0;
+    border: #333 solid 1px;
+}
+
+tbody td {
+    padding: 0 ;
+    margin: 0;
+    color: black;
+}
+
+input::placeholder {
+    color: black;
+}
+
+tbody, thead {
+    padding: 0 5px;
+}
+
+tbody .table-input {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html,body,form {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+body {
+
+    background-color:#f7f7f7;
+    font-family:Helvetica,Arial,sans-serif;
+    color:#555;
+    font-weight:200;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 0;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 50px 0;
+
+}
