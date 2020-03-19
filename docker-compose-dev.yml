@@ -1,11 +1,11 @@
-version: '3.4'
+version: '3.5'
 
 services:
 
   proxy:
     container_name: proxy
     build:
-      context: .
+      context: proxy
     restart: unless-stopped
 
     network_mode: host
