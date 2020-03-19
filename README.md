@@ -5,33 +5,43 @@ This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 For more information, go to https://aurelia.io/docs/cli/webpack
 
 ## Run dev app
+_Allows hot reload_
+```bash
+# --< In backend repo >--
 
-Got to proxy subdirectory
+# Start ofbiz locally
+./gradlew [cleanAll loadAll] ofbiz
 
-Run `docker-compose up` to start proxy container
+# --< In frontend repo (here) >--
 
-Run `npm start`, then open `http://localhost:8080`
+# Start aurelia app
+au run
 
-You can change the standard webpack configurations from CLI easily with something like this: `npm start -- --open --port 8888`. However, it is better to change the respective npm scripts or `webpack.config.js` with these options, as per your need.
+# Start proxy
+# Use --build to recreate containers
+docker-compose -f docker-compose-dev.yml up [--build]
+```
 
-To enable Webpack Bundle Analyzer, do `npm run analyze` (production build).
+## Run prod? app
+_Only exposes port 80 to public, uses nginx to serve front_
+```bash
+# --< In backend repo >--
 
-To enable hot module reload, do `npm start -- --hmr`.
+# Start ofbiz in docker
+docker-compose up
 
-To change dev server port, do `npm start -- --port 8888`.
+# --< In frontend repo (here) >--
 
-To change dev server host, do `npm start -- --host 127.0.0.1`
+# Build aurelia
+au build
 
-**PS:** You could mix all the flags as well, `npm start -- --host 127.0.0.1 --port 7070 --open --hmr`
+# Start proxy and front
+# Use --build to recreate containers
+docker-compose up [--build]
+```
+**If something is broken...**
+- Make sore you have correct ports opened if running on windows _(especially using docker-toolbox)_
+- On unix files created in docker need sudo rights to be removed so that might be a problem if backend doesn't build
+- You can contact Tavo Annus (kilpkonn)
 
-For long time aurelia-cli user, you can still use `au run` with those arguments like `au run --env prod --open --hmr`. But `au run` now simply executes `npm start` command.
-
-## Build for production
-
-Run `npm run build`, or the old way `au build --env prod`.
-
-## Unit tests
-
-Run `au test` (or `au jest`).
-
-To run in watch mode, `au test --watch` or `au jest --watch`.
+**TODO: Scripts to build both front and back**
