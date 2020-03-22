@@ -2,6 +2,7 @@ import { autoinject } from "aurelia-framework";
 import {PLATFORM} from 'aurelia-pal';
 import { Service } from "./test/service";
 import {RouterConfiguration, Router} from 'aurelia-router';
+import 'bootstrap/dist/css/bootstrap.css';
 
 @autoinject
 export class app {
@@ -16,8 +17,8 @@ export class app {
     config.options.root = '/';
     config.map([
       {route:[ "", "login"], name: 'login', moduleId: PLATFORM.moduleName('login/login'), nav: false, title:'Login'},
-      {route:["ostuarve_sisestamine"], name: 'ostuarve_sisestamine', moduleId: PLATFORM.moduleName('ostuarve_sisestamine/ostuarve_sisestamine'), nav: true, title:'arve'},
-      {route:["ostuarve_vaade"], name: 'ostuarve_sisestamine', moduleId: PLATFORM.moduleName('ostuarve_vaade/ostuarve_vaade'), nav: true, title:'arve'}
+      {route:["ostuarve-sisestamine"], name: 'ostuarve-sisestamine', moduleId: PLATFORM.moduleName('ostuarve-sisestamine/ostuarve-sisestamine'), nav: true, title:'arve'},
+      {route:["ostuarve-vaade"], name: 'ostuarve-sisestamine', moduleId: PLATFORM.moduleName('ostuarve-vaade/ostuarve-vaade'), nav: true, title:'arve'}
     ]);
 
     this.router = router;
@@ -25,7 +26,7 @@ export class app {
 
   }
   constructor(private service: Service) {
-    //console.log("this.data");
+    console.log("this.data");
     //this.getData();
   }
 

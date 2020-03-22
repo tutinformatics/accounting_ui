@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.login-form {
+.box .login-form {
   width: 360px;
   background-color: #343a40;
   height: 580px;
@@ -31,12 +31,12 @@
   color: white;
 }
 
-.inputs {
+.box .inputs {
   border-bottom: 2px solid #ffffff;
   margin: 40px 0;
 }
 
-.inputs input {
+.box .inputs input {
   font-size: 15px;
   color: white;
   border: none;
@@ -46,11 +46,11 @@
   padding: 0 5px;
   height: 40px;
 }
-.login-button {
+.box .login-button {
   margin: 80px 0 0 0;
 }
 
-.login-button button{
+.box .login-button button{
   font-weight: 700;
   color: #343a40;
   display: block;
@@ -64,7 +64,7 @@
 
 }
 
-.bottom-text {
+.box .bottom-text {
   background: transparent;
   color: white;
   margin-top: 60px;
@@ -72,7 +72,7 @@
   font-size: 14px;
 }
 
-.alert {
+.box .alert {
   text-align: center;
   color: white;
   margin-top: 10px;

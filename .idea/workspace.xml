@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aurelia_project/tasks/run.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aurelia_project/tasks/run.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.ts" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +31,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +49,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -33,24 +59,24 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/proxy/config" />
       <recent name="$PROJECT_DIR$/accounting_frontend" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/proxy" />
-    </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -79,6 +105,9 @@
       <workItem from="1584632185244" duration="4254000" />
       <workItem from="1584687288867" duration="2937000" />
       <workItem from="1584691560970" duration="622000" />
+      <workItem from="1584777483181" duration="4000" />
+      <workItem from="1584783756481" duration="5204000" />
+      <workItem from="1584878253919" duration="10302000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -155,6 +184,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Move frontend to docker for easier nginx management" />

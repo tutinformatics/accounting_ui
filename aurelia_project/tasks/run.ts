@@ -1,4 +1,4 @@
-import { NPM } from 'aurelia-cli';
+import { NPM } from "aurelia-cli";
 import * as kill from 'tree-kill';
 import { platform } from '../aurelia.json';
 
