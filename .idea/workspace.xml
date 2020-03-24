@@ -2,24 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aurelia_project/tasks/run.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aurelia_project/tasks/run.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aurelia_project/aurelia.json" beforeDir="false" afterPath="$PROJECT_DIR$/aurelia_project/aurelia.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_sisestamine/ostuarve_sisestamine.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve_vaade/ostuarve_vaade.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,13 +58,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\ostuarve" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\muugiarve\muugiarve-sisestamine" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\images" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\elements\sidenav" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\elements\header" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/proxy" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/proxy/config" />
-      <recent name="$PROJECT_DIR$/accounting_frontend" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,7 +108,10 @@
       <workItem from="1584691560970" duration="622000" />
       <workItem from="1584777483181" duration="4000" />
       <workItem from="1584783756481" duration="5204000" />
-      <workItem from="1584878253919" duration="10302000" />
+      <workItem from="1584878253919" duration="11144000" />
+      <workItem from="1584952688221" duration="649000" />
+      <workItem from="1584956571593" duration="28000" />
+      <workItem from="1585030829279" duration="22460000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -179,7 +183,13 @@
       <option name="project" value="LOCAL" />
       <updated>1584689183243</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="Added header, refactored code, added bootstrap">
+      <created>1584911662742</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1584911662742</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +220,8 @@
     <MESSAGE value="New dev config :D" />
     <MESSAGE value="Add running instructions" />
     <MESSAGE value="Move aurelia to port 6060 to avoid conflicts with ofbiz during development" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move aurelia to port 6060 to avoid conflicts with ofbiz during development" />
+    <MESSAGE value="Added header, refactored code, added bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added header, refactored code, added bootstrap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584633130901">

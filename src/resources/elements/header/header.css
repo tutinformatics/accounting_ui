@@ -1,0 +1,9 @@
+.navbar-wrapper {
+    background-color: #343a40;
+    color: white;
+}
+
+.navbar-wrapper .navbar-brand, .navbar-wrapper .nav-link {
+    color: white !important;
+}
+

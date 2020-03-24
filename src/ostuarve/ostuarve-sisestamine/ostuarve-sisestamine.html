@@ -1,0 +1,151 @@
+<template>
+
+    <require from="./ostuarve-sisestamine.css"></require>
+
+    <h1>Ostuarve sisestamine</h1>
+
+    <form>
+        <div class="row ">
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+                <div class="col-4">
+                    <p><label class="form-label">Arvje esitaja:</label></p>
+                    <p><label class="form-label">KOKKU:</label></p>
+                    <p><label class="form-label">KM:</label></p>
+                </div>
+
+                <div class="col-8">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+
+                <div class="col-4">
+                    <p><label class="form-label">Esitamise kuupäev:</label></p>
+                    <p><label class="form-label">Tasumistingimus:</label></p>
+                    <p><label class="form-label">Tähtpäev:</label></p>
+                </div>
+
+                <div class="col-8">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input disabled">
+
+                </div>
+
+            </div>
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+
+                <div class="col-4">
+                    <p><label class="form-label">Ostuarve:</label></p>
+                    <p><label class="form-label">Viitedokument:</label></p>
+                    <p><label class="form-label">Aadress:</label></p>
+                </div>
+
+                <div class="col-8">
+
+                    <div class="custom-file header-input">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01">
+                        <label class="custom-file-label" for="inputGroupFile01" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+
+                    <div class="custom-file header-input">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="justify-content-center">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td width="5%"></td>
+                    <td width="">Konto</td>
+                    <td width="">Konto kirjeldus</td>
+                    <td width="">Kaibemaks</td>
+                    <td width="">Summa KM`ta</td>
+                    <td width="">Kaibemaks</td>
+                    <td width="7%"></td>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Valige käibemaks
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item" >0%</a>
+                                <a class="dropdown-item" >9%</a>
+                                <a class="dropdown-item" >20%</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Valige käibemaks
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+
+                                <a class="dropdown-item" >0%</a>
+                                <a class="dropdown-item" >9%</a>
+                                <a class="dropdown-item" >20%</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn btn-success">New</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </form>
+
+
+
+</template>

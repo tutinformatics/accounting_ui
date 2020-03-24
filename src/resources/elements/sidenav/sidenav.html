@@ -1,0 +1,61 @@
+<template>
+  <require from="./sidenav.css"></require>
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+          <div class=""><img class="img logo rounded-circle mb-5" src="../../images/user.png"></div>
+        <ul class="list-unstyled components mb-5">
+            <li >
+                <a href="#">Home</a>
+            </li>
+          <li>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tellimused</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Info</a>
+              </li>
+              <li>
+                <a href="#">Arved</a>
+              </li>
+              <li>
+                <a href="#">Sisestamine</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#ostuarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ostuarved</a>
+            <ul class="collapse list-unstyled" id="ostuarved">
+              <li>
+                <a href="/ostuarvete-vaade">Ülevaade</a>
+              </li>
+              <li>
+                <a href="/ostuarve-sisestamine">Sisestamine</a>
+              </li>
+            </ul>
+          </li>
+
+            <li>
+                <a href="#muugiarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Müüguarved</a>
+                <ul class="collapse list-unstyled" id="muugiarved">
+                    <li>
+                        <a href="muugiarvete-vaade">Ülevaade</a>
+                    </li>
+                    <li>
+                        <a href="/muugiarve-sisestamine">Sisestamine</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--<div class="footer">
+          <p>
+            Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+          </p>
+        </div>-->
+      </div>
+    </nav>
+
+
+
+
+
+</template>

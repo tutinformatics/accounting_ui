@@ -1,7 +1,20 @@
 <template>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <require from="bootstrap/dist/css/bootstrap.css"></require>
-  <require from="./resources/elements/header"></require>
-  <header></header>
+  <require from="./css/main.css"></require>
+  <require from="./login/login"></require>
+  <require from="./resources/elements/sidenav/sidenav"></require>
 
-  <router-view></router-view>
+  <div if.bind="loggedIn">
+    <div class="wrapper d-flex align-items-stretch">
+      <sidenav></sidenav>
+      <div id="content" class="p-4 p-md-5">
+        <router-view></router-view>
+      </div>
+
+    </div>
+
+  </div>
+  <div if.bind="!loggedIn"><login></login></div>
+
 </template>
