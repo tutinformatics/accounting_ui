@@ -10,6 +10,14 @@ export class Overview {
         this.getInvoices();
     }
 
+    public sortBy(prop) {
+        this.invoices = this.invoices.sort((a, b) => {
+            if (a[prop] > b[prop]) return 1;
+            if (a[prop] < b[prop]) return -1;
+            return 0;
+        })
+    }
+
     public getInvoices() {
         this.http.fetch("invoices")
             .then(response => response.json())

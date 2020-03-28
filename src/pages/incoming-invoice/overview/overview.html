@@ -5,16 +5,16 @@
     <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
-            <td width="7%">Nr.</td>
+            <td width="7%" click.delegate="sortBy('invoiceId')">Nr.</td>
             <td width="3%">Kin</td>
-            <td width="8%">Arve kp.</td>
-            <td width="8%">Kande kp.</td>
+            <td width="8%" click.delegate="sortBy('createdTxStamp')">Arve kp.</td>
+            <td width="8%" click.delegate="sortBy('dueDate')">Kande kp.</td>
             <td width="8%">OT. nr.</td>
             <td width="8%">Tarn. arve nr.</td>
-            <td width="10%">Tarnija</td>
+            <td width="10%" click.delegate="sortBy('partyIdFrom')">Tarnija</td>
             <td width="34%">Nimi</td>
             <td width="8%">Kokku</td>
-            <td width="5%">Val.</td>
+            <td width="5%" click.delegate="sortBy('currencyUomId')">Val.</td>
         </tr>
         </thead>
 
