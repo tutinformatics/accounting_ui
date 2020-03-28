@@ -17,12 +17,12 @@ export class app {
     config.options.pushState = true;
     config.options.root = '/';
     config.map([
-      {route:[ "login"], name: 'login', moduleId: PLATFORM.moduleName('login/login'), nav: false, title:'Login'},
-      {route:[ "", "home"], name: 'home', moduleId: PLATFORM.moduleName('home/home'), nav: false, title:'Home'},
-      {route:["ostuarve-sisestamine"], name: 'ostuarve-sisestamine', moduleId: PLATFORM.moduleName('ostuarve/ostuarve-sisestamine/ostuarve-sisestamine'), nav: true, title:'arve'},
-      {route:["ostuarvete-vaade"], name: 'ostuarvete-sisestamine', moduleId: PLATFORM.moduleName('ostuarve/ostuarvete-vaade/ostuarvete-vaade'), nav: true, title:'arve'},
-      {route:["muugiarve-sisestamine"], name: 'muugiarve-sisestamine', moduleId: PLATFORM.moduleName('muugiarve/muugiarve-sisestamine/muugiarve-sisestamine'), nav: true, title:'arve'},
-      {route:["muugiarvete-vaade"], name: 'muugiarvete-vaade', moduleId: PLATFORM.moduleName('muugiarve/muugiarvete-vaade/muugiarvete-vaade'), nav: true, title:'arve'}
+      {route:[ "login"], name: 'login', moduleId: PLATFORM.moduleName('pages/login/login'), nav: false, title:'Login'},
+      {route:[ "", "home"], name: 'home', moduleId: PLATFORM.moduleName('pages/home/home'), nav: false, title:'Home'},
+      {route:["incoming-invoice/new"], name: 'incoming-invoice/new', moduleId: PLATFORM.moduleName('pages/incoming-invoice/new/new'), nav: true, title:'arve'},
+      {route:["incoming-invoice/overview"], name: 'incoming-invoice/overview', moduleId: PLATFORM.moduleName('pages/incoming-invoice/overview/overview'), nav: true, title:'arve'},
+      {route:["outgoing-invoice/new"], name: 'outgoing-invoice/new', moduleId: PLATFORM.moduleName('pages/outgoing-invoice/new/new'), nav: true, title:'arve'},
+      {route:["outgoing-invoice/overview"], name: 'outgoing-invoice/overview', moduleId: PLATFORM.moduleName('pages/outgoing-invoice/overview/overview'), nav: true, title:'arve'}
     ]);
 
     this.router = router;

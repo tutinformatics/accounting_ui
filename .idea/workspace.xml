@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +60,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\ostuarve" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\muugiarve\muugiarve-sisestamine" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\images" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\elements\sidenav" />
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\elements\header" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -103,7 +114,8 @@
       <workItem from="1584952688221" duration="649000" />
       <workItem from="1584956571593" duration="28000" />
       <workItem from="1585030829279" duration="22460000" />
-      <workItem from="1585410721767" duration="1122000" />
+      <workItem from="1585410721767" duration="1261000" />
+      <workItem from="1585419881323" duration="1212000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -181,7 +193,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1584911662742</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add json data">
+      <created>1585411924498</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585411924498</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +232,8 @@
     <MESSAGE value="Add running instructions" />
     <MESSAGE value="Move aurelia to port 6060 to avoid conflicts with ofbiz during development" />
     <MESSAGE value="Added header, refactored code, added bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added header, refactored code, added bootstrap" />
+    <MESSAGE value="Add json data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add json data" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584633130901">
@@ -221,11 +241,11 @@
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
     <state x="677" y="357" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1584633130901" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1584689183032">
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1585411924194">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1584689183032" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1585411924194" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -246,18 +266,18 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1585410709538" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1584689185349">
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1585411926158">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1584689185349" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1585411926158" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584094321552" />
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585409014415">
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585419978678">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585409014415" />
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585419978678" />
   </component>
 </project>
