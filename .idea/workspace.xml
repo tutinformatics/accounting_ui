@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aurelia_project/aurelia.json" beforeDir="false" afterPath="$PROJECT_DIR$/aurelia_project/aurelia.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/nginx/default.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-sisestamine/ostuarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarve-sisestamine/ostuarve-sisestamine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ostuarve-vaade/ostuarve-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarve-sisestamine/muugiarve-sisestamine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/muugiarve/muugiarvete-vaade/muugiarvete-vaade.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ostuarve/ostuarvete-vaade/ostuarvete-vaade.ts" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,15 +60,15 @@
       <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -112,6 +103,7 @@
       <workItem from="1584952688221" duration="649000" />
       <workItem from="1584956571593" duration="28000" />
       <workItem from="1585030829279" duration="22460000" />
+      <workItem from="1585410721767" duration="1122000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -234,10 +226,26 @@
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
     <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1584689183032" />
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1584632154149">
+    <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1584632154149" />
+    <state width="1827" height="252" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098062" />
+    <state width="1827" height="252" key="GridCell.Tab.0.center" timestamp="1585409098061">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1827" height="252" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
+    <state width="1827" height="252" key="GridCell.Tab.0.left" timestamp="1585409098061">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1827" height="252" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
+    <state width="1827" height="252" key="GridCell.Tab.0.right" timestamp="1585409098061">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1827" height="252" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1585410709538">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1585410709538" />
     <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1584689185349">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -247,5 +255,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584094321552" />
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585409014415">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585409014415" />
   </component>
 </project>

@@ -1,7 +1,16 @@
-export class MuugiarveSisestamine {
-  message: string;
+import {HttpClient} from "aurelia-fetch-client";
+import {inject} from 'aurelia-framework';
 
-  constructor() {
-    this.message = 'Hello world';
+@inject(HttpClient)
+export class MuugiarveSisestamine {
+
+  constructor(private http: HttpClient) {
+    //this.getInvoices()
+  }
+
+  public getInvoices() {
+    this.http.fetch("invoices")
+        .then(response => response.json())
+        .then(r => console.log(r))
   }
 }

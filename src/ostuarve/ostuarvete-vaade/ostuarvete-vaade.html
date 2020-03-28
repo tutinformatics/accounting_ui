@@ -19,69 +19,17 @@
         </thead>
 
         <tbody>
-        <tr>
-            <td><a href="" class="text-decoration-none ">25468</a></td>
-            <td>-</td>
-            <td>01.03.2020</td>
-            <td>01.03.2020</td>
-            <td>-</td>
-            <td>15823</td>
-            <td>TalTech</td>
-            <td>Tallinna Tehnika Ulikool</td>
-            <td>1260,00</td>
-            <td>EUR</td>
-
-        </tr>
-        <tr>
-            <td>25468</td>
-            <td>-</td>
-            <td>01.03.2020</td>
-            <td>01.03.2020</td>
-            <td>-</td>
-            <td>15823</td>
-            <td>TalTech</td>
-            <td>Tallinna Tehnika Ulikool</td>
-            <td>1260,00</td>
-            <td>EUR</td>
-
-        </tr>
-        <tr>
-            <td>25468</td>
-            <td>-</td>
-            <td>01.03.2020</td>
-            <td>01.03.2020</td>
-            <td>-</td>
-            <td>15823</td>
-            <td>TalTech</td>
-            <td>Tallinna Tehnika Ulikool</td>
-            <td>1260,00</td>
-            <td>EUR</td>
-
-        </tr>
-        <tr>
-            <td>25468</td>
-            <td>-</td>
-            <td>01.03.2020</td>
-            <td>01.03.2020</td>
-            <td>-</td>
-            <td>15823</td>
-            <td>TalTech</td>
-            <td>Tallinna Tehnika Ulikool</td>
-            <td>1260,00</td>
-            <td>EUR</td>
-
-        </tr>
-        <tr>
-            <td>25468</td>
-            <td>-</td>
-            <td>01.03.2020</td>
-            <td>01.03.2020</td>
-            <td>-</td>
-            <td>15823</td>
-            <td>TalTech</td>
-            <td>Tallinna Tehnika Ulikool</td>
-            <td>1260,00</td>
-            <td>EUR</td>
+        <tr repeat.for="invoice of invoices">
+            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
+            <td>todo</td>
+            <td>${invoice.createdTxStamp}</td>
+            <td>${invoice.dueDate}</td>
+            <td>todo</td>
+            <td>todo</td>
+            <td>${invoice.partyIdFrom}</td>
+            <td>todo</td>
+            <td>todo</td>
+            <td>${invoice.currencyUomId}</td>
 
         </tr>
         </tbody>
