@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,15 +54,15 @@
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\images" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -99,6 +99,7 @@
       <workItem from="1585030829279" duration="22460000" />
       <workItem from="1585410721767" duration="1261000" />
       <workItem from="1585419881323" duration="2329000" />
+      <workItem from="1585744139964" duration="2340000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
