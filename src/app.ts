@@ -1,6 +1,6 @@
 import { autoinject } from "aurelia-framework";
 import {PLATFORM} from 'aurelia-pal';
-import { Service } from "./test/service";
+import { Service } from "./service/service";
 import {RouterConfiguration, Router} from 'aurelia-router';
 import 'bootstrap';
 

@@ -3,10 +3,10 @@ import {HttpClient} from "aurelia-fetch-client";
 
 @autoinject
 export class Service {
-    constructor(private http: HttpClient) {
+    constructor(protected http: HttpClient) {
         this.http.configure(config => {
             config
-                .withBaseUrl('api/')
+                .withBaseUrl('api/v2/')
                 .withDefaults({
                     headers: {
                         'Accept': 'application/json',
@@ -24,14 +24,5 @@ export class Service {
                     }
                 });
         });
-    }
-
-    getAll() {
-        console.log("Getting data");
-        this.http.fetch("invoices")
-            .then(response => {
-                console.log(response);
-                console.log("json", response.json());
-            })
     }
 }

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +46,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/proxy" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\ostuarve" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\muugiarve\muugiarve-sisestamine" />
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\resources\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -99,6 +102,8 @@
       <workItem from="1585030829279" duration="22460000" />
       <workItem from="1585410721767" duration="1261000" />
       <workItem from="1585419881323" duration="2329000" />
+      <workItem from="1585806309781" duration="13000" />
+      <workItem from="1586105274645" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -274,9 +279,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584094321552" />
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585419978678">
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585735440762">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585419978678" />
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585735440762" />
   </component>
 </project>

@@ -1,12 +1,12 @@
-import {HttpClient} from "aurelia-fetch-client";
 import {inject} from 'aurelia-framework';
+import {InvoiceService} from "../../../service/invoice-service";
 
-@inject(HttpClient)
+@inject(InvoiceService)
 export class Overview {
 
     invoices = [];
 
-    constructor(private http: HttpClient) {
+    constructor(private invoiceService: InvoiceService) {
         this.getInvoices();
     }
 
@@ -19,8 +19,7 @@ export class Overview {
     }
 
     public getInvoices() {
-        this.http.fetch("invoices")
-            .then(response => response.json())
+        this.invoiceService.getAll()
             .then(data => this.invoices = JSON.parse(data))
     }
 }
