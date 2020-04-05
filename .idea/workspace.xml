@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +100,7 @@
       <workItem from="1585410721767" duration="1261000" />
       <workItem from="1585419881323" duration="2329000" />
       <workItem from="1585806309781" duration="13000" />
-      <workItem from="1586105274645" duration="6596000" />
+      <workItem from="1586105274645" duration="8072000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586112313867</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add missing fields">
+      <created>1586112877926</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586112877926</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +265,8 @@
     <MESSAGE value="Create invoice service" />
     <MESSAGE value="Add todos" />
     <MESSAGE value="Add models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add models" />
+    <MESSAGE value="Add missing fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add missing fields" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586110299502">
@@ -264,11 +274,11 @@
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
     <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586110299502" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586112313798">
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586112877783">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586112313798" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586112877783" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
