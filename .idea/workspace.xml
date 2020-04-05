@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/invoice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/item-type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/item.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/party.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/party-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/invoice-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +104,7 @@
       <workItem from="1585410721767" duration="1261000" />
       <workItem from="1585419881323" duration="2329000" />
       <workItem from="1585806309781" duration="13000" />
-      <workItem from="1586105274645" duration="2180000" />
+      <workItem from="1586105274645" duration="6209000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -207,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586106517288</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add todos">
+      <created>1586108059196</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586108059196</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,19 +253,20 @@
     <MESSAGE value="Use english names" />
     <MESSAGE value="Move components to components folder" />
     <MESSAGE value="Create invoice service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create invoice service" />
+    <MESSAGE value="Add todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add todos" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="677" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584633130901">
+    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586110299502">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
-    <state x="677" y="357" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1584633130901" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586106517169">
+    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586110299502" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586112283047">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586106517169" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586112283047" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -272,15 +283,15 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1827" height="252" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1585410709538">
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586108641896">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1585410709538" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1585421526197">
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586108641896" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586108081547">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1585421526197" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586108081547" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
