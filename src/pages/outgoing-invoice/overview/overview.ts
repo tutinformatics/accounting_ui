@@ -11,7 +11,7 @@ export class Overview {
   }
 
   public getInvoices() {
-    this.invoiceService.getAll()
+    this.invoiceService.getOutgoing()
         .then(data => this.invoices = JSON.parse(data))
   }
 

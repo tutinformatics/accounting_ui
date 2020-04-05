@@ -19,7 +19,7 @@ export class Overview {
     }
 
     public getInvoices() {
-        this.invoiceService.getAll()
+        this.invoiceService.getIncoming()
             .then(data => this.invoices = JSON.parse(data))
     }
 }

@@ -6,4 +6,18 @@ export class InvoiceService extends Service{
         return this.http.fetch("Invoice")
             .then(response => response.json());
     }
+
+    getIncoming() { // TODO
+        return this.http.fetch("Invoice")
+            .then(response => response.json());
+    }
+
+    getOutgoing() { // TODO
+        return this.http.fetch("Invoice")
+            .then(response => response.json());
+    }
+
+    createInvoice(invoice) {
+        return; // TODO
+    }
 }
