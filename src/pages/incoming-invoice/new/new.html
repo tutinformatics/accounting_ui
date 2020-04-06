@@ -35,11 +35,11 @@
 
                 <div class="col-8">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                    <input type="text" aria-label="First name" class="form-control header-input" value.bind="invoice.createdStamp">
 
                     <input type="text" aria-label="First name" class="form-control header-input">
 
-                    <input type="text" aria-label="First name" class="form-control header-input disabled">
+                    <input type="text" aria-label="First name" class="form-control header-input disabled" value.bind="invoice.dueDate">
 
                 </div>
 
@@ -136,7 +136,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><button type="button" class="btn btn-success">New</button></td>
+                    <td><button type="button" class="btn btn-success" click.delegate="createInvoice()">New</button></td>
                 </tr>
 
                 </tbody>

@@ -1,6 +1,6 @@
 import {Service} from "./service";
 
-export class InvoiceService extends Service{
+export class InvoiceService extends Service {
 
     getAll() {
         return this.http.fetch("Invoice")
