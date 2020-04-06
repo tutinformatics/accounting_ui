@@ -22,4 +22,11 @@ export class Overview {
         this.invoiceService.getIncoming()
             .then(data => this.invoices = JSON.parse(data))
     }
+
+    public getTotal(invoice) {
+        let amount = 0;
+        for (let i = 0; i < invoice.invoiceItemIdValues.length; i++) {
+            amount += invoice.invoiceItemIdValues[i].amount;
+        }
+    }
 }
