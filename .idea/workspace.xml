@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/order/new/new.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/order/new/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/order/new/new.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,12 +18,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1Z1SLbx07S5buBo0isnGqgO2SpK" />
   <component name="ProjectViewState">
@@ -54,25 +48,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_ui\src\pages\order\overview" />
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_ui\src\pages\order" />
+      <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\ostuarve" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\muugiarve\muugiarve-sisestamine" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -109,10 +103,8 @@
       <workItem from="1585030829279" duration="22460000" />
       <workItem from="1585410721767" duration="1261000" />
       <workItem from="1585419881323" duration="2329000" />
-      <workItem from="1585744139964" duration="3149000" />
-      <workItem from="1586108652722" duration="15000" />
-      <workItem from="1586108692538" duration="1131000" />
-      <workItem from="1586153767157" duration="4146000" />
+      <workItem from="1585806309781" duration="13000" />
+      <workItem from="1586105274645" duration="8072000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -211,19 +203,42 @@
       <option name="project" value="LOCAL" />
       <updated>1585421524968</updated>
     </task>
-    <task id="LOCAL−00015" summary="ci init">
-      <created>1585751265878</created>
-      <option name="number" value="LOCAL−00015" />
-      <option name="presentableId" value="LOCAL−00015" />
-      <updated>1585751265878</updated>
+    <task id="LOCAL-00015" summary="Create invoice service">
+      <created>1586106517288</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1586106517288</updated>
     </task>
-    <task id="LOCAL−00016" summary="added ip">
-      <created>1585751874304</created>
-      <option name="number" value="LOCAL−00016" />
-      <option name="presentableId" value="LOCAL−00016" />
-      <updated>1585751874304</updated>
+    <task id="LOCAL-00016" summary="Add todos">
+      <created>1586108059196</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586108059196</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add models">
+      <created>1586112313867</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1586112313867</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add missing fields">
+      <created>1586112877926</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586112877926</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fix build failing">
+      <created>1586171358754</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586171358754</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,21 +273,24 @@
     <MESSAGE value="Add json data" />
     <MESSAGE value="Use english names" />
     <MESSAGE value="Move components to components folder" />
-    <MESSAGE value="ci init" />
-    <MESSAGE value="added ip" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ip" />
+    <MESSAGE value="Create invoice service" />
+    <MESSAGE value="Add todos" />
+    <MESSAGE value="Add models" />
+    <MESSAGE value="Add missing fields" />
+    <MESSAGE value="Fix build failing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix build failing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="677" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584633130901">
+    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586110299502">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
-    <state x="677" y="357" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1584633130901" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1585421524843">
+    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586110299502" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586171358671">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1585421524843" />
+    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586171358671" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -289,22 +307,34 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1827" height="252" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1585410709538">
+    <state x="701" y="261" width="578" height="591" key="MultipleFileMergeDialog" timestamp="1586171256433">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1585410709538" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1585421526197">
+    <state x="701" y="261" width="578" height="591" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171256433" />
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586108641896">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586108641896" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586171598218">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1585421526197" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586171598218" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1584094321552" />
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1585419978678">
+    <state x="761" y="468" width="467" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586171250652">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585419978678" />
+    <state x="761" y="468" width="467" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586171250652" />
+    <state x="721" y="185" width="537" height="743" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586171620991">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="721" y="185" width="537" height="743" key="git4idea.branch.GitSmartOperationDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171620991" />
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1586171235302">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171235302" />
   </component>
 </project>
