@@ -33,6 +33,7 @@ deploy accounting:
     - accounting
   script:
     - docker stop "$APP_CONTAINER_NAME" || true
+    - docker rm "$APP_CONTAINER_NAME" || true
     - docker run --name "$APP_CONTAINER_NAME" -p 80:80 -d "accounting:${CI_COMMIT_SHORT_SHA}"
     - docker system prune -af
   only:
