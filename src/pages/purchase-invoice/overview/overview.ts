@@ -1,10 +1,12 @@
 import {inject} from 'aurelia-framework';
 import {InvoiceService} from "../../../service/invoice-service";
+import {TimeConverter} from '../../../util/time-converter';
 
 @inject(InvoiceService)
 export class Overview {
 
     invoices = [];
+    sortAsc = true;
 
     constructor(private invoiceService: InvoiceService) {
         this.getInvoices();
@@ -12,8 +14,8 @@ export class Overview {
 
     public sortBy(prop) {
         this.invoices = this.invoices.sort((a, b) => {
-            if (a[prop] > b[prop]) return 1;
-            if (a[prop] < b[prop]) return -1;
+            if (a[prop] > b[prop]) return this.sortAsc ? 1 : -1;
+            if (a[prop] < b[prop]) return this.sortAsc ? -1 : 1;
             return 0;
         })
     }
@@ -23,10 +25,15 @@ export class Overview {
             .then(res => this.invoices = res);
     }
 
-    public getTotal(invoice) {
+    public convertTime(ms: number) {
+        return TimeConverter.convertDate(ms);
+    }
+
+    public getTotal(invoice): number {
         let amount = 0;
         for (let i = 0; i < invoice.invoiceItemIdValues.length; i++) {
             amount += invoice.invoiceItemIdValues[i].amount;
         }
+        return amount; // wtf is dis. no work?
     }
 }

@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="Remove obsolete deploy options">
+    <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/util/time-converter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/config/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/config/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/incoming-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/outgoing-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/invoice-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/party-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/party-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -256,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586172107667</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Move to bigdata backend api">
+      <created>1586613224361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586613224361</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +292,8 @@
     <MESSAGE value="Add missing fields" />
     <MESSAGE value="Fix build failing" />
     <MESSAGE value="Remove obsolete deploy options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove obsolete deploy options" />
+    <MESSAGE value="Move to bigdata backend api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move to bigdata backend api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586110299502">
@@ -304,11 +301,11 @@
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
     <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586110299502" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586172486143">
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586613224302">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586172486143" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586613224302" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
