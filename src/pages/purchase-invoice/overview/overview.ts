@@ -33,7 +33,7 @@ export class Overview {
         let amount = 0;
         for (let i = 0; i < invoice.invoiceItemIdValues.length; i++) {
             amount += invoice.invoiceItemIdValues[i].amount;
-        }
+        } // TODO: @Kapa
         return amount; // wtf is dis. no work?
     }
 }

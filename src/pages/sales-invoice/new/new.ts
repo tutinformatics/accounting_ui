@@ -1,16 +1,21 @@
 import {HttpClient} from "aurelia-fetch-client";
 import {inject} from 'aurelia-framework';
+import {Invoice} from "../../../model/invoice";
+import {InvoiceService} from "../../../service/invoice-service";
 
-@inject(HttpClient)
+@inject(InvoiceService)
 export class New {
 
-  constructor(private http: HttpClient) {
+  invoice: Invoice = new Invoice();
+
+  constructor(private invoiceService: InvoiceService) {
     //this.getInvoices()
   }
 
-  public getInvoices() {
-    this.http.fetch("invoices")
-        .then(response => response.json())
-        .then(r => console.log(r))
+  createInvoice() {
+    // TODO: Validate @Marten
+    this.invoiceService.createInvoice(this.invoice);
+    // TODO: Handle error @Tavo
   }
+
 }

@@ -26,7 +26,7 @@ export class Service {
         });
     }
 
-    formatUrl(url: string, params: Object) {
+    protected formatUrl(url: string, params: Object) {
         const esc = encodeURIComponent;
         const query = Object.keys(params)
             .map(k => esc(k) + '=' + esc(params[k]))
