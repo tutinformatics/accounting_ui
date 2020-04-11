@@ -1,31 +1,12 @@
 version: '3.7'
 
 services:
-  proxy:
-    container_name: proxy
+  proxy-dev:
+    container_name: proxy-dev
     build:
       context: ./proxy
+      dockerfile: Dockerfile
     restart: unless-stopped
-    networks:
-      - ofbiz-api-network
-      - aurelia-front-network
+    network_mode: "host"
     ports:
       - "80:80"
-
-  aurelia_front:
-    container_name: aurelia-front
-    build:
-      context: .
-    restart: unless-stopped
-    networks:
-      - aurelia-front-network
-
-networks:
-  ofbiz-api-network:
-    external:
-      name: ofbiz-api-network
-
-  aurelia-front-network:
-    name: aurelia-front-network
-    driver: bridge
-

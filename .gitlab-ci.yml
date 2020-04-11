@@ -1,28 +1,9 @@
 stages:
-  - install_dependencies
   - build
   - deploy
 
 before_script:
   - export APP_CONTAINER_NAME=accounting-front-container
-
-install_dependencies accounting:
-  stage: install_dependencies
-  image: node:11-alpine
-  tags:
-    - accounting
-  cache:
-    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
-    paths:
-      - node_modules/
-  script:
-    - yarn install
-  only:
-    refs:
-      - master
-      - tags
-    changes:
-      - package-lock.json
 
 build accounting:
   stage: build
@@ -52,6 +33,7 @@ deploy accounting:
     - accounting
   script:
     - docker stop "$APP_CONTAINER_NAME" || true
+    - docker rm "$APP_CONTAINER_NAME" || true
     - docker run --name "$APP_CONTAINER_NAME" -p 80:80 -d "accounting:${CI_COMMIT_SHORT_SHA}"
     - docker system prune -af
   only:
