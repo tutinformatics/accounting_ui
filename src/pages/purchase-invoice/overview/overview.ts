@@ -20,7 +20,7 @@ export class Overview {
 
     public getInvoices() {
         this.invoiceService.getIncoming()
-            .then(data => this.invoices = JSON.parse(data))
+            .then(res => this.invoices = res);
     }
 
     public getTotal(invoice) {

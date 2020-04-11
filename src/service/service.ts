@@ -1,12 +1,12 @@
 import {autoinject} from "aurelia-framework";
-import {HttpClient} from "aurelia-fetch-client";
+import {HttpClient, json} from "aurelia-fetch-client";
 
 @autoinject
 export class Service {
     constructor(protected http: HttpClient) {
         this.http.configure(config => {
             config
-                .withBaseUrl('api/v2/')
+                .withBaseUrl('/api/generic/v1/entities')
                 .withDefaults({
                     headers: {
                         'Accept': 'application/json',
@@ -24,5 +24,18 @@ export class Service {
                     }
                 });
         });
+    }
+
+    get(url: string) {
+        return this.http.fetch(url)
+            .then(response => response.json())
+    }
+
+    post(url: string, data: any) {
+        return this.http.fetch(url, {
+            method: 'post',
+            body: json(data)
+        })
+            .then(response => response.json());
     }
 }
