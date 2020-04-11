@@ -6,12 +6,12 @@ export class InvoiceService extends Service {
         return this.get("/Invoice");
     }
 
-    getIncoming() { // TODO
-        return this.get("/Invoice");
+    getIncoming() {
+        return this.get("/Invoice", {invoiceTypeId: 'PURCHASE_INVOICE'});
     }
 
-    getOutgoing() { // TODO
-        return this.get("/Invoice");
+    getOutgoing() {
+        return this.get("/Invoice", {invoiceTypeId: 'SALES_INVOICE'});
     }
 
     createInvoice(invoice) {

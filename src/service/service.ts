@@ -26,8 +26,17 @@ export class Service {
         });
     }
 
-    get(url: string) {
-        return this.http.fetch(url)
+    formatUrl(url: string, params: Object) {
+        const esc = encodeURIComponent;
+        const query = Object.keys(params)
+            .map(k => esc(k) + '=' + esc(params[k]))
+            .join('&');
+        return query.length > 0 ? url + '?' + query : url;
+    }
+
+    get(url: string, params: Object = {}) {
+        const formattedUrl = this.formatUrl(url, params);
+        return this.http.fetch(formattedUrl)
             .then(response => response.json())
     }
 
