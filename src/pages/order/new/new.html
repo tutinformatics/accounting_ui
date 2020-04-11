@@ -2,15 +2,16 @@
 
     <require from="./new.css"></require>
 
-    <h1>Ostuarve sisestamine</h1>
+    <h1>Tellimuse sisestamine</h1>
 
     <form>
         <div class="row justify-content-around">
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
                 <div class="col-5">
-                    <p><label class="form-label">Arvje esitaja:</label></p>
-                    <p><label class="form-label">KOKKU:</label></p>
-                    <p><label class="form-label">KM:</label></p>
+                    <p><label class="form-label">Klient:</label></p>
+                    <p><label class="form-label">Kokku:</label></p>
+                    <p><label class="form-label">Tasuda:</label></p>
+
                 </div>
 
                 <div class="col-7">
@@ -35,11 +36,11 @@
 
                 <div class="col-7">
 
-                    <input type="text" aria-label="First name" class="form-control header-input" value.bind="invoice.createdStamp">
+                    <input type="text" aria-label="First name" class="form-control header-input">
 
                     <input type="text" aria-label="First name" class="form-control header-input">
 
-                    <input type="text" aria-label="First name" class="form-control header-input disabled" value.bind="invoice.dueDate">
+                    <input type="text" aria-label="First name" class="form-control header-input disabled">
 
                 </div>
 
@@ -47,22 +48,16 @@
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
 
                 <div class="col-5">
-                    <p><label class="form-label">Ostuarve:</label></p>
-                    <p><label class="form-label">Viitedokument:</label></p>
+                    <p><label class="form-label">MT nr.:</label></p>
+                    <p><label class="form-label">Muugiagent:</label></p>
                     <p><label class="form-label">Aadress:</label></p>
                 </div>
 
                 <div class="col-7">
 
-                    <div class="custom-file header-input">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01">
-                        <label class="custom-file-label" for="inputGroupFile01" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
+                    <input type="text" aria-label="First name" class="form-control header-input">
 
-                    <div class="custom-file header-input">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02">
-                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
+                    <input type="text" aria-label="First name" class="form-control header-input">
 
                     <input type="text" aria-label="First name" class="form-control header-input">
 
@@ -77,11 +72,11 @@
                 <thead>
                 <tr>
                     <td width="5%"></td>
-                    <td width="">Konto</td>
-                    <td width="">Konto kirjeldus</td>
+                    <td width="">Toode</td>
+                    <td width="">Kogus</td>
                     <td width="">Kaibemaks</td>
                     <td width="">Summa KM`ta</td>
-                    <td width="">Kaibemaks</td>
+                    <td width="">Summa KM`ga</td>
                     <td width="7%"></td>
                 </tr>
                 </thead>
@@ -126,7 +121,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td><button type="button" class="btn btn-success" click.delegate="createInvoice()">New</button></td>
+                    <td><button type="button" class="btn btn-success">New</button></td>
                 </tr>
 
                 </tbody>

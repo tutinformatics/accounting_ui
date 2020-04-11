@@ -1,0 +1,39 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Tellimused</h1>
+        </div>
+        <div class="col ">
+            <a href="/order/new" class="btn btn-success float-right mr-4"> NEW</a>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="5%">Nr.</td>
+            <td width="5%">Kin</td>
+            <td width="8%">Kuupaev</td>
+            <td width="8%">Agent</td>
+            <td width="34%">Tellija</td>
+            <td width="8%">Kokku</td>
+            <td width="5%">Val.</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="invoice of invoices">
+            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
+            <td>todo</td>
+            <td>${invoice.invoiceDate}</td>
+            <td>todo</td>
+            <td>${invoice.partyId}</td>
+            <td>todo</td>
+            <td>${invoice.currencyUomId}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+

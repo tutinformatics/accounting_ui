@@ -1,17 +1,22 @@
 <template>
 
-  <h1>Müügiarved</h1>
+  <div class="row justify-content-between">
+    <div class="col ml-3 mb-2">
+      <h1>Muugiarved</h1>
+    </div>
+    <div class="col ">
+      <a href="/outgoing-invoice/new" class="btn btn-success float-right mr-4"> NEW</a>
+    </div>
+  </div>
   <table class="table table-striped">
     <thead class="thead-dark">
     <tr>
-      <td width="7%">Nr.</td>
-      <td width="3%">Kin</td>
+      <td width="5%">Nr.</td>
+      <td width="5%">Kin</td>
       <td width="8%">Arve kp.</td>
-      <td width="8%">Kande kp.</td>
-      <td width="8%">OT. nr.</td>
-      <td width="8%">Tarn. arve nr.</td>
-      <td width="10%">Tarnija</td>
-      <td width="34%">Nimi</td>
+      <td width="8%">MT. nr.</td>
+      <td width="8%">Agent</td>
+      <td width="34%">Tellija</td>
       <td width="8%">Kokku</td>
       <td width="5%">Val.</td>
     </tr>
@@ -23,10 +28,7 @@
       <td>todo</td>
       <td>${invoice.invoiceDate}</td>
       <td>todo</td>
-      <td>todo</td>
-      <td>todo</td>
       <td>${invoice.partyId}</td>
-      <td>todo</td>
       <td>todo</td>
       <td>${invoice.currencyUomId}</td>
 

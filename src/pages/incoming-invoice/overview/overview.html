@@ -1,12 +1,19 @@
 <template>
     <require from="./overview.css"></require>
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Ostuarved</h1>
+        </div>
+        <div class="col ">
+            <a href="/incoming-invoice/new" class="btn btn-success float-right mr-4"> NEW</a>
+        </div>
+    </div>
 
-    <h1>Ostuarved</h1>
     <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
             <td width="10%" click.delegate="sortBy('invoiceId')">Nr.</td>
-            <td width="10%" click.delegate="sortBy('statusId')">Kin</td>
+            <td width="10%">Kin?</td>
             <td width="10%" click.delegate="sortBy('createdTxStamp')">Arve kp.</td>
             <td width="10%" click.delegate="sortBy('dueDate')">Kande kp.</td>
             <td width="10%">Tarn. arve nr.</td>
@@ -19,13 +26,14 @@
         <tbody>
         <tr repeat.for="invoice of invoices">
             <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
-            <td>${invoice.statusId}</td>
+            <td>todo</td>
             <td>${invoice.createdTxStamp}</td>
             <td>${invoice.dueDate}</td>
             <td>todo</td>
             <td>${invoice.partyIdFrom}</td>
-            <td>getTotal(invoice)</td>
+            <td>todo</td>
             <td>${invoice.currencyUomId}</td>
+
         </tr>
         </tbody>
     </table>
