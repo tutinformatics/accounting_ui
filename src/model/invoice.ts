@@ -2,7 +2,7 @@ import {Item} from "./item";
 import {Model} from "./model";
 
 export class Invoice extends Model{
-    invoiceId: string;
+    invoiceId: string = new Date().getTime().toString();
     partyIdFrom: string;
     partyId: string;
     dueDate: Date = new Date();
@@ -23,7 +23,7 @@ export class Invoice extends Model{
             invoiceId: this.invoiceId,
             invoiceTypeId: this.invoiceTypeId,
             partyIdFrom: this.partyIdFrom, // Other guys
-            partyId: this.partyId, // Us
+            partyId: this.partyId = 'Company', // TODO: Us
 
             // Optional fields
             dueDate: this.dueDate.getTime(),
