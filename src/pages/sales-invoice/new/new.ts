@@ -43,8 +43,6 @@ export class New {
         .matches(/^(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}$/)
         .on(this.invoice)
         .ensure("partyIdFrom")
-        .matches(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/)
-        .maxLength(50)
         .required()
         .on(this.invoice)
         .ensure("daysTimeToPay")
