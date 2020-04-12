@@ -8,7 +8,6 @@
         </div>
 
         <div class="col ">
-
             <button type="button" class="btn btn-success float-right"  click.delegate="createInvoice()">Salvesta</button>
             <button type="button" class="btn btn-success float-right" click.delegate="confirm()">${confirmString}</button>
         </div>
@@ -47,9 +46,9 @@
 
                 <div class="col-7">
 
-                    <input type="text" for="inp" class="form-control header-input" value.bind="invoice.createdStamp & validate" >
+                    <abp-datetime-picker onchange="dueDateCreator()" value.bind="invoice.createdStamp & validate" options.bind="pickerOptions"></abp-datetime-picker>
 
-                    <input type="text" class="form-control header-input" value.bind="daysTimeToPay & validate">
+                    <input type="text" change.delegate="dueDateCreator()" class="form-control header-input" value.bind="daysTimeToPay & validate">
                     <fieldset disabled>
                         <input type="text" placeholder="" class="form-control header-input disabled" value.bind="invoice.dueDate">
                     </fieldset>

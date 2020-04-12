@@ -3,12 +3,15 @@ import {PLATFORM} from 'aurelia-pal';
 import { Service } from "./service/service";
 import {RouterConfiguration, Router} from 'aurelia-router';
 import 'bootstrap';
+import 'aurelia-bootstrap-datetimepicker';
 
 @autoinject
 export class app {
   router: Router;
   data;
   loggedIn = true;
+
+
 
   configureRouter(config: RouterConfiguration, router: Router): void {
     console.log('configureRouter');
