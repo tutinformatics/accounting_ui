@@ -16,7 +16,7 @@ export class InvoiceService extends Service {
     }
 
     createInvoice(invoice: Model) {
-        return this.post("/services/createInvoice", invoice.toJson());
-        // return this.post("/entities/Invoice", invoice.toJson());
+        // return this.post("/services/createInvoice", invoice.toJson());
+        return this.post("/entities/Invoice", invoice.toJson());
     }
 }
