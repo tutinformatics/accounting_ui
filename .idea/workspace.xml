@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/customer/new/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/customer/new/new.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/invoice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +62,6 @@
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -315,13 +298,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix nginx not starting" />
@@ -366,22 +348,22 @@
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
     <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586671723216" />
-    <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
+    <state width="1826" height="265" key="GridCell.Tab.0.bottom" timestamp="1586703967327">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="252" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098062" />
-    <state width="1827" height="252" key="GridCell.Tab.0.center" timestamp="1585409098061">
+    <state width="1826" height="265" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1586703967327" />
+    <state width="1826" height="265" key="GridCell.Tab.0.center" timestamp="1586703967327">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="252" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
-    <state width="1827" height="252" key="GridCell.Tab.0.left" timestamp="1585409098061">
+    <state width="1826" height="265" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1586703967327" />
+    <state width="1826" height="265" key="GridCell.Tab.0.left" timestamp="1586703967326">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="252" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
-    <state width="1827" height="252" key="GridCell.Tab.0.right" timestamp="1585409098061">
+    <state width="1826" height="265" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1586703967326" />
+    <state width="1826" height="265" key="GridCell.Tab.0.right" timestamp="1586703967327">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1827" height="252" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585409098061" />
+    <state width="1826" height="265" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1586703967327" />
     <state x="701" y="261" width="578" height="591" key="MultipleFileMergeDialog" timestamp="1586171256433">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>

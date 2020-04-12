@@ -1,4 +1,3 @@
-import {HttpClient} from "aurelia-fetch-client";
 import {inject} from 'aurelia-framework';
 import {Invoice} from "../../../model/invoice";
 import {InvoiceService} from "../../../service/invoice-service";
@@ -14,8 +13,9 @@ export class New {
 
   createInvoice() {
     // TODO: Validate @Marten
-    this.invoiceService.createInvoice(this.invoice);
-    // TODO: Handle error @Tavo
+    this.invoice.invoiceTypeId = 'SALES_INVOICE'
+    this.invoiceService.createInvoice(this.invoice)
+        .then(res => this.invoice = new Invoice());
   }
 
 }

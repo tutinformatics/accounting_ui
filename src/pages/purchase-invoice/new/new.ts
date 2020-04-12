@@ -50,11 +50,12 @@ export class New {
 
     createInvoice() {
         // TODO: Validate @Marten
+        this.invoice.invoiceTypeId = 'PURCHASE_INVOICE';
+        console.log(this.invoice);
         if (this.isInputsValidated()) {
             this.invoiceService.createInvoice(this.invoice)
-                .then(res => console.log(res));
-
-            this.invoice = new Invoice();
+                .then(res => console.log(res))
+                .then(_ => this.invoice = new Invoice());
         }
     }
 

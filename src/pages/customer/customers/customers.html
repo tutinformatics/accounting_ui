@@ -20,8 +20,8 @@
 
         <tbody>
         <tr repeat.for="party of parties">
-          <td><a href="" class="text-decoration-none ">id</a></td>
-          <td>nimi</td>
+          <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
+          <td>${convertTime(party.createdStamp)}</td>
         </tr>
         </tbody>
       </table>
