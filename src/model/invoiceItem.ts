@@ -10,7 +10,7 @@ export class InvoiceItem extends Model{
     lastUpdatedTxStamp: Date = new Date();
     invoiceItemSeqId: string;
     uomId: string;
-    invoiceItemTypeId: string;
+    invoiceItemTypeId: string = 'PINV_WE_ITEM'; // TODO: Add types?
     invoiceId: string;
 
     toJson() {

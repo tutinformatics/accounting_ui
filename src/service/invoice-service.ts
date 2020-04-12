@@ -21,6 +21,7 @@ export class InvoiceService extends Service {
         return this.post("/entities/Invoice", invoice.toJson());
 
         for (let item of invoice.items) {
+            item.invoiceId = invoice.invoiceId;
             this.createInvoiceItem(item);
         }
     }

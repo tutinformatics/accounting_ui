@@ -24,6 +24,12 @@
                 </div>
 
                 <div class="col-7">
+                    <select class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
+                        <option model.bind="null">Choose...</option>
+                        <option repeat.for="party of parties" model.bind="party.partyId">
+                            ${party.partyId}
+                        </option>
+                    </select>
                     <input type="text" class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
                     <input type="text" class="form-control header-input">
                     <fieldset disabled>

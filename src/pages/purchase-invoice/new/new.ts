@@ -19,7 +19,10 @@ export class New {
     };
     parties = [];
 
-    constructor(private partyService: PartyService, private invoiceService: InvoiceService, private controller: ValidationControllerFactory) {
+    constructor(private partyService: PartyService,
+                private invoiceService: InvoiceService,
+                private controller: ValidationControllerFactory)
+    {
         this.valController = controller.createForCurrentScope();
         this.initRules();
         this.initParties();

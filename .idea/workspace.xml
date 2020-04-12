@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="" />
+    <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/invoiceItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoiceItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/invoice-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586704846293</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Minor changes">
+      <created>1586705071803</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1586705071803</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +319,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
     <MESSAGE value="Small tweaks to nginx" />
     <MESSAGE value="Fixed cors with docker" />
@@ -331,7 +343,8 @@
     <MESSAGE value="Fix incorrect package lock" />
     <MESSAGE value="Added timepicker" />
     <MESSAGE value="Adding invoice works :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding invoice works :D" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">
@@ -343,11 +356,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586676656128" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586704846181">
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586705071755">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586704846181" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586705071755" />
     <state width="1826" height="265" key="GridCell.Tab.0.bottom" timestamp="1586703967327">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -372,11 +385,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586671603499" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586615689257">
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586705073572">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586615689257" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586705073572" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
