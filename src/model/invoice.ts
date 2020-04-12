@@ -1,32 +1,43 @@
-import {Item} from "./item";
+import {InvoiceItem} from "./invoiceItem";
 import {Model} from "./model";
 
 export class Invoice extends Model{
-    invoiceId: string;
+    invoiceId: string = new Date().getTime().toString();
     partyIdFrom: string;
     partyId: string;
-    dueDate: Date;
+    dueDate: Date = new Date();
     invoiceTypeId: string;
-    createdStamp: Date;
+    createdStamp: Date = new Date();
+    referenceNumber: string
     description: string;
-    lastUpdatedStamp: Date;
-    currencyUomId: string;
-    createdTxStamp: Date;
-    lastUpdatedTxStamp: Date;
-    invoiceDate: Date;
+    lastUpdatedStamp: Date = new Date();
+    currencyUomId: string = 'USD';
+    createdTxStamp: Date = new Date();
+    lastUpdatedTxStamp: Date = new Date();
+    invoiceDate: Date = new Date();
     statusId: string;
-    items: [Item];
+    items: [InvoiceItem]; // TODO: Something with these
 
     toJson() {
         return {
-            invoiceTypeId: 'PURCHASE_INVOICE',
-            partyIdFrom: 'DEMO_COMPANY1',
-            partyId: 'DEMO_COMPANY',
-            invoiceDate: new Date().getTime(),
-            _ENTITY_NAME_: 'Invoice'
-            //userLogin: userLogin
-        }
+            // Mandatory fields
+            invoiceId: this.invoiceId,
+            invoiceTypeId: this.invoiceTypeId,
+            partyIdFrom: this.partyIdFrom, // Other guys
+            partyId: this.partyId = 'Company', // TODO: Us
 
-        //return {"partyIdFrom":"Company","lastUpdatedStamp":1585748174696,"roleTypeId":null,"recurrenceInfoId":null,"createdTxStamp":1585748173832,"invoiceTypeId":"SALES_INVOICE","dueDate":1148550387122,"createdStamp":1585748174696,"_ENTITY_NAME_":"Invoice","description":"This is the first invoice number to AcctBuyer","lastUpdatedTxStamp":1585748173832,"billingAccountId":null,"invoiceDate":1145958387122,"contactMechId":null,"currencyUomId":"USD","statusId":"INVOICE_IN_PROCESS","paidDate":null,"referenceNumber":null,"invoiceId":"demo10000","invoiceMessage":null,"_DELEGATOR_NAME_":"default","partyId":"AcctBuyer"}
+            // Optional fields
+            dueDate: this.dueDate.getTime(),
+            invoiceDate: this.invoiceDate.getTime(),
+            createdStamp: this.createdStamp.getTime(),
+            referenceNumber: this.referenceNumber,
+            description: this.description,
+            lastUpdatedStamp: this.lastUpdatedStamp.getTime(),
+            currencyUomId: this.currencyUomId,
+            createdTxStamp: this.createdTxStamp.getTime(),
+            lastUpdatedTxStamp: this.lastUpdatedTxStamp.getTime(),
+            statusId: this.statusId,
+            _ENTITY_NAME_: 'Invoice',
+        }
     }
 }
