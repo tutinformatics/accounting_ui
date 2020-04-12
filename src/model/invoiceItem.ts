@@ -1,6 +1,6 @@
 import {Model} from "./model";
 
-export class Item extends Model{
+export class InvoiceItem extends Model{
     lastUpdatedStamp: Date = new Date();
     amount: number;
     createdTxStamp: Date = new Date();

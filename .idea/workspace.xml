@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/invoice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/item.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoiceItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/invoice-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/party-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/party-service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +96,7 @@
       <workItem from="1585419881323" duration="2329000" />
       <workItem from="1585806309781" duration="13000" />
       <workItem from="1586105274645" duration="8072000" />
-      <workItem from="1586671491488" duration="12519000" />
+      <workItem from="1586671491488" duration="13223000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -289,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586684330966</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Generate random id for invoice">
+      <created>1586684690600</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1586684690600</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +319,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
     <MESSAGE value="Small tweaks to nginx" />
     <MESSAGE value="Fixed cors with docker" />
@@ -333,7 +343,8 @@
     <MESSAGE value="Fix incorrect package lock" />
     <MESSAGE value="Mess with services" />
     <MESSAGE value="Post works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Post works now" />
+    <MESSAGE value="Generate random id for invoice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate random id for invoice" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">
@@ -345,11 +356,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586683835648" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586684330910">
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586684690526">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586684330910" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586684690526" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -374,11 +385,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586671603499" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586684338005">
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586684692566">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586684338005" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586684692566" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

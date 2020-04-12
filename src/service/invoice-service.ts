@@ -1,5 +1,6 @@
 import {Service} from "./service";
-import {Model} from "../model/model";
+import {Invoice} from "../model/invoice";
+import {InvoiceItem} from "../model/invoiceItem";
 
 export class InvoiceService extends Service {
 
@@ -15,8 +16,16 @@ export class InvoiceService extends Service {
         return this.get("/entities/Invoice", {invoiceTypeId: 'SALES_INVOICE'});
     }
 
-    createInvoice(invoice: Model) {
+    createInvoice(invoice: Invoice) {
         // return this.post("/services/createInvoice", invoice.toJson());
         return this.post("/entities/Invoice", invoice.toJson());
+
+        for (let item of invoice.items) {
+            this.createInvoiceItem(item);
+        }
+    }
+
+    protected createInvoiceItem(invoiceItem: InvoiceItem) {
+        return this.post("/entities/InvoiceItem", invoiceItem.toJson());
     }
 }

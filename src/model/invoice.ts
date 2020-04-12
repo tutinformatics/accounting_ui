@@ -1,4 +1,4 @@
-import {Item} from "./item";
+import {InvoiceItem} from "./invoiceItem";
 import {Model} from "./model";
 
 export class Invoice extends Model{
@@ -8,6 +8,7 @@ export class Invoice extends Model{
     dueDate: Date = new Date();
     invoiceTypeId: string;
     createdStamp: Date = new Date();
+    referenceNumber: string
     description: string;
     lastUpdatedStamp: Date = new Date();
     currencyUomId: string = 'USD';
@@ -15,7 +16,7 @@ export class Invoice extends Model{
     lastUpdatedTxStamp: Date = new Date();
     invoiceDate: Date = new Date();
     statusId: string;
-    items: [Item]; // TODO: Something with these
+    items: [InvoiceItem]; // TODO: Something with these
 
     toJson() {
         return {
@@ -29,6 +30,7 @@ export class Invoice extends Model{
             dueDate: this.dueDate.getTime(),
             invoiceDate: this.invoiceDate.getTime(),
             createdStamp: this.createdStamp.getTime(),
+            referenceNumber: this.referenceNumber,
             description: this.description,
             lastUpdatedStamp: this.lastUpdatedStamp.getTime(),
             currencyUomId: this.currencyUomId,
