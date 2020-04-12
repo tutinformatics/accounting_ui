@@ -27,7 +27,8 @@ export class New {
 
     initParties() {
         this.partyService.getAll().then(result => {
-            console.log(result)
+            console.log(result);
+            this.parties = result;
         })
     }
 
@@ -86,13 +87,13 @@ export class New {
     }
 
     addDays(date, days) {
-        var result = new Date(date);
+        const result = new Date(date);
         result.setDate(result.getDate() + days);
         return result;
     }
 
     parse(str) {
-        var y = str.substr(6,4),
+        const y = str.substr(6,4),
             m = str.substr(3,2),
             d = str.substr(0,2);
         return new Date(y,m - 1,d);

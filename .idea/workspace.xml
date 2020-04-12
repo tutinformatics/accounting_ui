@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/overview/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/new/new.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sales-invoice/overview/overview.html" afterDir="false" />
-    </list>
+    <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -287,7 +280,14 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1586685723626</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Adding invoice works :D">
+      <created>1586704846293</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1586704846293</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +306,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix nginx not starting" />
     <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
     <MESSAGE value="Small tweaks to nginx" />
@@ -331,7 +330,8 @@
     <MESSAGE value="Add some todos + cleanup" />
     <MESSAGE value="Fix incorrect package lock" />
     <MESSAGE value="Added timepicker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added timepicker" />
+    <MESSAGE value="Adding invoice works :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding invoice works :D" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">
@@ -343,11 +343,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586676656128" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586671723216">
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586704846181">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586671723216" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586704846181" />
     <state width="1826" height="265" key="GridCell.Tab.0.bottom" timestamp="1586703967327">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
