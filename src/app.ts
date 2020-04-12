@@ -27,7 +27,9 @@ export class app {
       {route:["purchase-invoice/new"], name: 'purchase-invoice/new', moduleId: PLATFORM.moduleName('pages/purchase-invoice/new/new'), nav: true, title:'arve'},
       {route:["purchase-invoice/overview"], name: 'purchase-invoice/overview', moduleId: PLATFORM.moduleName('pages/purchase-invoice/overview/overview'), nav: true, title:'arve'},
       {route:["sales-invoice/new"], name: 'sales-invoice/new', moduleId: PLATFORM.moduleName('pages/sales-invoice/new/new'), nav: true, title:'arve'},
-      {route:["sales-invoice/overview"], name: 'sales-invoice/overview', moduleId: PLATFORM.moduleName('pages/sales-invoice/overview/overview'), nav: true, title:'arve'}
+      {route:["sales-invoice/overview"], name: 'sales-invoice/overview', moduleId: PLATFORM.moduleName('pages/sales-invoice/overview/overview'), nav: true, title:'arve'},
+      {route:["customer/customers"], name: 'customer/customers', moduleId: PLATFORM.moduleName('pages/customer/customers/customers'), nav: true, title:'customers'},
+      {route:["customer/new"], name: 'customer/new', moduleId: PLATFORM.moduleName('pages/customer/new/new'), nav: true, title:'New Customer'}
     ]);
 
     this.router = router;

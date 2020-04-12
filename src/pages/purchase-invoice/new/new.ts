@@ -1,9 +1,10 @@
 import {Invoice} from "../../../model/invoice";
 import {InvoiceService} from "../../../service/invoice-service";
+import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-framework";
 import {ValidationRules, ValidationControllerFactory, ValidationController} from "aurelia-validation";
 
-@inject(InvoiceService, ValidationControllerFactory, ValidationController)
+@inject(PartyService, InvoiceService, ValidationControllerFactory, ValidationController)
 export class New {
     invoice: Invoice = new Invoice();
     confirmString: String = "Kinnita";
@@ -11,15 +12,23 @@ export class New {
     createdTimeStamp = "";
     valController: ValidationController;
     daysTimeToPay = "";
-    dateEntered = "";
-    dateObject = "";
+    dateEnteredString = "";
+    dueDateString = "";
     pickerOptions = {
         format: 'DD.MM.YYYY'
     };
+    parties = [];
 
-    constructor(private invoiceService: InvoiceService, private controller: ValidationControllerFactory) {
+    constructor(private partyService: PartyService, private invoiceService: InvoiceService, private controller: ValidationControllerFactory) {
         this.valController = controller.createForCurrentScope();
         this.initRules();
+        this.initParties();
+    }
+
+    initParties() {
+        this.partyService.getAll().then(result => {
+            console.log(result)
+        })
     }
 
     initRules() {
@@ -41,11 +50,19 @@ export class New {
 
     createInvoice() {
         // TODO: Validate @Marten
+        if (this.isInputsValidated()) {
+            this.invoiceService.createInvoice(this.invoice)
+                .then(res => console.log(res));
 
-        this.invoiceService.createInvoice(this.invoice)
-            .then(res => console.log(res));
+            this.invoice = new Invoice();
+        }
+    }
 
-        this.invoice = new Invoice();
+    isInputsValidated() {
+        if (this.valController.errors.length > 0 || this.daysTimeToPay.length == 0) {
+            return false
+        }
+        return true
     }
 
     dueDateCreator() {
@@ -60,15 +77,23 @@ export class New {
     }
 
     generateDueDate() {
-        console.log(this.parse(this.invoice.createdStamp.toString()))
+        let date = this.parse(this.dateEnteredString);
+        let dueDate = this.addDays(date, +this.daysTimeToPay);
+        this.invoice.createdStamp = date;
+        this.invoice.dueDate = date;
+        this.dueDateString = dueDate.getDate() + "." + (dueDate.getMonth() + 1) + "." + dueDate.getFullYear();
+    }
+
+    addDays(date, days) {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
     }
 
     parse(str) {
-        console.log(str)
         var y = str.substr(6,4),
             m = str.substr(3,2),
             d = str.substr(0,2);
-        console.log(y, m, d);
         return new Date(y,m - 1,d);
     }
 

@@ -8,7 +8,7 @@ export class Invoice extends Model{
     dueDate: Date = new Date();
     invoiceTypeId: string;
     createdStamp: Date = new Date();
-    referenceNumber: string
+    referenceNumber: string;
     description: string;
     lastUpdatedStamp: Date = new Date();
     currencyUomId: string = 'USD';

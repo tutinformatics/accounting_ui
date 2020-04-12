@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/customer/customers/customers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/customer/new/new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/customer/new/new.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aurelia_project/aurelia.json" beforeDir="false" afterPath="$PROJECT_DIR$/aurelia_project/aurelia.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sidenav/sidenav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/invoice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" afterDir="false" />
     </list>
@@ -56,15 +57,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_ui\src\pages\customer\customers" />
+      <recent name="C:\Users\Marten\IdeaProjects\accounting_ui\src\pages\customer" />
       <recent name="$PROJECT_DIR$/src/service" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\ostuarve" />
-      <recent name="C:\Users\Marten\IdeaProjects\accounting_frontend\src\muugiarve\muugiarve-sisestamine" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,7 +298,13 @@
       <option name="project" value="LOCAL" />
       <updated>1586671723324</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL−00027" summary="Added timepicker">
+      <created>1586685723626</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1586685723626</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +324,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add docker compose for front" />
     <MESSAGE value="Fix nginx not starting" />
     <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
@@ -342,7 +348,8 @@
     <MESSAGE value="Fetch with query params" />
     <MESSAGE value="Add some todos + cleanup" />
     <MESSAGE value="Fix incorrect package lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix incorrect package lock" />
+    <MESSAGE value="Added timepicker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added timepicker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">

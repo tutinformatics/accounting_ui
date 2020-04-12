@@ -1,0 +1,33 @@
+<template>
+
+  <div class="row justify-content-between">
+    <div class="col ml-3 mb-2">
+      <h1>Kliendid</h1>
+    </div>
+    <div class="col ">
+      <a href="/customer/new" class="btn btn-success float-right mr-4"> Lisa uus</a>
+    </div>
+  </div>
+  <div class="row justify-content-start">
+    <div class="col-6">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+          <td width="">Nr.</td>
+          <td width="">Klient</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="party of parties">
+          <td><a href="" class="text-decoration-none ">id</a></td>
+          <td>nimi</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</template>
+
