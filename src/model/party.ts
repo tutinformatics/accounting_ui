@@ -1,4 +1,6 @@
-export class Party {
+import {Model} from "./model";
+
+export class Party extends Model{
     partyId: string;
     statusId: string;
     createdStamp: Date;
@@ -6,4 +8,8 @@ export class Party {
     createdTxStamp: Date;
     lastUpdatedTxStamp: Date;
     lastUpdatedStamp: Date;
+
+    toJson() {
+
+    }
 }

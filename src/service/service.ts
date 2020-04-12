@@ -6,7 +6,7 @@ export class Service {
     constructor(protected http: HttpClient) {
         this.http.configure(config => {
             config
-                .withBaseUrl('/api/generic/v1/entities')
+                .withBaseUrl('/api/generic/v1')
                 .withDefaults({
                     headers: {
                         'Accept': 'application/json',
@@ -41,10 +41,11 @@ export class Service {
     }
 
     post(url: string, data: any) {
+        console.log(json(data));
         return this.http.fetch(url, {
             method: 'post',
             body: json(data)
         })
-            .then(response => response.json());
+            .then(response => console.log(response));
     }
 }

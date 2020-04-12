@@ -12,8 +12,8 @@ export class New {
     valController: ValidationController;
     daysTimeToPay = "";
 
-    constructor(private invoiceService: InvoiceService,private controller: ValidationControllerFactory) {
-        this.valController =  controller.createForCurrentScope();
+    constructor(private invoiceService: InvoiceService, private controller: ValidationControllerFactory) {
+        this.valController = controller.createForCurrentScope();
         this.initRules();
     }
 
@@ -36,8 +36,11 @@ export class New {
 
     createInvoice() {
         // TODO: Validate @Marten
-        this.invoiceService.createInvoice(this.invoice);
-        // TODO: Handle error, etc @Tavo
+
+        this.invoiceService.createInvoice(this.invoice)
+            .then(res => console.log(res));
+
+        this.invoice = new Invoice();
     }
 
     confirm() {
