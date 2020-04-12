@@ -84,7 +84,6 @@
                     <td width="">Konto kirjeldus</td>
                     <td width="">Summa</td>
                     <td width="">Käibemaks</td>
-                    <td width="">Summa KM'ta</td>
                     <td width="">Summa KM'ga</td>
                     <td width="">Käibemaks</td>
                     <td width="7%"></td>
@@ -92,30 +91,26 @@
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
+                <tr repeat.for="row of rows">
+                    <td>${$index + 1}</td>
+                    <td><input type="text" class="form-control" value.bind="row.account"></td>
+                    <td><input type="text" class="form-control" value.bind="row.accountDescription"></td>
+                    <td><input type="text" class="form-control" id="${$index + 0}" value.bind="row.itemValue" change.delegate="processTaxValue($event)"></td>
                     <td>
-                        <select class="form-control">
+                        <select class="form-control" id="${$index + 0 + 0}" value.bind="row.tax" change.delegate="processTaxValue($event)">
                             <option>20%</option>
                             <option>9%</option>
                             <option>0%</option>
                         </select>
                     </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td>${ row.valueWithTax }</td>
+                    <td>${ row.taxValue }</td>
+                    <td><button type="button" id="${$index}" class="btn btn-danger" click.delegate="removeRow($event)">Eemalda</button></td>
                 </tr>
-
-
-
                 </tbody>
             </table>
-            <div class="row justify-content-end mr-4">
-                <button type="button" class="btn btn-success " click.delegate="createInvoice()">New</button>
+            <div class="row justify-content-end mr-3">
+                <button type="button" class="btn btn-success " click.delegate="addRow()">Uus rida</button>
             </div>
 
         </div>

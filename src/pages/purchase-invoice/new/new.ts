@@ -1,4 +1,5 @@
 import {Invoice} from "../../../model/invoice";
+import {AccountRow} from "../../../model/accountRow";
 import {InvoiceService} from "../../../service/invoice-service";
 import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-framework";
@@ -18,11 +19,13 @@ export class New {
         format: 'DD.MM.YYYY'
     };
     parties = [];
+    rows = [new AccountRow()];
 
     constructor(private partyService: PartyService,
                 private invoiceService: InvoiceService,
                 private controller: ValidationControllerFactory)
     {
+
         this.valController = controller.createForCurrentScope();
         this.initRules();
         this.initParties();
@@ -48,6 +51,28 @@ export class New {
             .required()
             .matches(/^[1-9]|[1-9][0-9]$/)
             .on(this);
+    }
+
+    addRow(){
+        this.rows.push(new AccountRow())
+    }
+
+    removeRow(event) {
+        this.rows.splice(event.target.id, 1);
+    }
+
+    processTaxValue(event) {
+        let row = this.rows[event.target.id];
+        if (row.tax == undefined) {
+            row.tax = "20%";
+        }
+        let rowTax = row.tax;
+        rowTax = rowTax.substring(0, rowTax.length - 1);
+        let tax = +rowTax;
+        row.valueWithTax = +row.itemValue + +row.itemValue * 0.01 * tax;
+        row.valueWithTax = +row.valueWithTax.toFixed(2);
+        row.taxValue = row.itemValue * 0.01 * tax;
+        row.taxValue = +row.taxValue.toFixed(2);
     }
 
     createInvoice() {
