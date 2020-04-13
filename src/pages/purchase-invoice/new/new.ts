@@ -5,6 +5,9 @@ import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-framework";
 import {ValidationRules, ValidationControllerFactory, ValidationController} from "aurelia-validation";
 import {BillingAccountService} from "../../../service/billing-account-service";
+import {Party} from "../../../model/party";
+import {BillingAccount} from "../../../model/billing-account";
+import {TimeUtils} from "../../../util/time-utils";
 
 @inject(PartyService, InvoiceService, BillingAccountService, ValidationControllerFactory, ValidationController)
 export class New {
@@ -19,8 +22,8 @@ export class New {
     pickerOptions = {
         format: 'DD.MM.YYYY'
     };
-    parties = [];
-    billingAccounts = [];
+    parties = [Party];
+    billingAccounts = [BillingAccount];
     rows = [new AccountRow()];
 
     constructor(private partyService: PartyService,
@@ -109,24 +112,11 @@ export class New {
     }
 
     generateDueDate() {
-        let date = this.parse(this.dateEnteredString);
-        let dueDate = this.addDays(date, +this.daysTimeToPay);
+        let date = TimeUtils.parse(this.dateEnteredString);
+        let dueDate = TimeUtils.addDays(date, +this.daysTimeToPay);
         this.invoice.createdStamp = date;
         this.invoice.dueDate = date;
         this.dueDateString = dueDate.getDate() + "." + (dueDate.getMonth() + 1) + "." + dueDate.getFullYear();
-    }
-
-    addDays(date, days) {
-        const result = new Date(date);
-        result.setDate(result.getDate() + days);
-        return result;
-    }
-
-    parse(str) {
-        const y = str.substr(6,4),
-            m = str.substr(3,2),
-            d = str.substr(0,2);
-        return new Date(y,m - 1,d);
     }
 
     confirm() {
