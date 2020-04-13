@@ -1,5 +1,5 @@
 import {Invoice} from "../../../model/invoice";
-import {AccountRow} from "../../../model/accountRow";
+import {AccountRow} from "../../../model/account-row";
 import {InvoiceService} from "../../../service/invoice-service";
 import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-framework";

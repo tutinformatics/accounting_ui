@@ -1,6 +1,6 @@
 import {Service} from "./service";
 import {Invoice} from "../model/invoice";
-import {InvoiceItem} from "../model/invoiceItem";
+import {InvoiceItem} from "../model/invoice-item";
 
 export class InvoiceService extends Service {
 

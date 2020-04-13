@@ -1,4 +1,4 @@
-import {InvoiceItem} from "./invoiceItem";
+import {InvoiceItem} from "./invoice-item";
 import {Model} from "./model";
 
 export class Invoice extends Model{

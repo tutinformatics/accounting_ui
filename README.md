@@ -1,8 +1,4 @@
-# `accounting-frontend`
-
-This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
-
-For more information, go to https://aurelia.io/docs/cli/webpack
+# Accounting frontend
 
 Currently deployed at: [http://18.191.26.144/](http://18.191.26.144/).
 
