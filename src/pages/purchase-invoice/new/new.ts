@@ -4,8 +4,9 @@ import {InvoiceService} from "../../../service/invoice-service";
 import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-framework";
 import {ValidationRules, ValidationControllerFactory, ValidationController} from "aurelia-validation";
+import {BillingAccountService} from "../../../service/billing-account-service";
 
-@inject(PartyService, InvoiceService, ValidationControllerFactory, ValidationController)
+@inject(PartyService, InvoiceService, BillingAccountService, ValidationControllerFactory, ValidationController)
 export class New {
     invoice: Invoice = new Invoice();
     confirmString: String = "Kinnita";
@@ -19,23 +20,26 @@ export class New {
         format: 'DD.MM.YYYY'
     };
     parties = [];
+    billingAccounts = [];
     rows = [new AccountRow()];
 
     constructor(private partyService: PartyService,
                 private invoiceService: InvoiceService,
+                private billingAccountService: BillingAccountService,
                 private controller: ValidationControllerFactory)
     {
 
         this.valController = controller.createForCurrentScope();
         this.initRules();
-        this.initParties();
+        this.initData();
     }
 
-    initParties() {
-        this.partyService.getAll().then(result => {
-            console.log(result);
-            this.parties = result;
-        })
+    initData() {
+        this.partyService.getAll()
+            .then(result => this.parties = result);
+
+        this.billingAccountService.getAll()
+            .then(result => this.billingAccounts = result);
     }
 
     initRules() {

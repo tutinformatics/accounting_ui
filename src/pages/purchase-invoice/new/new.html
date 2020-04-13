@@ -93,7 +93,14 @@
                 <tbody>
                 <tr repeat.for="row of rows">
                     <td>${$index + 1}</td>
-                    <td><input type="text" class="form-control" value.bind="row.account"></td>
+                    <td>
+                        <select class="form-control header-input " value.bind="row.account">
+                            <option model.bind="null">Choose...</option>
+                            <option repeat.for="billingAcc of billingAccounts" model.bind="billincAcc.billingAccountId">
+                                ${billingAcc.billingAccountId}
+                            </option>
+                        </select>
+                    </td>
                     <td><input type="text" class="form-control" value.bind="row.accountDescription"></td>
                     <td><input type="text" class="form-control" id="${$index + 0}" value.bind="row.itemValue" change.delegate="processTaxValue($event)"></td>
                     <td>

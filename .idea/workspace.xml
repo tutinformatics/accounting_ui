@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47758b3c-adb1-47d1-96bb-f0611aac81b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/billingAccount.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/billing-account-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/purchase-invoice/new/new.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,8 @@
       <workItem from="1585806309781" duration="13000" />
       <workItem from="1586105274645" duration="8072000" />
       <workItem from="1586671491488" duration="6697000" />
-      <workItem from="1586706226511" duration="321000" />
+      <workItem from="1586706226511" duration="398000" />
+      <workItem from="1586772675385" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -313,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586706047603</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add billing account service">
+      <created>1586706616199</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1586706616200</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +340,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed cors with docker" />
     <MESSAGE value="Run fully in docker" />
     <MESSAGE value="New dev config :D" />
     <MESSAGE value="Add running instructions" />
@@ -357,7 +364,8 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Got select box for parties" />
     <MESSAGE value="Add some stuff to sales invoice as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some stuff to sales invoice as well" />
+    <MESSAGE value="Add billing account service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add billing account service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">
@@ -365,15 +373,15 @@
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
     <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586673211684" />
-    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586676656128">
+    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586706329801">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586676656128" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586706047564">
+    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586706329801" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586706616029">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586706047564" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586706616029" />
     <state width="1826" height="265" key="GridCell.Tab.0.bottom" timestamp="1586706057949">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -398,11 +406,11 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586671603499" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586706049044">
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586706617344">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586706049044" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586706617344" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -419,9 +427,9 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="721" y="185" width="537" height="743" key="git4idea.branch.GitSmartOperationDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171620991" />
-    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog" timestamp="1586671504519">
+    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog" timestamp="1586772710019">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586671504519" />
+    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586772710019" />
   </component>
 </project>
