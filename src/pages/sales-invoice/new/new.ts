@@ -3,8 +3,11 @@ import {Invoice} from "../../../model/invoice";
 import {InvoiceService} from "../../../service/invoice-service";
 import {ValidationController, ValidationControllerFactory, ValidationRules} from "aurelia-validation";
 import {PartyService} from "../../../service/party-service";
+import {Product} from "../../../model/product";
+import {Party} from "../../../model/party";
+import {ProductService} from "../../../service/product-service";
 
-@inject(PartyService, InvoiceService, ValidationControllerFactory, ValidationController)
+@inject(PartyService, InvoiceService, ProductService, ValidationControllerFactory, ValidationController)
 export class New {
 
   invoice: Invoice = new Invoice();
@@ -18,22 +21,26 @@ export class New {
   pickerOptions = {
     format: 'DD.MM.YYYY'
   };
-  parties = [];
+  parties = [Party];
+  products = [Product];
 
   constructor(private partyService: PartyService,
               private invoiceService: InvoiceService,
+              private productService: ProductService,
               private controller: ValidationControllerFactory)
   {
     this.valController = controller.createForCurrentScope();
     this.initRules();
-    this.initParties();
+    this.initData();
   }
 
-  initParties() {
-    this.partyService.getAll().then(result => {
-      console.log(result);
-      this.parties = result;
-    })
+  initData() {
+    this.partyService.getAll()
+        .then(result => this.parties = result);
+
+    this.productService.getAll()
+        .then(result => this.products = result)
+        .then(r => console.log(this.products))
   }
 
   initRules() {

@@ -95,7 +95,14 @@
         <tbody>
         <tr>
           <td>1</td>
-          <td><input type="text" aria-label="First name" class="form-control"></td>
+          <td>
+            <select class="form-control header-input ">
+              <option model.bind="null">Choose...</option>
+              <option repeat.for="product of products" model.bind="product.productId">
+                ${product.productName}
+              </option>
+            </select>
+          </td>
           <td><input type="text" aria-label="First name" class="form-control"></td>
           <td>
             <select class="form-control">
