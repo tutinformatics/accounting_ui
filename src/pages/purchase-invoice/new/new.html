@@ -8,7 +8,6 @@
         </div>
 
         <div class="col ">
-
             <button type="button" class="btn btn-success float-right"  click.delegate="createInvoice()">Salvesta</button>
             <button type="button" class="btn btn-success float-right" click.delegate="confirm()">${confirmString}</button>
         </div>
@@ -25,20 +24,20 @@
                 </div>
 
                 <div class="col-7">
-
-                    <input type="text" class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
-
+                    <select class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
+                        <option model.bind="null">Choose...</option>
+                        <option repeat.for="party of parties" model.bind="party.partyId">
+                            ${party.partyId}
+                        </option>
+                    </select>
                     <input type="text" class="form-control header-input">
-
                     <fieldset disabled>
                         <input type="text" class="form-control header-input">
                     </fieldset>
                 </div>
-
             </div>
 
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-
                 <div class="col-5">
                     <p><label class="form-label">Esitamise kuupäev:</label></p>
                     <p><label class="form-label">Tasumistingimus:</label></p>
@@ -46,20 +45,15 @@
                 </div>
 
                 <div class="col-7">
-
-                    <input type="text" for="inp" class="form-control header-input" value.bind="invoice.createdStamp & validate" >
-
-                    <input type="text" class="form-control header-input" value.bind="daysTimeToPay & validate">
+                    <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
+                    <input type="text" change.delegate="dueDateCreator()" class="form-control header-input" value.bind="daysTimeToPay & validate">
                     <fieldset disabled>
-                        <input type="text" placeholder="" class="form-control header-input disabled" value.bind="invoice.dueDate">
+                        <input type="text" placeholder="" class="form-control header-input disabled" value.bind="dueDateString">
                     </fieldset>
-
-
                 </div>
-
             </div>
-            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
 
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
                 <div class="col-5">
                     <p><label class="form-label">Ostuarve:</label></p>
                     <p><label class="form-label">Viitedokument:</label></p>
@@ -67,21 +61,16 @@
                 </div>
 
                 <div class="col-7">
-
                     <div class="custom-file header-input">
                         <input type="file" class="custom-file-input" id="inputGroupFile01">
                         <label class="custom-file-label" for="inputGroupFile01" aria-describedby="inputGroupFileAddon02">Choose file</label>
                     </div>
-
                     <div class="custom-file header-input">
                         <input type="file" class="custom-file-input" id="inputGroupFile02">
                         <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                     </div>
-
                     <input type="text" aria-label="First name" class="form-control header-input">
-
                 </div>
-
             </div>
         </div>
 
@@ -93,40 +82,42 @@
                     <td width="5%"></td>
                     <td width="">Konto</td>
                     <td width="">Konto kirjeldus</td>
-                    <td width="">Objekt</td>
                     <td width="">Summa</td>
-                    <td width="">Kaibemaks</td>
-                    <td width="">Summa KM`ta</td>
-                    <td width="">Kaibemaks</td>
+                    <td width="">Käibemaks</td>
+                    <td width="">Summa KM'ga</td>
+                    <td width="">Käibemaks</td>
                     <td width="7%"></td>
                 </tr>
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="text" class="form-control"></td>
+                <tr repeat.for="row of rows">
+                    <td>${$index + 1}</td>
                     <td>
-                        <select class="form-control">
+                        <select class="form-control header-input " value.bind="row.account">
+                            <option model.bind="null">Choose...</option>
+                            <option repeat.for="billingAcc of billingAccounts" model.bind="billincAcc.billingAccountId">
+                                ${billingAcc.billingAccountId}
+                            </option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="form-control" value.bind="row.accountDescription"></td>
+                    <td><input type="text" class="form-control" id="${$index + 0}" value.bind="row.itemValue" change.delegate="processTaxValue($event)"></td>
+                    <td>
+                        <select class="form-control" id="${$index + 0 + 0}" value.bind="row.tax" change.delegate="processTaxValue($event)">
                             <option>20%</option>
                             <option>9%</option>
                             <option>0%</option>
                         </select>
                     </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td>${ row.valueWithTax }</td>
+                    <td>${ row.taxValue }</td>
+                    <td><button type="button" id="${$index}" class="btn btn-danger" click.delegate="removeRow($event)">Eemalda</button></td>
                 </tr>
-
-
-
                 </tbody>
             </table>
-            <div class="row justify-content-end mr-4">
-                <button type="button" class="btn btn-success " click.delegate="createInvoice()">New</button>
+            <div class="row justify-content-end mr-3">
+                <button type="button" class="btn btn-success " click.delegate="addRow()">Uus rida</button>
             </div>
 
         </div>

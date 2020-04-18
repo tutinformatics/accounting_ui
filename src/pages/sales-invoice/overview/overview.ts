@@ -1,6 +1,6 @@
 import {inject} from 'aurelia-framework';
 import {InvoiceService} from "../../../service/invoice-service";
-import {TimeConverter} from "../../../util/time-converter";
+import {TimeUtils} from "../../../util/time-utils";
 
 @inject(InvoiceService)
 export class Overview {
@@ -26,7 +26,7 @@ export class Overview {
   }
 
   public convertTime(ms: number) {
-    return TimeConverter.convertDate(ms);
+    return TimeUtils.convertDate(ms);
   }
 
 }

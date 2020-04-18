@@ -1,11 +1,12 @@
 import {Service} from "./service";
+import {Party} from "../model/party";
 
-export class PartyService extends Service{
+export class PartyService extends Service {
     getAll() {
-        return this.get("/Party");
+        return this.get("/entities/Party");
     }
 
-    create(party) {
-        return; // TODO: @Tavo
+    create(party: Party) {
+        return this.post('/entities/Party', party.toJson())
     }
 }

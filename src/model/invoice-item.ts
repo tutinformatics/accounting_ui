@@ -1,6 +1,6 @@
 import {Model} from "./model";
 
-export class Item extends Model{
+export class InvoiceItem extends Model{
     lastUpdatedStamp: Date = new Date();
     amount: number;
     createdTxStamp: Date = new Date();
@@ -10,7 +10,7 @@ export class Item extends Model{
     lastUpdatedTxStamp: Date = new Date();
     invoiceItemSeqId: string;
     uomId: string;
-    invoiceItemTypeId: string;
+    invoiceItemTypeId: string = 'PINV_WE_ITEM'; // TODO: Add types?
     invoiceId: string;
 
     toJson() {

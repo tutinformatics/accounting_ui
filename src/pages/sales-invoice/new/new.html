@@ -2,13 +2,22 @@
 
   <require from="./new.css"></require>
 
-  <h1>Müügiarve sisestamine</h1>
+  <div class="row justify-content-between">
+    <div class="col">
+      <h1>Müügiarve sisestamine</h1>
+    </div>
+
+    <div class="col ">
+      <button type="button" class="btn btn-success float-right"  click.delegate="createInvoice()">Salvesta</button>
+      <button type="button" class="btn btn-success float-right" click.delegate="confirm()">${confirmString}</button>
+    </div>
+  </div>
 
   <form>
     <div class="row justify-content-around">
       <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
         <div class="col-5">
-          <p><label class="form-label">Arvje esitaja:</label></p>
+          <p><label class="form-label">Arve esitaja:</label></p>
           <p><label class="form-label">Arve saaja:</label></p>
           <p><label class="form-label">KOKKU:</label></p>
         </div>
@@ -17,10 +26,15 @@
 
           <input type="text" aria-label="First name" class="form-control header-input">
 
+          <select class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
+            <option model.bind="null">Choose...</option>
+            <option repeat.for="party of parties" model.bind="party.partyId">
+              ${party.partyId}
+            </option>
+          </select>
+          <fieldset disabled>
           <input type="text" aria-label="First name" class="form-control header-input">
-
-          <input type="text" aria-label="First name" class="form-control header-input">
-
+          </fieldset>
         </div>
 
       </div>
@@ -34,13 +48,11 @@
         </div>
 
         <div class="col-7">
-
-          <input type="text" aria-label="First name" class="form-control header-input">
-
-          <input type="text" aria-label="First name" class="form-control header-input">
-
-          <input type="text" aria-label="First name" class="form-control header-input disabled">
-
+          <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
+          <input type="text" change.delegate="dueDateCreator()" class="form-control header-input" value.bind="daysTimeToPay & validate">
+          <fieldset disabled>
+            <input type="text" placeholder="" class="form-control header-input disabled" value.bind="dueDateString">
+          </fieldset>
         </div>
 
       </div>
@@ -48,7 +60,7 @@
 
         <div class="col-5">
           <p><label class="form-label">MT nr.:</label></p>
-          <p><label class="form-label">Muugiagent:</label></p>
+          <p><label class="form-label">Müügiagent:</label></p>
           <p><label class="form-label">Aadress:</label></p>
         </div>
 
@@ -73,9 +85,9 @@
           <td width="5%"></td>
           <td width="">Toode</td>
           <td width="">Kogus</td>
-          <td width="">Kaibemaks</td>
-          <td width="">Summa KM`ta</td>
-          <td width="">Summa KM`ga</td>
+          <td width="">Käibemaks</td>
+          <td width="">Summa KM'ta</td>
+          <td width="">Summa KM'ga</td>
           <td width="7%"></td>
         </tr>
         </thead>
@@ -83,11 +95,17 @@
         <tbody>
         <tr>
           <td>1</td>
-          <td><input type="text" aria-label="First name" class="form-control"></td>
+          <td>
+            <select class="form-control header-input ">
+              <option model.bind="null">Choose...</option>
+              <option repeat.for="product of products" model.bind="product.productId">
+                ${product.productName}
+              </option>
+            </select>
+          </td>
           <td><input type="text" aria-label="First name" class="form-control"></td>
           <td>
             <select class="form-control">
-              <option>Vali kaibemaks</option>
               <option>20%</option>
               <option>9%</option>
               <option>0%</option>
@@ -95,37 +113,13 @@
           </td>
           <td>-</td>
           <td>-</td>
-          <td><button type="button" class="btn btn-danger">Remove</button></td>
+          <td><button type="button" class="btn btn-danger">Eemalda</button></td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td><input type="text" aria-label="First name" class="form-control"></td>
-          <td><input type="text" aria-label="First name" class="form-control"></td>
-          <td>
-            <select class="form-control">
-              <option>Vali kaibemaks</option>
-              <option>20%</option>
-              <option>9%</option>
-              <option>0%</option>
-            </select>
-          </td>
-          <td>-</td>
-          <td>-</td>
-          <td><button type="button" class="btn btn-danger">Remove</button></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button type="button" class="btn btn-success">New</button></td>
-        </tr>
-
         </tbody>
       </table>
-
+      <div class="row justify-content-end mr-3">
+        <button type="button" class="btn btn-success " click.delegate="createInvoice()">Lisa rida</button>
+      </div>
     </div>
 
   </form>

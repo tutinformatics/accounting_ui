@@ -7,7 +7,8 @@ export function configure(aurelia: Aurelia) {
     aurelia.use
         .standardConfiguration()
         .feature(PLATFORM.moduleName('resources/index'))
-        .plugin(PLATFORM.moduleName('aurelia-validation'));
+        .plugin(PLATFORM.moduleName('aurelia-validation'))
+        .plugin(PLATFORM.moduleName('aurelia-bootstrap-datetimepicker'));
 
     aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 
