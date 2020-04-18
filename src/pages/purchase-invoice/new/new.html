@@ -2,7 +2,18 @@
 
     <require from="./new.css"></require>
 
-    <h1>Ostuarve sisestamine</h1>
+    <div class="row justify-content-between">
+        <div class="col">
+            <h1>Ostuarve sisestamine</h1>
+        </div>
+
+        <div class="col ">
+
+            <button type="button" class="btn btn-success float-right"  click.delegate="createInvoice()">Salvesta</button>
+            <button type="button" class="btn btn-success float-right" click.delegate="confirm()">${confirmString}</button>
+        </div>
+    </div>
+
 
     <form>
         <div class="row justify-content-around">
@@ -15,12 +26,13 @@
 
                 <div class="col-7">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                    <input type="text" class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                    <input type="text" class="form-control header-input">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
-
+                    <fieldset disabled>
+                        <input type="text" class="form-control header-input">
+                    </fieldset>
                 </div>
 
             </div>
@@ -35,11 +47,13 @@
 
                 <div class="col-7">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                    <input type="text" for="inp" class="form-control header-input" value.bind="invoice.createdStamp & validate" >
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                    <input type="text" class="form-control header-input" value.bind="daysTimeToPay & validate">
+                    <fieldset disabled>
+                        <input type="text" placeholder="" class="form-control header-input disabled" value.bind="invoice.dueDate">
+                    </fieldset>
 
-                    <input type="text" aria-label="First name" class="form-control header-input disabled">
 
                 </div>
 
@@ -79,6 +93,8 @@
                     <td width="5%"></td>
                     <td width="">Konto</td>
                     <td width="">Konto kirjeldus</td>
+                    <td width="">Objekt</td>
+                    <td width="">Summa</td>
                     <td width="">Kaibemaks</td>
                     <td width="">Summa KM`ta</td>
                     <td width="">Kaibemaks</td>
@@ -89,11 +105,12 @@
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="text" class="form-control"></td>
                     <td>
                         <select class="form-control">
-                            <option>Vali kaibemaks</option>
                             <option>20%</option>
                             <option>9%</option>
                             <option>0%</option>
@@ -103,34 +120,14 @@
                     <td>-</td>
                     <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Vali kaibemaks</option>
-                            <option>20%</option>
-                            <option>9%</option>
-                            <option>0%</option>
-                        </select>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button type="button" class="btn btn-success">New</button></td>
-                </tr>
+
+
 
                 </tbody>
             </table>
+            <div class="row justify-content-end mr-4">
+                <button type="button" class="btn btn-success " click.delegate="createInvoice()">New</button>
+            </div>
 
         </div>
 

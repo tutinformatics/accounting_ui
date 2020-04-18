@@ -1,6 +1,6 @@
 import { autoinject } from "aurelia-framework";
 import {PLATFORM} from 'aurelia-pal';
-import { Service } from "./test/service";
+import { Service } from "./service/service";
 import {RouterConfiguration, Router} from 'aurelia-router';
 import 'bootstrap';
 
@@ -19,12 +19,12 @@ export class app {
     config.map([
       {route:[ "login"], name: 'login', moduleId: PLATFORM.moduleName('pages/login/login'), nav: false, title:'Login'},
       {route:[ "", "home"], name: 'home', moduleId: PLATFORM.moduleName('pages/home/home'), nav: false, title:'Home'},
-      //{route:["order/overview"], name: 'order/overview', moduleId: PLATFORM.moduleName('pages/order/overview/overview'), nav: true, title:'Order'},
+      {route:["order/overview"], name: 'order/overview', moduleId: PLATFORM.moduleName('pages/order/overview/overview'), nav: true, title:'Order'},
       {route:["order/new"], name: 'order/new', moduleId: PLATFORM.moduleName('pages/order/new/new'), nav: true, title:'Order'},
-      {route:["incoming-invoice/new"], name: 'incoming-invoice/new', moduleId: PLATFORM.moduleName('pages/incoming-invoice/new/new'), nav: true, title:'arve'},
-      {route:["incoming-invoice/overview"], name: 'incoming-invoice/overview', moduleId: PLATFORM.moduleName('pages/incoming-invoice/overview/overview'), nav: true, title:'arve'},
-      {route:["outgoing-invoice/new"], name: 'outgoing-invoice/new', moduleId: PLATFORM.moduleName('pages/outgoing-invoice/new/new'), nav: true, title:'arve'},
-      {route:["outgoing-invoice/overview"], name: 'outgoing-invoice/overview', moduleId: PLATFORM.moduleName('pages/outgoing-invoice/overview/overview'), nav: true, title:'arve'}
+      {route:["purchase-invoice/new"], name: 'purchase-invoice/new', moduleId: PLATFORM.moduleName('pages/purchase-invoice/new/new'), nav: true, title:'arve'},
+      {route:["purchase-invoice/overview"], name: 'purchase-invoice/overview', moduleId: PLATFORM.moduleName('pages/purchase-invoice/overview/overview'), nav: true, title:'arve'},
+      {route:["sales-invoice/new"], name: 'sales-invoice/new', moduleId: PLATFORM.moduleName('pages/sales-invoice/new/new'), nav: true, title:'arve'},
+      {route:["sales-invoice/overview"], name: 'sales-invoice/overview', moduleId: PLATFORM.moduleName('pages/sales-invoice/overview/overview'), nav: true, title:'arve'}
     ]);
 
     this.router = router;

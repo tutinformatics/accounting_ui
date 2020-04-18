@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="Remove obsolete deploy options">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="0d3fac55-6489-4666-be22-faa0100490c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/invoice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/invoice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/item.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/item.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/party.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/party.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/invoice-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/invoice-service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -34,7 +38,6 @@
   <component name="ProjectId" id="1Z1SLbx07S5buBo0isnGqgO2SpK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -44,7 +47,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/proxy" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -58,18 +61,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/proxy" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -106,6 +97,7 @@
       <workItem from="1585419881323" duration="2329000" />
       <workItem from="1585806309781" duration="13000" />
       <workItem from="1586105274645" duration="8072000" />
+      <workItem from="1586671491488" duration="12179000" />
     </task>
     <task id="LOCAL-00001" summary="Move frontend to docker for easier nginx management">
       <created>1584006004551</created>
@@ -253,28 +245,67 @@
       <option name="project" value="LOCAL" />
       <updated>1586172107667</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Move to bigdata backend api">
+      <created>1586613224361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586613224361</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Format time">
+      <created>1586614687850</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1586614687850</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fetch with query params">
+      <created>1586615251677</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1586615251677</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add some todos + cleanup">
+      <created>1586615682215</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586615682215</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fix incorrect package lock">
+      <created>1586671723324</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1586671723324</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Mess with services">
+      <created>1586678398165</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1586678398165</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Move frontend to docker for easier nginx management" />
-    <MESSAGE value="Add docker compose for front" />
     <MESSAGE value="Fix nginx not starting" />
     <MESSAGE value="Move everything 1 folder up" />
     <MESSAGE value="Fix wrong port" />
@@ -294,19 +325,29 @@
     <MESSAGE value="Add missing fields" />
     <MESSAGE value="Fix build failing" />
     <MESSAGE value="Remove obsolete deploy options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove obsolete deploy options" />
+    <MESSAGE value="Move to bigdata backend api" />
+    <MESSAGE value="Format time" />
+    <MESSAGE value="Fetch with query params" />
+    <MESSAGE value="Add some todos + cleanup" />
+    <MESSAGE value="Fix incorrect package lock" />
+    <MESSAGE value="Mess with services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mess with services" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586110299502">
+    <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586673211684">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="675" y="357" width="643" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584089580372" />
-    <state x="677" y="357" width="618" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586110299502" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2" timestamp="1586172486143">
+    <state x="677" y="357" width="654" height="423" key="#com.intellij.fileTypes.FileTypeChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586673211684" />
+    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586683835648">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="803" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1586683835648" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2" timestamp="1586678398099">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="537" y="149" width="903" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120291815" />
-    <state x="539" y="91" width="879" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586172486143" />
+    <state x="539" y="91" width="1000" height="989" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1586678398099" />
     <state width="1827" height="252" key="GridCell.Tab.0.bottom" timestamp="1585409098062">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -327,15 +368,15 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="701" y="261" width="578" height="591" key="MultipleFileMergeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171256433" />
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586108641896">
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1586671603499">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586108641896" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586172495177">
+    <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1586671603499" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1586678405320">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1584120294550" />
-    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586172495177" />
+    <state x="590" y="288" width="800" height="543" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586678405320" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1584094321552">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -344,13 +385,17 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="761" y="468" width="467" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1586171250652" />
+    <state x="678" y="278" width="634" height="550" key="find.popup" timestamp="1586611390744">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="678" y="278" width="634" height="550" key="find.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1586611390744" />
     <state x="721" y="185" width="537" height="743" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586171620991">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="721" y="185" width="537" height="743" key="git4idea.branch.GitSmartOperationDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171620991" />
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog" timestamp="1586171235302">
+    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog" timestamp="1586671504519">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="633" y="329" width="713" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586171235302" />
+    <state x="633" y="329" width="756" height="456" key="git4idea.merge.GitPullDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1586671504519" />
   </component>
 </project>

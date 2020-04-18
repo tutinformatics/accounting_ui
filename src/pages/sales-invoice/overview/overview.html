@@ -11,12 +11,12 @@
   <table class="table table-striped">
     <thead class="thead-dark">
     <tr>
-      <td width="5%">Nr.</td>
+      <td width="5%" click.delegate="sortBy('invoiceId')">Nr.</td>
       <td width="5%">Kin</td>
-      <td width="8%">Arve kp.</td>
+      <td width="8%" click.delegate="sortBy('invoiceDate')">Arve kp.</td>
       <td width="8%">MT. nr.</td>
       <td width="8%">Agent</td>
-      <td width="34%">Tellija</td>
+      <td width="34%" click.delegate="sortBy('partyId')">Tellija</td>
       <td width="8%">Kokku</td>
       <td width="5%">Val.</td>
     </tr>
@@ -26,7 +26,7 @@
     <tr repeat.for="invoice of invoices">
       <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
       <td>todo</td>
-      <td>${invoice.invoiceDate}</td>
+      <td>${convertTime(invoice.invoiceDate)}</td>
       <td>todo</td>
       <td>${invoice.partyId}</td>
       <td>todo</td>

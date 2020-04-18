@@ -27,8 +27,8 @@
         <tr repeat.for="invoice of invoices">
             <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
             <td>todo</td>
-            <td>${invoice.createdTxStamp}</td>
-            <td>${invoice.dueDate}</td>
+            <td>${convertTime(invoice.createdTxStamp)}</td>
+            <td>${convertTime(invoice.dueDate)}</td>
             <td>todo</td>
             <td>${invoice.partyIdFrom}</td>
             <td>todo</td>
