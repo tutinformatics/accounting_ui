@@ -9,6 +9,7 @@ export class Product extends Model{
     description: string;
     internalName: string;
     lastUpdatedStamp: Date = new Date();
+    price: number;
     productTypeId: string = "ASSET_USAGE" // TODO: dynamic
 
     toJson() {
@@ -22,7 +23,8 @@ export class Product extends Model{
             internalName: this.internalName,
             lastUpdatedStamp: this.lastUpdatedStamp.getTime(),
             productTypeId: this.productTypeId,
-            _ENTITY_NAME_: 'Product',
+            price: this.price,
+        _ENTITY_NAME_: 'Product',
         }
     }
 }

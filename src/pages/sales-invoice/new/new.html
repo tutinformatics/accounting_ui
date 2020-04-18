@@ -33,7 +33,7 @@
             </option>
           </select>
           <fieldset disabled>
-          <input type="text" aria-label="First name" class="form-control header-input">
+            <input type="text" aria-label="First name" class="form-control header-input" value.bind="temporary.totalValue">
           </fieldset>
         </div>
 
@@ -43,16 +43,17 @@
 
         <div class="col-5">
           <p><label class="form-label">Esitamise kuupäev:</label></p>
-          <p><label class="form-label">Tasumistingimus:</label></p>
+          <p><label class="form-label">Täitmise alustamine:</label></p>
           <p><label class="form-label">Tähtpäev:</label></p>
         </div>
 
         <div class="col-7">
+
           <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
-          <input type="text" change.delegate="dueDateCreator()" class="form-control header-input" value.bind="daysTimeToPay & validate">
-          <fieldset disabled>
-            <input type="text" placeholder="" class="form-control header-input disabled" value.bind="dueDateString">
-          </fieldset>
+
+          <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
+
+          <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
         </div>
 
       </div>
@@ -70,8 +71,9 @@
 
           <input type="text" aria-label="First name" class="form-control header-input">
 
-          <input type="text" aria-label="First name" class="form-control header-input">
-
+          <fieldset disabled>
+            <input type="text" aria-label="First name" class="form-control header-input">
+          </fieldset>
         </div>
 
       </div>
@@ -82,10 +84,16 @@
       <table class="table">
         <thead>
         <tr>
+          <!-- konto - kontokirjeldus - artikkel aka toode - kogus - summa (arvutab toode.hind * kogus, ei saa muuta), sama asi aga muudetav, allahindlus%, summa kmga, summa kmta-->
           <td width="5%"></td>
-          <td width="">Toode</td>
-          <td width="">Kogus</td>
-          <td width="">Käibemaks</td>
+          <td width="10%">Konto</td>
+          <td width="10%">Konto kirjeldus</td>
+          <td width="10%">Toode</td>
+          <td width="8%">Kogus</td>
+          <td width="">Summa</td>
+          <td width="8%">Müügisumma</td>
+          <td width="8%">Allahindlus%</td>
+          <td width="">KM</td>
           <td width="">Summa KM'ta</td>
           <td width="">Summa KM'ga</td>
           <td width="7%"></td>
@@ -93,32 +101,38 @@
         </thead>
 
         <tbody>
-        <tr>
-          <td>1</td>
+        <tr repeat.for="row of rows">
+          <td>${$index + 1}</td>
           <td>
-            <select class="form-control header-input ">
+            <select class="form-control header-input " value.bind="row.account">
               <option model.bind="null">Choose...</option>
-              <option repeat.for="product of products" model.bind="product.productId">
+              <option repeat.for="billingAcc of billingAccounts" model.bind="billincAcc.billingAccountId">
+                ${billingAcc.billingAccountId}
+              </option>
+            </select>
+          </td>
+          <td><input type="text" class="form-control" value.bind="row.accountDescription"></td>
+          <td>
+            <select class="form-control header-input" value.bind="row.purchaseProduct">
+              <option model.bind="null">Choose...</option>
+              <option repeat.for="product of products" model.bind="product">
                 ${product.productName}
               </option>
             </select>
           </td>
-          <td><input type="text" aria-label="First name" class="form-control"></td>
-          <td>
-            <select class="form-control">
-              <option>20%</option>
-              <option>9%</option>
-              <option>0%</option>
-            </select>
-          </td>
-          <td>-</td>
-          <td>-</td>
-          <td><button type="button" class="btn btn-danger">Eemalda</button></td>
+          <td><input type="text" aria-label="First name" class="form-control" value.bind="row.itemAmount" id="${ $index }" change.delegate="calcPrice($event)"></td>
+          <td>${  row.purchaseProduct.price * row.itemAmount }</td>
+          <td><input type="text" id="${$index }" value.bind="row.withDiscount" aria-label="First name" class="form-control" change.delegate="calcDiscount($event)" model.bind="row.withDiscount"></td>
+          <td><input type="text" id="${ $index}" aria-label="First name" class="form-control" value.bind="row.discount" model.bind="row.discount" change.delegate="calcPrice($event)"></td>
+          <td>${ row.taxValue }</td>
+          <td>${ row.withDiscount }</td>
+          <td>${ row.valueWithTax }</td>
+          <td><button type="button" id="${$index}" class="btn btn-danger" click.delegate="removeRow($event)">Eemalda</button></td>
         </tr>
         </tbody>
       </table>
       <div class="row justify-content-end mr-3">
-        <button type="button" class="btn btn-success " click.delegate="createInvoice()">Lisa rida</button>
+        <button type="button" class="btn btn-success " click.delegate="addRow()">Uus rida</button>
       </div>
     </div>
 

@@ -1,4 +1,5 @@
 import {Invoice} from "../../../model/invoice";
+import {Product} from "../../../model/product";
 import {AccountRow} from "../../../model/account-row";
 import {InvoiceService} from "../../../service/invoice-service";
 import {PartyService} from "../../../service/party-service";
@@ -8,6 +9,7 @@ import {BillingAccountService} from "../../../service/billing-account-service";
 import {Party} from "../../../model/party";
 import {BillingAccount} from "../../../model/billing-account";
 import {TimeUtils} from "../../../util/time-utils";
+import {Temporary} from "../../../model/temporary";
 
 @inject(PartyService, InvoiceService, BillingAccountService, ValidationControllerFactory, ValidationController)
 export class New {
@@ -25,6 +27,9 @@ export class New {
     parties = [Party];
     billingAccounts = [BillingAccount];
     rows = [new AccountRow()];
+    product: Product;
+    products = [];
+    temporary: Temporary = new Temporary();
 
     constructor(private partyService: PartyService,
                 private invoiceService: InvoiceService,
@@ -35,6 +40,18 @@ export class New {
         this.valController = controller.createForCurrentScope();
         this.initRules();
         this.initData();
+
+        this.product = new Product();
+        this.product.productId = "Test50";
+        this.product.createdStamp = new Date("30.03.2020");
+        this.product.productName =  "Test";
+        this.product.createdTxStamp = new Date("30.03.2020");
+        this.product.lastUpdatedTxStamp = new Date("30.03.2020");
+        this.product.description = "Test50";
+        this.product.internalName = "Test50";
+        this.product.lastUpdatedStamp = new Date("30.03.2020");
+        this.product. price = 50;
+        this.products.push(this.product);
     }
 
     initData() {
@@ -66,6 +83,8 @@ export class New {
 
     removeRow(event) {
         this.rows.splice(event.target.id, 1);
+        this.processTotalTax();
+        this.processTotalValue();
     }
 
     processTaxValue(event) {
@@ -73,13 +92,34 @@ export class New {
         if (row.tax == undefined) {
             row.tax = "20%";
         }
+        if (row.itemAmount == undefined) {
+            row.itemAmount = 1;
+        }
         let rowTax = row.tax;
         rowTax = rowTax.substring(0, rowTax.length - 1);
         let tax = +rowTax;
-        row.valueWithTax = +row.itemValue + +row.itemValue * 0.01 * tax;
-        row.valueWithTax = +row.valueWithTax.toFixed(2);
-        row.taxValue = row.itemValue * 0.01 * tax;
+        row.taxValue = (row.purchaseProduct.price * +row.itemAmount) * 0.01 * tax;
         row.taxValue = +row.taxValue.toFixed(2);
+        row.valueWithTax = (+row.purchaseProduct.price * +row.itemAmount) + +row.taxValue;
+        row.valueWithTax = +row.valueWithTax.toFixed(2);
+        this.processTotalTax();
+        this.processTotalValue();
+    }
+
+    processTotalTax() {
+        var total = 0;
+        for (let r of this.rows) {
+            total += r.taxValue;
+        }
+        this.temporary.totalTax = total;
+    }
+
+    processTotalValue() {
+        let total = 0;
+        for (let r of this.rows) {
+            total += r.valueWithTax;
+        }
+        this.temporary.totalValue = total;
     }
 
     createInvoice() {
