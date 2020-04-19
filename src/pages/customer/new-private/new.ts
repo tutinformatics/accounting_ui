@@ -2,11 +2,15 @@ import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-dependency-injection";
 import {ValidationRules, ValidationControllerFactory, ValidationController} from "aurelia-validation";
 import {Party} from "../../../model/party";
+import {PartyAndPerson} from "../../../model/party-and-person";
+import {PartyAndContactMech} from "../../../model/party-and-contact-mech";
 
 @inject(PartyService, ValidationControllerFactory, ValidationController)
 export class New {
 
     party: Party = new Party();
+    partyAndPerson = new PartyAndPerson();
+    partyAndContactMech = new PartyAndContactMech();
     controller = null;
 
     // TODO Tavo - attach thosefields to correct model
@@ -44,14 +48,13 @@ export class New {
             // TODO Tavo - call correct service function
             this.party.partyTypeId =  "PERSON"
             this.partyService.create(this.party).then(res => {
-               console.log(res)
+               console.log('a', res)
             });
-            this.party = new Party();
         }
     }
 
     isValidated() {
-        if (this.controller.errors.length > 0 || this.party.partyId == undefined) {
+        if (this.controller.errors.length > 0) {
             return false
         }
         return true

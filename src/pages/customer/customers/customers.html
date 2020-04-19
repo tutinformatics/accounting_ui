@@ -21,20 +21,20 @@
               <td width="">Telefon</td>
               <td width="">Aadress</td>
               <td width="">Sugu</td>
-              <td width="">Vanus</td>
+              <td width="">Sunni aeg</td>
             </tr>
             </thead>
 
             <tbody>
             <tr repeat.for="party of parties">
               <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
-              <td>${convertTime(party.createdStamp)}</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>${party.__partyAndPerson.firstName}</td>
+              <td>${party.__partyAndPerson.lastName}</td>
+              <td>${party.__partyAndContactMech.infoString}</td>
+              <td>${party.__partyAndContactMech.tnContactNumber}</td>
+              <td>${party.__partyAndContactMech.paAddress1}</td>
+              <td>${party.__partyAndPerson.gender}</td>
+              <td>${party.__partyAndPerson.birthDate}</td>
             </tr>
             </tbody>
           </table>
