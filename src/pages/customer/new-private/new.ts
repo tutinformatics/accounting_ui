@@ -13,21 +13,6 @@ export class New {
     partyAndContactMech = new PartyAndContactMech();
     controller = null;
 
-    // TODO Tavo - attach thosefields to correct model
-    id: number;
-    name: String = "";
-    firstName: String = "";
-    lastName: String = "";
-    email: String = "";
-    phone: number;
-    age: number;
-    gender: string;
-    address: String = "";
-    city: String = "";
-    country: String = "";
-    postalCode: number;
-    type: String = "private";
-
 
     constructor(private partyService: PartyService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
@@ -45,10 +30,9 @@ export class New {
 
     save() {
         if (this.isValidated()) {
-            // TODO Tavo - call correct service function
             this.party.partyTypeId =  "PERSON"
             this.partyService.create(this.party).then(res => {
-               console.log('a', res)
+               console.log('a', res) // TODO: save relations
             });
         }
     }
