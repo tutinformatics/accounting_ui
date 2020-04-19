@@ -42,9 +42,10 @@ export class New {
     save() {
         if (this.isValidated()) {
             // TODO Tavo - call correct service function
-            //this.partyService.create(this.party).then(res => {
-            //    console.log(res)
-            //});
+            this.party.partyTypeId =  "PERSON"
+            this.partyService.create(this.party).then(res => {
+               console.log(res)
+            });
             this.party = new Party();
         }
     }

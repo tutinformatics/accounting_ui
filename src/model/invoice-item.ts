@@ -12,21 +12,5 @@ export class InvoiceItem extends Model{
     uomId: string;
     invoiceItemTypeId: string = 'PINV_WE_ITEM'; // TODO: Add types?
     invoiceId: string;
-
-    toJson() {
-        return {
-            lastUpdatedStamp: this.lastUpdatedStamp.getTime(),
-            amount: this.amount,
-            createdTxStamp: this.createdTxStamp.getTime(),
-            createdStamp: this.createdStamp.getTime(),
-            taxableFlag: this.taxableFlag,
-            description: this.description,
-            lastUpdatedTxStamp: this.lastUpdatedTxStamp.getTime(),
-            invoiceItemSeqId: this.invoiceItemSeqId,
-            uomId: this.uomId,
-            invoiceItemTypeId: this.invoiceItemTypeId,
-            invoiceId: this.invoiceId,
-            _ENTITY_NAME_: 'InvoiceItem'
-        }
-    }
+    _ENTITY_NAME_= 'InvoiceItem';
 }
