@@ -1,0 +1,40 @@
+<template>
+
+    <div class="row justify-content-center">
+
+        <div class="col-8 row  shadow-lg p-5">
+            <div class="col  mb-4">
+                <h1>Tooted</h1>
+            </div>
+            <div class="col-3 row justify-content-between">
+
+                <div class="col ">
+                    <a href="/item/new" class="btn btn-success float-right mr-4"> Lisa uus</a>
+                </div>
+            </div>
+            <div class="col-9 row justify-content-start">
+
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                        <tr>
+                            <td width="">Nr.</td>
+                            <td width="">Toode</td>
+                            <td width="">Hind</td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr repeat.for="party of parties">
+                            <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
+                            <td>${convertTime(party.createdStamp)}</td>
+                            <td>${convertTime(party.createdStamp)}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</template>

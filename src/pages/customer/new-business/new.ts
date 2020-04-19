@@ -9,6 +9,19 @@ export class New {
     party: Party = new Party();
     controller = null;
 
+    // TODO Tavo - attach thosefields to correct model
+    id: number;
+    name: String = "";
+    firstName: String = "";
+    lastName: String = "";
+    email: String = "";
+    phone: number;
+    address: String = "";
+    city: String = "";
+    country: String = "";
+    postalCode: number;
+    type: String = "business";
+
 
     constructor(private partyService: PartyService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
@@ -16,6 +29,7 @@ export class New {
     }
 
     initRules() {
+        // TODO Marten/Kapa - add more validation rules when all fields are attached to model
         ValidationRules
             .ensure("partyId")
             .required()
@@ -24,9 +38,10 @@ export class New {
 
     save() {
         if (this.isValidated()) {
-            this.partyService.create(this.party).then(res => {
-                console.log(res)
-            });
+            // TODO Tavo - call correct service function
+            //this.partyService.create(this.party).then(res => {
+            //    console.log(res)
+            //});
             this.party = new Party();
         }
     }

@@ -1,0 +1,81 @@
+<template>
+
+    <div class="row justify-content-center ">
+
+        <div class="col-5 shadow-lg p-5">
+
+            <h1 class="mb-5">Uus eraklient</h1>
+
+
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div>
+                        <label class="mb-3">Eesnimi:</label>
+                        <input type="text" class="form-control mb-2 w-100" value.bind="firstName & validate">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="mb-3">Perekonnanimi:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="lastName & validate">
+                </div>
+                <div class="col-6">
+                    <div>
+                        <label class="mb-3">Email:</label>
+                        <input type="text" class="form-control mb-2 w-100" value.bind="email & validate">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="mb-3">Telefon:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="phone & validate">
+                </div>
+                <div class="col-6">
+                    <div>
+                        <label class="mb-3">Sugu:</label>
+                        <input type="text" class="form-control mb-2 w-100" value.bind="gender & validate">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="mb-3">Vanus:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="age & validate">
+                </div>
+                <div class="col-6">
+                    <label class="mb-3">Aadress:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="address & validate">
+                </div>
+                <div class="col-6">
+                    <label class="mb-3">Linn:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="city & validate">
+                </div>
+                <div class="col-6">
+                    <label class="mb-3">Riik/Regioon:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="country & validate">
+                </div>
+                <div class="col-6">
+                    <label class="mb-3">Postiindeks:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="postalCode & validate">
+                </div>
+                <div class="col-10 row justify-content-center mt-4">
+                    <button click.delegate="save()" class="btn btn-success w-100 float-right mt-5">Lisa</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--
+    <div class="row justify-content-start mt-4">
+        <div class="col-2">
+            <label class="mb-4">Kliendi Id Ehk nimi praegu</label><br>
+
+        </div>
+        <div class="col-2">
+            <input type="text" class="form-control mb-2" value.bind="party.partyId & validate">
+
+        </div>
+    </div>
+
+    -->
+
+</template>
