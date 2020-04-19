@@ -1,22 +1,15 @@
-import {PartyService} from "../../../service/party-service";
 import {inject} from "aurelia-dependency-injection";
-import {ValidationRules, ValidationControllerFactory, ValidationController} from "aurelia-validation";
-import {Party} from "../../../model/party";
+import {ValidationController, ValidationControllerFactory} from "aurelia-validation";
+import {Product} from "../../../model/product";
+import {ProductService} from "../../../service/product-service";
 
-@inject(PartyService, ValidationControllerFactory, ValidationController)
+@inject(ProductService, ValidationControllerFactory, ValidationController)
 export class New {
 
-    // TODO Tavo - Wrong model
-    // party: Party = new Party();
+    product = new Product();
     controller = null;
 
-    // TODO Tavo - attach those fields to correct model
-    id: number;
-    name: String = "";
-    price: number;
-
-
-    constructor(private partyService: PartyService, validationControllerFactory) {
+    constructor(private productService: ProductService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
         this.initRules()
     }
@@ -31,11 +24,8 @@ export class New {
 
     save() {
         if (this.isValidated()) {
-            // TODO Tavo - attach fields to correct models and call correct function from service
-            //this.partyService.create(this.party).then(res => {
-            //    console.log(res)
-            //});
-            //this.party = new Party();
+            this.productService.create(this.product)
+                .then(() => this.product = new Product())
         }
     }
 

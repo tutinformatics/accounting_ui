@@ -47,7 +47,7 @@ export class New {
     this.product.description = "Test50";
     this.product.internalName = "Test50";
     this.product.lastUpdatedStamp = new Date("30.03.2020");
-    this.product. price = 50;
+    this.product.priceDetailText = 50;
     this.products.push(this.product);
 
   }
@@ -86,14 +86,14 @@ export class New {
 
   calcPrice(event) {
     let row = this.rows[event.target.id];
-    row.withDiscount = (row.purchaseProduct.price * row.itemAmount) - (row.purchaseProduct.price * row.itemAmount) * 0.01 * row.discount;
+    row.withDiscount = (row.purchaseProduct.priceDetailText * row.itemAmount) - (row.purchaseProduct.priceDetailText * row.itemAmount) * 0.01 * row.discount;
     row.withDiscount = +row.withDiscount.toFixed(2);
     this.calcTax(row);
   }
 
   calcDiscount(event) {
     let row = this.rows[event.target.id];
-    row.discount = 100 - (row.withDiscount / (row.purchaseProduct.price * row.itemAmount) * 100);
+    row.discount = 100 - (row.withDiscount / (row.purchaseProduct.priceDetailText * row.itemAmount) * 100);
     row.discount = +row.discount.toFixed(2);
     this.calcTax(row);
   }

@@ -9,7 +9,7 @@ export class Product extends Model {
     description: string;
     internalName: string;
     lastUpdatedStamp: Date = new Date();
-    price: number;
+    priceDetailText: number;
     productTypeId: string = "ASSET_USAGE" // TODO: dynamic
     _ENTITY_NAME_ = 'Product'
 }

@@ -24,10 +24,10 @@
                         </thead>
 
                         <tbody>
-                        <tr repeat.for="party of parties">
-                            <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
-                            <td>${convertTime(party.createdStamp)}</td>
-                            <td>${convertTime(party.createdStamp)}</td>
+                        <tr repeat.for="product of products">
+                            <td><a href="" class="text-decoration-none ">${product.productId}</a></td>
+                            <td>${product.productName}</td>
+                            <td>${product.priceDetailText}</td>
                         </tr>
                         </tbody>
                     </table>

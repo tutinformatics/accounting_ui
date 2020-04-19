@@ -50,7 +50,7 @@ export class New {
         this.product.description = "Test50";
         this.product.internalName = "Test50";
         this.product.lastUpdatedStamp = new Date("30.03.2020");
-        this.product. price = 50;
+        this.product.priceDetailText = 50;
         this.products.push(this.product);
     }
 
@@ -98,9 +98,9 @@ export class New {
         let rowTax = row.tax;
         rowTax = rowTax.substring(0, rowTax.length - 1);
         let tax = +rowTax;
-        row.taxValue = (row.purchaseProduct.price * +row.itemAmount) * 0.01 * tax;
+        row.taxValue = (row.purchaseProduct.priceDetailText * +row.itemAmount) * 0.01 * tax;
         row.taxValue = +row.taxValue.toFixed(2);
-        row.valueWithTax = (+row.purchaseProduct.price * +row.itemAmount) + +row.taxValue;
+        row.valueWithTax = (+row.purchaseProduct.priceDetailText * +row.itemAmount) + +row.taxValue;
         row.valueWithTax = +row.valueWithTax.toFixed(2);
         this.processTotalTax();
         this.processTotalValue();
