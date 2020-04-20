@@ -82,6 +82,7 @@ export class New {
 
   removeRow(event) {
     this.rows.splice(event.target.id, 1);
+    this.calcTotal();
   }
 
   calcPrice(event) {

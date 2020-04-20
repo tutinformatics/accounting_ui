@@ -121,7 +121,7 @@
             </select>
           </td>
           <td><input type="text" aria-label="First name" class="form-control" value.bind="row.itemAmount" id="${ $index }" change.delegate="calcPrice($event)"></td>
-          <td>${  row.purchaseProduct.price * row.itemAmount }</td>
+          <td>${  row.purchaseProduct.priceDetailText * row.itemAmount }</td>
           <td><input type="text" id="${$index }" value.bind="row.withDiscount" aria-label="First name" class="form-control" change.delegate="calcDiscount($event)" model.bind="row.withDiscount"></td>
           <td><input type="text" id="${ $index}" aria-label="First name" class="form-control" value.bind="row.discount" model.bind="row.discount" change.delegate="calcPrice($event)"></td>
           <td>${ row.taxValue }</td>
