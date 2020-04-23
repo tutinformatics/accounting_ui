@@ -13,17 +13,15 @@ export class Customers {
 
     initParties() {
         this.partyService.getAllPersons()
-            .then(res => this.parties = res)
-            .then(() => {
-                // @ts-ignore
-                for (let party of this.parties) {
-                    this.partyService.getPartyAndPersonForParty(party.partyId)
-                        .then(res => party.__partyAndPerson = res[0]);
-                    this.partyService.getPartyAndContactMechForParty(party.partyId)
-                        .then(res => party.__partyAndContactMech = res[0])
-                        .then(() => console.log(party));
-                }
-            });
+            .then(res => {
+                res.map(p => {
+                    delete Object.assign(p, {['__partyAndPerson']: p['_toOne_Person'] })['_toOne_Person'];
+                    this.partyService.getPartyAndContactMechForParty(p.partyId)
+                        .then(resp => p.__partyAndContactMech = resp[0])
+                });
+                this.parties = res;
+            })
+            .then(() => console.log(this.parties));
     }
 
     convertTime(ms: number) {

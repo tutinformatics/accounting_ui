@@ -77,7 +77,7 @@ export class New {
             .on(this);
     }
 
-    addRow(){
+    addRow() {
         this.rows.push(new AccountRow())
     }
 

@@ -9,7 +9,7 @@ export class PartyService extends Service {
     }
 
     getAllPersons() {
-        return this.get("/entities/Party", { partyTypeId: 'PERSON' });
+        return this.get("/entities/Party", { partyTypeId: 'PERSON' , _depth: 1 });
     }
 
     getPartyAndPersonForParty(partyId: string) {
