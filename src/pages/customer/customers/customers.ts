@@ -20,8 +20,7 @@ export class Customers {
                         .then(resp => p.__partyAndContactMech = resp[0])
                 });
                 this.parties = res;
-            })
-            .then(() => console.log(this.parties));
+            });
     }
 
     convertTime(ms: number) {

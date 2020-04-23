@@ -4,6 +4,7 @@ import {PartyAndContactMech} from "./party-and-contact-mech";
 
 export class Party extends Model{
     partyId: string;
+    lastModifiedByUserLogin: string
     statusId: string = "PARTY_ENABLED";
     createdStamp: Date = new Date();
     partyTypeId: string;

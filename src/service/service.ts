@@ -46,6 +46,6 @@ export class Service {
             method: 'post',
             body: json(data)
         })
-            .then(response => console.log(response));
+            .then(response => response.json());
     }
 }

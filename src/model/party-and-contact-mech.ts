@@ -1,9 +1,10 @@
 import {Model} from "./model";
 
 export class PartyAndContactMech extends Model{
-    tnContactNumber: string;
-    _ENTITY_NAME_ = "PartyAndContactMech"
-    contactMechTypeId: string = "EMAIL_ADDRESS"
+    tnContactNumber: string
+    _ENTITY_NAME_ = "PartyAndContactMech";
+    contactMechTypeId: string = "EMAIL_ADDRESS";
+    createdByUserLogin: string
     paAddress2: string
     paAddress1: string
     contactMechId: string
@@ -13,8 +14,8 @@ export class PartyAndContactMech extends Model{
     preferredCurrencyUomId: string
     partyId: string
     monthsWithContactMech: number
-    fromDate: Date
-    statusId = "PARTY_ENABLED"
+    fromDate: Date = new Date();
+    statusId = "PARTY_ENABLED";
     paPostalCode: string
     paCityGeoId: string
     description: string
