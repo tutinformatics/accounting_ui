@@ -1,0 +1,37 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Orders history</h1>
+        </div>
+    </div>
+    <p><a href="/">Back</a></p>
+    <p>Cost:</p>
+    <p>Constains products:</p>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="20%">Product name</td>
+            <td width="15%">Quantity</td>
+            <td width="20%">Item price €</td>
+            <td width="20%">Total price €</td>
+            <td width="20%">Details</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="invoice of invoices">
+            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
+            <td>todo</td>
+            <td>${invoice.invoiceDate}</td>
+            <td>todo</td>
+            <td>${invoice.partyId}</td>
+            <td>todo</td>
+            <td>${invoice.currencyUomId}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+
