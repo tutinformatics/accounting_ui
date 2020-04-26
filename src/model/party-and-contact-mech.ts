@@ -23,6 +23,7 @@ export class PartyAndContactMech extends Model{
     roleTypeId: string
     comments: string
     lastModifiedDate: Date = new Date()
+    lastModifiedByUserLogin = "ofbiz";
     verified: string
     paCity: string
     createdDate: Date = new Date()
