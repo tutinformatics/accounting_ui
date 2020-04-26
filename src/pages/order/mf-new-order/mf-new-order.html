@@ -1,0 +1,136 @@
+<template>
+
+    <require from="./mf-new-order.css"></require>
+
+    <h1>Add new order</h1>
+
+    <form>
+        <div class="row justify-content-around">
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+                <div class="col-5">
+                    <p><label class="form-label">Klient:</label></p>
+                    <p><label class="form-label">Kokku:</label></p>
+                    <p><label class="form-label">Tasuda:</label></p>
+
+                </div>
+
+                <div class="col-7">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                </div>
+
+            </div>
+
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+
+                <div class="col-5">
+                    <p><label class="form-label">Esitamise kuupäev:</label></p>
+                    <p><label class="form-label">Tasumistingimus:</label></p>
+                    <p><label class="form-label">Tähtpäev:</label></p>
+                </div>
+
+                <div class="col-7">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input disabled">
+
+                </div>
+
+            </div>
+            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+
+                <div class="col-5">
+                    <p><label class="form-label">MT nr.:</label></p>
+                    <p><label class="form-label">Muugiagent:</label></p>
+                    <p><label class="form-label">Aadress:</label></p>
+                </div>
+
+                <div class="col-7">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                    <input type="text" aria-label="First name" class="form-control header-input">
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="justify-content-center">
+            <table class="table">
+                <thead>
+                <tr>
+                    <td width="5%"></td>
+                    <td width="">Toode</td>
+                    <td width="">Kogus</td>
+                    <td width="">Kaibemaks</td>
+                    <td width="">Summa KM`ta</td>
+                    <td width="">Summa KM`ga</td>
+                    <td width="7%"></td>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td>
+                        <select class="form-control">
+                            <option>Vali kaibemaks</option>
+                            <option>20%</option>
+                            <option>9%</option>
+                            <option>0%</option>
+                        </select>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td><input type="text" aria-label="First name" class="form-control"></td>
+                    <td>
+                        <select class="form-control">
+                            <option>Vali kaibemaks</option>
+                            <option>20%</option>
+                            <option>9%</option>
+                            <option>0%</option>
+                        </select>
+                    </td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn btn-success">New</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </form>
+
+
+
+</template>
