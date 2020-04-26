@@ -1,0 +1,38 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Active orders</h1>
+        </div>
+        <div class="col ">
+            <a href="/order/new" class="btn btn-success float-right mr-4"> NEW</a>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="5%">Order id</td>
+            <td width="15%">Total cost €</td>
+            <td width="15%">Date ordered</td>
+            <td width="15%">Approx arrival</td>
+            <td width="10%">Progress</td>
+            <td width="20%">Details</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="invoice of invoices">
+            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
+            <td>todo</td>
+            <td>${invoice.invoiceDate}</td>
+            <td>todo</td>
+            <td>${invoice.partyId}</td>
+            <td>todo</td>
+            <td>${invoice.currencyUomId}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+
