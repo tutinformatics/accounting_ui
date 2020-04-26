@@ -31,6 +31,7 @@ export class app {
       {route:["customer/customers"], name: 'customer/customers', moduleId: PLATFORM.moduleName('pages/customer/customers/customers'), nav: true, title:'customers'},
       {route:["customer/new"], name: 'customer/new', moduleId: PLATFORM.moduleName('pages/customer/new/new'), nav: true, title:'New Customer'},
       {route:["order/mf-active-orders"], name: 'order/mf-active-orders', moduleId: PLATFORM.moduleName('pages/order/mf-active-orders/mf-active-orders'), nav: true, title:'Active orders'},
+      {route:["order/mf-orders-history"], name: 'order/mf-orders-history', moduleId: PLATFORM.moduleName('pages/order/mf-orders-history/mf-orders-history'), nav: true, title:'Orders history'}
 
     ]);
 
