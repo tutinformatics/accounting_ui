@@ -5,11 +5,11 @@
   <require from="bootstrap/dist/css/bootstrap.css"></require>
   <require from="./css/main.css"></require>
   <require from="./pages/login/login"></require>
-  <require from="./components/sidenav/sidenav"></require>
+  <require from="./components/mf-sidenav/mf-sidenav"></require>
 
   <div if.bind="loggedIn">
     <div class="wrapper d-flex align-items-stretch">
-      <sidenav></sidenav>
+      <mf-sidenav></mf-sidenav>
       <div id="content" class="p-4 p-md-5">
         <router-view></router-view>
       </div>
