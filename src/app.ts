@@ -11,8 +11,6 @@ export class app {
   data;
   loggedIn = true;
 
-
-
   configureRouter(config: RouterConfiguration, router: Router): void {
     console.log('configureRouter');
     this.router = router;
