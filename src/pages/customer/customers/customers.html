@@ -1,32 +1,93 @@
 <template>
+  <div class="row justify-content-around ">
+    <div class="col-11 shadow-lg p-4">
+      <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+          <h1>Erakliendid</h1>
+        </div>
+        <div class="col ">
+          <a href="customer/new-private" class="btn btn-success float-right mr-4"> Lisa uus</a>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-10">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+              <td width="">Nr.</td>
+              <td width="">Eesnimi</td>
+              <td width="">Perekonnanimi</td>
+              <td width="">Email</td>
+              <td width="">Telefon</td>
+              <td width="">Aadress</td>
+              <td width="">Sugu</td>
+              <td width="">Sunni aeg</td>
+            </tr>
+            </thead>
 
-  <div class="row justify-content-between">
-    <div class="col ml-3 mb-2">
-      <h1>Kliendid</h1>
+            <tbody>
+            <tr repeat.for="party of parties">
+              <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
+              <td>${party.__partyAndPerson.firstName}</td>
+              <td>${party.__partyAndPerson.lastName}</td>
+              <td>${party.__partyAndContactMech.infoString}</td>
+              <td>${party.__partyAndContactMech.tnContactNumber}</td>
+              <td>${party.__partyAndContactMech.paAddress1}</td>
+              <td>${party.__partyAndPerson.gender}</td>
+              <td>${party.__partyAndPerson.birthDate}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="col ">
-      <a href="/customer/new" class="btn btn-success float-right mr-4"> Lisa uus</a>
+
+
+
+    <div class="col-11 shadow-lg p-4 mt-5">
+      <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+          <h1>Ärikliendid</h1>
+        </div>
+        <div class="col ">
+          <a href="/customer/new-business" class="btn btn-success float-right mr-4"> Lisa uus</a>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-10">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+              <td width="">Nr.</td>
+              <td width="">Nimi</td>
+              <td width="">Registri kood</td>
+              <td width="">Esindaja eesnimi</td>
+              <td width="">Esindaja perekonnanimi</td>
+              <td width="">Email</td>
+              <td width="">Telefon</td>
+              <td width="">Aadress</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr repeat.for="party of parties">
+              <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
+              <td>${convertTime(party.createdStamp)}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row justify-content-start">
-    <div class="col-6">
-      <table class="table table-striped">
-        <thead class="thead-dark">
-        <tr>
-          <td width="">Nr.</td>
-          <td width="">Klient</td>
-        </tr>
-        </thead>
 
-        <tbody>
-        <tr repeat.for="party of parties">
-          <td><a href="" class="text-decoration-none ">${party.partyId}</a></td>
-          <td>${convertTime(party.createdStamp)}</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+
 
 
 </template>

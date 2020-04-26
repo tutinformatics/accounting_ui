@@ -18,12 +18,8 @@ export class InvoiceService extends Service {
 
     createInvoice(invoice: Invoice) {
         // return this.post("/services/createInvoice", invoice.toJson());
+        console.log(invoice.toJson())
         return this.post("/entities/Invoice", invoice.toJson());
-
-        for (let item of invoice.items) {
-            item.invoiceId = invoice.invoiceId;
-            this.createInvoiceItem(item);
-        }
     }
 
     protected createInvoiceItem(invoiceItem: InvoiceItem) {
