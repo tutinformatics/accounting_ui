@@ -31,7 +31,7 @@ export class app {
       {route:["order/mf-active-orders"], name: 'order/mf-active-orders', moduleId: PLATFORM.moduleName('pages/order/mf-active-orders/mf-active-orders'), nav: true, title:'Active orders'},
       {route:["order/mf-orders-history"], name: 'order/mf-orders-history', moduleId: PLATFORM.moduleName('pages/order/mf-orders-history/mf-orders-history'), nav: true, title:'Orders history'},
       {route:["order/mf-order-view"], name: 'order/mf-order-view', moduleId: PLATFORM.moduleName('pages/order/mf-order-view/mf-order-view'), nav: true, title:'Order view'}
-    ]);
+      ]);
 
     this.router = router;
     this.router.refreshNavigation();
