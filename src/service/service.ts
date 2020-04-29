@@ -1,6 +1,9 @@
 import {autoinject} from "aurelia-framework";
 import {HttpClient, json} from "aurelia-fetch-client";
 
+const bearerTokenPrefix = 'Bearer '
+const noExpirationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg'
+
 @autoinject
 export class Service {
     constructor(protected http: HttpClient) {
@@ -10,18 +13,26 @@ export class Service {
                 .withDefaults({
                     headers: {
                         'Accept': 'application/json',
-                        'X-Requested-With': 'Fetch'
+                        'X-Requested-With': 'Fetch',
+                        'Authorization': bearerTokenPrefix + noExpirationToken
                     }
                 })
                 .withInterceptor({
                     request(request) {
-                        console.log(`Requesting ${request.method} ${request.url}`);
-                        request.headers.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg")
+                        console.info(`Requesting ${request.method} ${request.url}`);
                         return request;
                     },
+                    requestError(error) {
+                        console.error(`Request failed: ${error}`);
+                        throw error;
+                    },
                     response(response) {
-                        console.log(`Received ${response.status} ${response.url}`);
+                        console.info(`Received ${response.status} ${response.url}`);
                         return response;
+                    },
+                    responseError(error) {
+                        console.error(`Response failed: ${error}`);
+                        throw error;
                     }
                 });
         });
@@ -46,7 +57,6 @@ export class Service {
         return this.http.fetch(url, {
             method: 'post',
             body: json(data)
-        })
-            .then(response => response.json());
+        }).then(response => response.json());
     }
 }
