@@ -14,22 +14,5 @@ export class BillingAccount extends Model {
     accountLimit: number
     externalAccountId: string
     accountCurrencyUomId: "USD"
-
-    toJson() {
-        return {
-            lastUpdatedStamp: 1586677798898,
-            createdTxStamp: 1585748175239,
-            createdStamp: 1585748180543,
-            _ENTITY_NAME_: "BillingAccount",
-            description: "Demo Customer Company Billing Account",
-            lastUpdatedTxStamp: 1586677797612,
-            billingAccountId: "9010",
-            contactMechId: "9010",
-            thruDate: null,
-            fromDate: 989704800000,
-            accountLimit: 10000.00,
-            externalAccountId: null,
-            accountCurrencyUomId: "USD",
-        }
-    }
+    _ENTITY_NAME_ = "BillingAccount"
 }

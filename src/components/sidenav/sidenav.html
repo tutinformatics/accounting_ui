@@ -1,58 +1,74 @@
 <template>
-    <require from="./sidenav.css"></require>
+  <require from="./sidenav.css"></require>
     <nav id="sidebar">
-        <div class="p-4 pt-5">
-            <div class=""><img class="img logo rounded-circle mb-5" src="../../resources/images/user.png"></div>
-            <ul class="list-unstyled components mb-5">
-                <li >
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tellimused</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="/order/overview">Ülevaade</a>
-                        </li>
-                        <li>
-                            <a href="/order/new">Sisestamine</a>
-                        </li>
-                    </ul>
-                </li>
+      <div class="p-4 pt-5">
+          <div class=""><img class="img logo rounded-circle mb-5" src="../../resources/images/user.png"></div>
+        <ul class="list-unstyled components mb-5">
+            <li >
+                <a href="#">Home</a>
+            </li>
+            <li >
+                <a href="/order/overview">Tellimused</a>
+            </li>
+            <li >
+                <a href="/purchase-invoice/overview">Ostuarved</a>
+            </li>
+            <li >
+                <a href="sales-invoice/overview">Müügiarved</a>
+            </li>
+            <li >
+                <a href="/customer/customers">Kliendid</a>
+            </li>
+            <li >
+                <a href="/item/items">Tooted</a>
+            </li>
 
-                <li>
-                    <a href="#ostuarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ostuarved</a>
-                    <ul class="collapse list-unstyled" id="ostuarved">
-                        <li>
-                            <a href="/purchase-invoice/overview">Ülevaade</a>
-                        </li>
-                        <li>
-                            <a href="/purchase-invoice/new">Sisestamine</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#muugiarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Müügiarved</a>
-                    <ul class="collapse list-unstyled" id="muugiarved">
-                        <li>
-                            <a href="sales-invoice/overview">Ülevaade</a>
-                        </li>
-                        <li>
-                            <a href="/sales-invoice/new">Sisestamine</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li >
-                    <a href="/customer/customers">Kliendid</a>
-                </li>
+            <!--
+          <li>
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tellimused</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="/order/overview">Ülevaade</a>
+              </li>
+              <li>
+                <a href="/order/new">Sisestamine</a>
+              </li>
             </ul>
-            <!--<div class="footer">
-              <p>
-                Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-              </p>
-            </div>-->
-        </div>
+          </li>
+
+          <li>
+            <a href="#ostuarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ostuarved</a>
+            <ul class="collapse list-unstyled" id="ostuarved">
+              <li>
+                <a href="/purchase-invoice/overview">Ülevaade</a>
+              </li>
+              <li>
+                <a href="/purchase-invoice/new">Sisestamine</a>
+              </li>
+            </ul>
+          </li>
+
+            <li>
+                <a href="#muugiarved" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Müügiarved</a>
+                <ul class="collapse list-unstyled" id="muugiarved">
+                    <li>
+                        <a href="sales-invoice/overview">Ülevaade</a>
+                    </li>
+                    <li>
+                        <a href="/sales-invoice/new">Sisestamine</a>
+                    </li>
+                </ul>
+            </li>
+            -->
+
+
+        </ul>
+        <!--<div class="footer">
+          <p>
+            Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+          </p>
+        </div>-->
+      </div>
     </nav>
 
 

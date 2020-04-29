@@ -17,34 +17,36 @@
     <form>
         <div class="row justify-content-around">
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-                <div class="col-5">
+                <div class="col-6">
                     <p><label class="form-label">Arvje esitaja:</label></p>
                     <p><label class="form-label">KOKKU:</label></p>
                     <p><label class="form-label">KM:</label></p>
                 </div>
 
-                <div class="col-7">
+                <div class="col-6">
                     <select class="form-control header-input " value.bind="invoice.partyIdFrom & validate">
                         <option model.bind="null">Choose...</option>
                         <option repeat.for="party of parties" model.bind="party.partyId">
                             ${party.partyId}
                         </option>
                     </select>
-                    <input type="text" class="form-control header-input">
                     <fieldset disabled>
-                        <input type="text" class="form-control header-input">
+                        <input type="text" class="form-control header-input" value.bind="temporary.totalValue">
+                    </fieldset>
+                    <fieldset disabled>
+                        <input type="text" class="form-control header-input" value.bind="temporary.totalTax">
                     </fieldset>
                 </div>
             </div>
 
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-                <div class="col-5">
+                <div class="col-6">
                     <p><label class="form-label">Esitamise kuupäev:</label></p>
                     <p><label class="form-label">Tasumistingimus:</label></p>
                     <p><label class="form-label">Tähtpäev:</label></p>
                 </div>
 
-                <div class="col-7">
+                <div class="col-6">
                     <abp-datetime-picker onchange="dueDateCreator()" value.bind="dateEnteredString & validate" options.bind="pickerOptions"></abp-datetime-picker>
                     <input type="text" change.delegate="dueDateCreator()" class="form-control header-input" value.bind="daysTimeToPay & validate">
                     <fieldset disabled>
@@ -54,22 +56,15 @@
             </div>
 
             <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-                <div class="col-5">
+                <div class="col-6">
                     <p><label class="form-label">Ostuarve:</label></p>
-                    <p><label class="form-label">Viitedokument:</label></p>
-                    <p><label class="form-label">Aadress:</label></p>
                 </div>
 
-                <div class="col-7">
+                <div class="col-6">
                     <div class="custom-file header-input">
                         <input type="file" class="custom-file-input" id="inputGroupFile01">
                         <label class="custom-file-label" for="inputGroupFile01" aria-describedby="inputGroupFileAddon02">Choose file</label>
                     </div>
-                    <div class="custom-file header-input">
-                        <input type="file" class="custom-file-input" id="inputGroupFile02">
-                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                    </div>
-                    <input type="text" aria-label="First name" class="form-control header-input">
                 </div>
             </div>
         </div>
@@ -79,13 +74,15 @@
             <table class="table">
                 <thead>
                 <tr>
+                    <!-- konto - kontokirjeldus - artikkel aka toode - kogus - kaibemaks - kokku(KM-ta) - kaibemaks -->
                     <td width="5%"></td>
-                    <td width="">Konto</td>
-                    <td width="">Konto kirjeldus</td>
-                    <td width="">Summa</td>
-                    <td width="">Käibemaks</td>
-                    <td width="">Summa KM'ga</td>
-                    <td width="">Käibemaks</td>
+                    <td width="5%">Konto</td>
+                    <td width="5%">Konto kirjeldus</td>
+                    <td width="5%">Toode</td>
+                    <td width="5%">Kogus</td>
+                    <td width="5%">KM</td>
+                    <td width="5%">Summa KM'ga</td>
+                    <td width="5%">KM</td>
                     <td width="7%"></td>
                 </tr>
                 </thead>
@@ -102,9 +99,17 @@
                         </select>
                     </td>
                     <td><input type="text" class="form-control" value.bind="row.accountDescription"></td>
-                    <td><input type="text" class="form-control" id="${$index + 0}" value.bind="row.itemValue" change.delegate="processTaxValue($event)"></td>
                     <td>
-                        <select class="form-control" id="${$index + 0 + 0}" value.bind="row.tax" change.delegate="processTaxValue($event)">
+                        <select class="form-control header-input" id="${ $index}" value.bind="row.purchaseProduct" change.delegate="processValue($event)">
+                            <option model.bind="null">Choose...</option>
+                            <option repeat.for="product of products" model.bind="product">
+                                ${product.productName}
+                            </option>
+                        </select>
+                    </td>
+                    <td><input type="text" aria-label="First name" id="${$index }" class="form-control" value.bind="row.itemAmount" change.delegate="processTaxValue($event)"></td>
+                    <td>
+                        <select class="form-control" id="${$index  }" value.bind="row.tax" change.delegate="processTaxValue($event)">
                             <option>20%</option>
                             <option>9%</option>
                             <option>0%</option>
