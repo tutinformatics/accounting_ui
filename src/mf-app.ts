@@ -33,7 +33,9 @@ export class app {
             {route:["order/mf-orders-history"], name: 'order/mf-orders-history', moduleId: PLATFORM.moduleName('pages/order/mf-orders-history/mf-orders-history'), nav: true, title:'Orders history'},
             {route:["order/mf-new-order"], name: 'order/mf-new-order', moduleId: PLATFORM.moduleName('pages/order/mf-new-order/mf-new-order'), nav: true, title:'New order'},
             {route:["order/mf-order-view"], name: 'order/mf-order-view', moduleId: PLATFORM.moduleName('pages/order/mf-order-view/mf-order-view'), nav: true, title:'Order view'},
-            {route:["order/mf-change-order"], name: 'order/mf-change-order', moduleId: PLATFORM.moduleName('pages/order/mf-change-order/mf-change-order'), nav: true, title:'Change order'}
+            {route:["order/mf-change-order"], name: 'order/mf-change-order', moduleId: PLATFORM.moduleName('pages/order/mf-change-order/mf-change-order'), nav: true, title:'Change order'},
+            {route:["order/mf-workeffort"], name: 'order/mf-workeffort', moduleId: PLATFORM.moduleName('pages/order/mf-workeffort/mf-workeffort'), nav: true, title:'Work efforts'}
+
         ]);
 
         this.router = router;
