@@ -1,15 +1,36 @@
 <template>
-  <require from="./mf-sidenav.css"></require>
+    <require from="./mf-sidenav.css"></require>
     <nav id="sidebar">
-      <div class="p-4 pt-5">
-          <div class=""><img class="img logo rounded-circle mb-5" src="../../resources/images/user.png"></div>
-        <ul class="list-unstyled components mb-5">
-            <li >
-                <a href="/home/mf-home">Home</a>
-            </li>
-          <li>
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
+        <div class="p-4 pt-5">
+            <div class=""><img class="img logo rounded-circle mb-5" src="../../resources/images/user.png"></div>
+            <ul class="list-unstyled components mb-5">
+                <li >
+                    <a href="/home/mf-home">Home</a>
+                </li>
+
+                <!--
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="/order/mf-active-orders">Active orders</a>
+                        </li>
+                        <li>
+                            <a href="/order/mf-orders-history">Orders history</a>
+                        </li>
+                        <li>
+                            <a href="/order/mf-order-view">Order view</a>
+                        </li>
+                        <li>
+                            <a href="/order/overview">Overview</a>
+                        </li>
+                        <li>
+                            <a href="/order/mf-new-order">Add new order</a>
+                        </li>
+                    </ul>
+                </li>-->
+
+
                 <li>
                     <a href="/order/mf-active-orders">Active orders</a>
                 </li>
@@ -19,30 +40,24 @@
                 <li>
                     <a href="/order/mf-order-view">Order view</a>
                 </li>
-              <li>
-                <a href="/order/overview">Overview</a>
-              </li>
-              <li>
-                <a href="/order/mf-new-order">Add new order</a>
-              </li>
+                <li>
+                    <a href="/order/overview">Overview</a>
+                </li>
+                <li>
+                    <a href="/order/mf-new-order">Add new order</a>
+                </li>
+                
+
+                <li >
+                    <a href="/customer/customers">Clients</a>
+                </li>
             </ul>
-          </li>
-
-
-            <li >
-                <a href="/customer/customers">Clients</a>
-            </li>
-        </ul>
-        <!--<div class="footer">
-          <p>
-            Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-          </p>
-        </div>-->
-      </div>
+            <!--<div class="footer">
+              <p>
+                Copyright ©<script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+              </p>
+            </div>-->
+        </div>
     </nav>
-
-
-
-
 
 </template>
