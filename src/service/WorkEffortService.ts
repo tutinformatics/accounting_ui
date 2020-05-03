@@ -8,9 +8,8 @@ export class WorkEffortService extends Service {
     }
 
     createWorkEffort(workEffort: WorkEffort) {
-        // return this.post("/services/createInvoice", invoice.toJson());
         console.log(workEffort.toJson())
-        return this.post("/entities/Invoice", workEffort.toJson());
+        return this.post("/entities/WorkEffort", workEffort.toJson());
     }
 
 }

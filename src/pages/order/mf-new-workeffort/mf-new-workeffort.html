@@ -10,11 +10,6 @@
 
                 <h1>Add new work effort</h1>
 
-                <p><label class="form-label">Id:</label></p>
-                <input type="text" aria-label="First name" class="form-control header-input">
-
-                <br>
-
                 <p><label class="form-label">Type id:</label></p>
                 <select id="type">
                     <option value="ROUTING">ROUTING</option>
@@ -29,21 +24,21 @@
                 <br><br>
 
                 <p><label class="form-label">Priority:</label></p>
-                <input type="text" aria-label="First name" class="form-control header-input">
+                <input type="text" class="form-control header-input" value.bind="workEffort.priority & validate">
 
                 <br>
 
                 <p><label class="form-label">Name:</label></p>
-                <input type="text" aria-label="First name" class="form-control header-input">
+                <input type="text" class="form-control header-input" value.bind="workEffort.workEffortName & validate">
 
                 <br>
 
                 <p><label class="form-label">Description:</label></p>
-                <input type="text" aria-label="First name" class="form-control header-input">
+                <input type="text" class="form-control header-input" value.bind="workEffort.description & validate">
 
                 <br>
 
-                <button type="button" class="btn btn-success float-right">CREATE</button>
+                <button click.delegate="save()" type="button" class="btn btn-success float-right">CREATE</button>
 
             </div>
 
