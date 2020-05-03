@@ -2,130 +2,50 @@
 
     <require from="./mf-new-workeffort.css"></require>
 
-    <h1>Add new work effort</h1>
 
     <form>
-        <div class="row justify-content-around">
-            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-                <div class="col-5">
-                    <p><label class="form-label">Client:</label></p>
-                    <p><label class="form-label">Total:</label></p>
-                    <p><label class="form-label">To pay:</label></p>
+        <div class="row justify-content-center">
 
-                </div>
+            <div class="col-12 shadow-lg">
 
-                <div class="col-7">
+                <h1>Add new work effort</h1>
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                <p><label class="form-label">Id:</label></p>
+                <input type="text" aria-label="First name" class="form-control header-input">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                <br>
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                <p><label class="form-label">Type id:</label></p>
+                <select id="type">
+                    <option value="ROUTING">ROUTING</option>
+                    <option value="ROU_TASK">ROU_TASK</option>
+                    <option value="MEETING">MEETING</option>
+                    <option value="PUBLISH_PROPS">PUBLISH_PROPS</option>
+                    <option value="PROJECT">PROJECT</option>
+                    <option value="PHASE">PHASE</option>
+                    <option value="TASK">TASK</option>
+                </select>
 
-                </div>
+                <br><br>
 
-            </div>
+                <p><label class="form-label">Priority:</label></p>
+                <input type="text" aria-label="First name" class="form-control header-input">
 
-            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
+                <br>
 
-                <div class="col-5">
-                    <p><label class="form-label">Date ordered:</label></p>
-                    <p><label class="form-label">Payment statement:</label></p>
-                    <p><label class="form-label">Due to:</label></p>
-                </div>
+                <p><label class="form-label">Name:</label></p>
+                <input type="text" aria-label="First name" class="form-control header-input">
 
-                <div class="col-7">
+                <br>
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                <p><label class="form-label">Description:</label></p>
+                <input type="text" aria-label="First name" class="form-control header-input">
 
-                    <input type="text" aria-label="First name" class="form-control header-input">
+                <br>
 
-                    <input type="text" aria-label="First name" class="form-control header-input disabled">
-
-                </div>
-
-            </div>
-            <div class="col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 row">
-
-                <div class="col-5">
-                    <p><label class="form-label">MT nr.:</label></p>
-                    <p><label class="form-label">Selling agent:</label></p>
-                    <p><label class="form-label">Address:</label></p>
-                </div>
-
-                <div class="col-7">
-
-                    <input type="text" aria-label="First name" class="form-control header-input">
-
-                    <input type="text" aria-label="First name" class="form-control header-input">
-
-                    <input type="text" aria-label="First name" class="form-control header-input">
-
-                </div>
+                <button type="button" class="btn btn-success float-right">CREATE</button>
 
             </div>
-        </div>
-
-
-        <div class="justify-content-center">
-            <table class="table">
-                <thead>
-                <tr>
-                    <td width="5%"></td>
-                    <td width="">Product</td>
-                    <td width="">Quantity</td>
-                    <td width="">Value added tax</td>
-                    <td width="">Sum without VAT</td>
-                    <td width="">Sum with VAT</td>
-                    <td width="7%"></td>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Choose VAT</option>
-                            <option>20%</option>
-                            <option>9%</option>
-                            <option>0%</option>
-                        </select>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td><input type="text" aria-label="First name" class="form-control"></td>
-                    <td>
-                        <select class="form-control">
-                            <option>Choose VAT</option>
-                            <option>20%</option>
-                            <option>9%</option>
-                            <option>0%</option>
-                        </select>
-                    </td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button type="button" class="btn btn-success">New</button></td>
-                </tr>
-
-                </tbody>
-            </table>
 
         </div>
 
