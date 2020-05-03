@@ -1,0 +1,33 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Products overview</h1>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="30%">Product id</td>
+            <td width="40%">Product name</td>
+            <td width="30%">Product price €</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="invoice of invoices">
+            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
+            <td>todo</td>
+            <td>${invoice.invoiceDate}</td>
+            <td>todo</td>
+            <td>${invoice.partyId}</td>
+            <td>todo</td>
+            <td>${invoice.currencyUomId}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+
