@@ -11,7 +11,8 @@
                 <h1>Add new work effort</h1>
 
                 <p><label class="form-label">Type id:</label></p>
-                <select id="type">
+                <select id="type" value.bind="workEffort.workEffortTypeId & validate">
+                    <option value=""></option>
                     <option value="ROUTING">ROUTING</option>
                     <option value="ROU_TASK">ROU_TASK</option>
                     <option value="MEETING">MEETING</option>
