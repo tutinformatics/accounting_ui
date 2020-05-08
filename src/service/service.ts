@@ -59,4 +59,12 @@ export class Service {
             body: json(data)
         }).then(response => response.json());
     }
+
+    put(url: string, data: any) {
+        console.log(json(data));
+        return this.http.fetch(url, {
+            method: 'put',
+            body: json(data)
+        }).then(response => response.json());
+    }
 }

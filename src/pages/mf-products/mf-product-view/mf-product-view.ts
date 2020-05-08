@@ -29,16 +29,19 @@ export class MfProductView {
 
     }
 
-    isValidated() {
-        if (this.controller.errors.length > 0) {
-            return false
-        }
-        return true
+    saveChanges() {
+        console.log(this.productName)
+
+        this.product.productId = this.productId.toString()
+        this.product.productName = this.productName.toString()
+        this.product.priceDetailText = parseInt(this.priceDetailText.toString(), 10)
+
+        this.productService.update(this.product)
+            .then(() => this.product = new Product())
     }
 
-    saveChanges() {
-        // todo saving logic
-
+    saveChangesAndGoToProducts() {
+        this.saveChanges()
         window.location.href = "/mf-products/mf-products-overview"
     }
 
