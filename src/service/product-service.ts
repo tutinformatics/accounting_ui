@@ -15,4 +15,8 @@ export class ProductService extends Service {
         return this.put('/entities/Product', product.toJson())
     }
 
+    deleteProduct(product: Product) {
+        return this.delete('/entities/Product', product.toJson())
+    }
+
 }

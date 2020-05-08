@@ -12,4 +12,12 @@ export class WorkEffortService extends Service {
         return this.post("/entities/WorkEffort", workEffort.toJson());
     }
 
+    update(workEffort: WorkEffort) {
+        return this.put('/entities/WorkEffort', workEffort.toJson())
+    }
+
+    deleteWorkEffort(workEffort: WorkEffort) {
+        return this.delete('/entities/WorkEffort', workEffort.toJson())
+    }
+
 }

@@ -67,4 +67,8 @@ export class Service {
             body: json(data)
         }).then(response => response.json());
     }
+
+    delete(url: string, data: any) {
+        // todo
+    }
 }

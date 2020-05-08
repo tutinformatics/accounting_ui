@@ -45,4 +45,13 @@ export class MfProductView {
         window.location.href = "/mf-products/mf-products-overview"
     }
 
+    deleteProduct() {
+        this.product.productId = this.productId.toString()
+        this.product.productName = this.productName.toString()
+        this.product.priceDetailText = parseInt(this.priceDetailText.toString(), 10)
+        this.productService.deleteProduct(this.product)
+        window.location.href = "/mf-products/mf-products-overview"
+
+    }
+
 }

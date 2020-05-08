@@ -31,6 +31,7 @@ export class app {
 
             {route:["workeffort/mf-workeffort"], name: 'workeffort/mf-workeffort', moduleId: PLATFORM.moduleName('pages/workeffort/mf-workeffort/mf-workeffort'), nav: true, title:'Work efforts'},
             {route:["workeffort/mf-new-workeffort"], name: 'workeffort/mf-new-workeffort', moduleId: PLATFORM.moduleName('pages/workeffort/mf-new-workeffort/mf-new-workeffort'), nav: true, title:'Add new work effort'},
+            {route:["workeffort/mf-workeffort-view"], name: 'workeffort/mf-workeffort-view', moduleId: PLATFORM.moduleName('pages/workeffort/mf-workeffort-view/mf-workeffort-view'), nav: true, title:'Work effort view'},
 
             {route:["mf-products/mf-product-view"], name: 'mf-products/mf-product-view', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
             {route:["mf-products/mf-products-overview"], name: 'mf-products/mf-products-overview', moduleId: PLATFORM.moduleName('pages/mf-products/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
