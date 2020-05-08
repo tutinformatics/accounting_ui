@@ -14,7 +14,23 @@ export class Items {
     private loadData() {
         this.productService.getAll()
             .then(res => this.products = res)
-        console.log("Products coming")
-        console.log(this.products)
+    }
+
+    goToProductView(productId: String, productName: String, priceDetailText: String) {
+        sessionStorage.setItem("productId", productId.toString());
+
+        if (productName == null) {
+            sessionStorage.setItem("productName", "");
+        } else {
+            sessionStorage.setItem("productName", productName.toString());
+        }
+
+        if (priceDetailText == null) {
+            sessionStorage.setItem("priceDetailText", "");
+        } else {
+            sessionStorage.setItem("priceDetailText", priceDetailText.toString());
+        }
+
+        window.location.href = "/mf-products/mf-product-view"
     }
 }

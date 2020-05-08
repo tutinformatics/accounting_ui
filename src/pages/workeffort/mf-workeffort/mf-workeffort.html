@@ -2,7 +2,7 @@
     <require from="./mf-workeffort.css"></require>
     <div class="row justify-content-between">
         <div class="col ml-3 mb-2">
-            <h1>Work Efforts</h1>
+            <h1>Work efforts</h1>
         </div>
 
         <div class="col ">
@@ -26,7 +26,8 @@
 
         <tbody>
         <tr repeat.for="workEffort of workEfforts">
-            <td><a href="" class="text-decoration-none ">${workEffort.workEffortId}</a></td>
+            <td><a href="" class="text-decoration-none "
+                    click.delegate="goToWorkEffortView(workEffort)">${workEffort.workEffortId}</a></td>
             <td>${workEffort.workEffortTypeId}</td>
             <td>${convertTime(workEffort.createdTxStamp)}</td>
             <td>${workEffort.priority}</td>

@@ -11,12 +11,8 @@ export class New {
 
     constructor(private workEffortService: WorkEffortService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
-        this.initRules()
     }
 
-    initRules() {
-
-    }
 
     save() {
         if (this.isValidated()) {
