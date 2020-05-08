@@ -1,6 +1,6 @@
 # Accounting frontend
 
-Currently deployed at: [http://18.191.26.144/](http://18.191.26.144/).
+Currently deployed at: [http://18.191.26.144:8090/](http://18.191.26.144:8090/)
 
 ## Run dev app
 _Allows hot reload_
