@@ -15,11 +15,6 @@ export class New {
     }
 
     initRules() {
-        // TODO Marten/Kapa - after fields are attached to model
-        //ValidationRules
-        //    .ensure("partyId")
-        //    .required()
-        //    .on(this.party)
     }
 
     save() {
@@ -27,6 +22,11 @@ export class New {
             this.productService.create(this.product)
                 .then(() => this.product = new Product())
         }
+    }
+
+    saveAndGoToProducts() {
+        this.save()
+        window.location.href = "/order/mf-products-overview"
     }
 
     isValidated() {

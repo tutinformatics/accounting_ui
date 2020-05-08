@@ -25,6 +25,11 @@ export class New {
         }
     }
 
+    saveAndGoBackToWorkefforts() {
+        this.save()
+        window.location.href = "/order/mf-workeffort"
+    }
+
     isValidated() {
         if (this.controller.errors.length > 0) {
             return false

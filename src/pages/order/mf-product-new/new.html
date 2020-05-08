@@ -6,24 +6,28 @@
 
         <div class="col-5 shadow-lg p-5">
 
-            <h1 class="mb-5">Uus toode</h1>
+            <h1 class="mb-5">New product</h1>
 
 
             <div class="row justify-content-center">
                 <div class="col-6">
                     <div>
-                        <label class="mb-3">Nimi:</label>
+                        <label class="mb-3">Name:</label>
                         <input type="text" class="form-control mb-2 w-100" value.bind="product.productName & validate">
                     </div>
                 </div>
 
                 <div class="col-6">
-                    <label class="mb-3">Hind:</label>
+                    <label class="mb-3">Price:</label>
                     <input type="text" class="form-control mb-2 w-100" value.bind="product.priceDetailText & validate">
                 </div>
 
                 <div class="col-10 row justify-content-center mt-1">
-                    <button click.delegate="save()" class="btn btn-success w-100 float-right mt-5">Lisa</button>
+                    <button click.delegate="save()" class="btn btn-success w-100 float-right mt-5">Create</button>
+                </div>
+
+                <div class="col-10 row justify-content-center mt-1">
+                    <button click.delegate="saveAndGoToProducts()" class="btn btn-success w-100 float-right mt-5">Create and go to products view</button>
                 </div>
 
             </div>

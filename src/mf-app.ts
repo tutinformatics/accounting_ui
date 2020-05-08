@@ -39,6 +39,7 @@ export class app {
             {route:["order/mf-product-view"], name: 'order/mf-product-view', moduleId: PLATFORM.moduleName('pages/order/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
             {route:["order/mf-change-product"], name: 'order/mf-change-product', moduleId: PLATFORM.moduleName('pages/order/mf-change-product/mf-change-product'), nav: true, title:'Change product'},
             {route:["order/mf-products-overview"], name: 'order/mf-products-overview', moduleId: PLATFORM.moduleName('pages/order/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
+            {route:["order/mf-product-new"], name: 'order/mf-product-new', moduleId: PLATFORM.moduleName('pages/order/mf-product-new/new'), nav: true, title:'New product'}
 
         ]);
 
