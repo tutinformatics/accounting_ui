@@ -8,7 +8,7 @@ export class New {
 
     saveAndGoBackToActiveOrders() {
         this.save()
-        window.location.href = "/order/mf-active-orders"
+        window.location.href = "/mf-order/mf-active-orders"
     }
 
     save() {

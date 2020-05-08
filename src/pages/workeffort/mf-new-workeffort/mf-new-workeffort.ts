@@ -27,7 +27,7 @@ export class New {
 
     saveAndGoBackToWorkefforts() {
         this.save()
-        window.location.href = "/order/mf-workeffort"
+        window.location.href = "/workeffort/mf-workeffort"
     }
 
     isValidated() {

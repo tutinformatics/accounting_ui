@@ -22,24 +22,20 @@ export class app {
         config.map([
             {route:[ "login"], name: 'login', moduleId: PLATFORM.moduleName('pages/login/login'), nav: false, title:'Login'},
             {route:[ "", "home"], name: 'home', moduleId: PLATFORM.moduleName('pages/home/mf-home'), nav: false, title:'Home'},
-            {route:["order/overview"], name: 'order/overview', moduleId: PLATFORM.moduleName('pages/order/overview/overview'), nav: true, title:'Order'},
-            {route:["order/new"], name: 'order/new', moduleId: PLATFORM.moduleName('pages/order/new/new'), nav: true, title:'Order'},
-            {route:["purchase-invoice/new"], name: 'purchase-invoice/new', moduleId: PLATFORM.moduleName('pages/purchase-invoice/new/new'), nav: true, title:'arve'},
-            {route:["purchase-invoice/overview"], name: 'purchase-invoice/overview', moduleId: PLATFORM.moduleName('pages/purchase-invoice/overview/overview'), nav: true, title:'arve'},
-            {route:["sales-invoice/new"], name: 'sales-invoice/new', moduleId: PLATFORM.moduleName('pages/sales-invoice/new/new'), nav: true, title:'arve'},
-            {route:["sales-invoice/overview"], name: 'sales-invoice/overview', moduleId: PLATFORM.moduleName('pages/sales-invoice/overview/overview'), nav: true, title:'arve'},
-            {route:["customer/customers"], name: 'customer/customers', moduleId: PLATFORM.moduleName('pages/customer/customers/customers'), nav: true, title:'customers'},
-            {route:["order/mf-active-orders"], name: 'order/mf-active-orders', moduleId: PLATFORM.moduleName('pages/order/mf-active-orders/mf-active-orders'), nav: true, title:'Active orders'},
-            {route:["order/mf-orders-history"], name: 'order/mf-orders-history', moduleId: PLATFORM.moduleName('pages/order/mf-orders-history/mf-orders-history'), nav: true, title:'Orders history'},
-            {route:["order/mf-new-order"], name: 'order/mf-new-order', moduleId: PLATFORM.moduleName('pages/order/mf-new-order/mf-new-order'), nav: true, title:'New order'},
-            {route:["order/mf-order-view"], name: 'order/mf-order-view', moduleId: PLATFORM.moduleName('pages/order/mf-order-view/mf-order-view'), nav: true, title:'Order view'},
-            {route:["order/mf-change-order"], name: 'order/mf-change-order', moduleId: PLATFORM.moduleName('pages/order/mf-change-order/mf-change-order'), nav: true, title:'Change order'},
-            {route:["order/mf-workeffort"], name: 'order/mf-workeffort', moduleId: PLATFORM.moduleName('pages/order/mf-workeffort/mf-workeffort'), nav: true, title:'Work efforts'},
-            {route:["order/mf-new-workeffort"], name: 'order/mf-new-workeffort', moduleId: PLATFORM.moduleName('pages/order/mf-new-workeffort/mf-new-workeffort'), nav: true, title:'Add new work effort'},
-            {route:["order/mf-product-view"], name: 'order/mf-product-view', moduleId: PLATFORM.moduleName('pages/order/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
-            {route:["order/mf-change-product"], name: 'order/mf-change-product', moduleId: PLATFORM.moduleName('pages/order/mf-change-product/mf-change-product'), nav: true, title:'Change product'},
-            {route:["order/mf-products-overview"], name: 'order/mf-products-overview', moduleId: PLATFORM.moduleName('pages/order/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
-            {route:["order/mf-product-new"], name: 'order/mf-product-new', moduleId: PLATFORM.moduleName('pages/order/mf-product-new/new'), nav: true, title:'New product'}
+
+            {route:["mf-order/mf-active-orders"], name: 'mf-order/mf-active-orders', moduleId: PLATFORM.moduleName('pages/mf-order/mf-active-orders/mf-active-orders'), nav: true, title:'Active orders'},
+            {route:["mf-order/mf-orders-history"], name: 'mf-order/mf-orders-history', moduleId: PLATFORM.moduleName('pages/mf-order/mf-orders-history/mf-orders-history'), nav: true, title:'Orders history'},
+            {route:["mf-order/mf-new-order"], name: 'mf-order/mf-new-order', moduleId: PLATFORM.moduleName('pages/mf-order/mf-new-order/mf-new-order'), nav: true, title:'New order'},
+            {route:["mf-order/mf-order-view"], name: 'mf-order/mf-order-view', moduleId: PLATFORM.moduleName('pages/mf-order/mf-order-view/mf-order-view'), nav: true, title:'Order view'},
+            {route:["mf-order/mf-change-order"], name: 'mf-order/mf-change-order', moduleId: PLATFORM.moduleName('pages/mf-order/mf-change-order/mf-change-order'), nav: true, title:'Change order'},
+
+            {route:["workeffort/mf-workeffort"], name: 'workeffort/mf-workeffort', moduleId: PLATFORM.moduleName('pages/workeffort/mf-workeffort/mf-workeffort'), nav: true, title:'Work efforts'},
+            {route:["workeffort/mf-new-workeffort"], name: 'workeffort/mf-new-workeffort', moduleId: PLATFORM.moduleName('pages/workeffort/mf-new-workeffort/mf-new-workeffort'), nav: true, title:'Add new work effort'},
+
+            {route:["mf-products/mf-product-view"], name: 'mf-products/mf-product-view', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
+            {route:["mf-products/mf-change-product"], name: 'mf-products/mf-change-product', moduleId: PLATFORM.moduleName('pages/mf-products/mf-change-product/mf-change-product'), nav: true, title:'Change product'},
+            {route:["mf-products/mf-products-overview"], name: 'mf-products/mf-products-overview', moduleId: PLATFORM.moduleName('pages/mf-products/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
+            {route:["mf-products/mf-product-new"], name: 'mf-products/mf-product-new', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-new/new'), nav: true, title:'New product'}
 
         ]);
 

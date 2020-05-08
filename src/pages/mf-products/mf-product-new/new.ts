@@ -26,7 +26,7 @@ export class New {
 
     saveAndGoToProducts() {
         this.save()
-        window.location.href = "/order/mf-products-overview"
+        window.location.href = "/mf-products/mf-products-overview"
     }
 
     isValidated() {
