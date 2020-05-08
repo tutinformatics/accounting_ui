@@ -14,5 +14,7 @@ export class Items {
     private loadData() {
         this.productService.getAll()
             .then(res => this.products = res)
+        console.log("Products coming")
+        console.log(this.products)
     }
 }
