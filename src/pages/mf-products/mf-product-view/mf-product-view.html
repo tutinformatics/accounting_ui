@@ -1,18 +1,37 @@
 <template>
 
-    <div class="row justify-content-between">
-        <p><a href="/mf-products/mf-products-overview" class="btn btn-success mr-4">BACK</a></p>
+    <form class>
 
-        <div class="col ml-3 mb-2">
-            <h1>Product view</h1>
-        </div>
-        <div class="col ">
-            <a href="/order/mf-change-product" class="btn btn-success float-right mr-4">CHANGE</a>
-        </div>
-    </div>
+        <div class="row">
 
-    <p>Product name: </p>
-    <p>Product id: </p>
-    <p>Cost: </p>
+            <a href="/mf-products/mf-products-overview" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <button class="btn btn-danger float-right mt-2" style="margin-bottom: 20px">Delete</button>
+
+                <a href="/mf-products/mf-change-product" class="btn btn-success float-right mt-2" style="margin-bottom: 20px; margin-right: 20px">Edit</a>
+
+
+                <h1>Product view</h1>
+                <br>
+
+                <label class="mb-3">Id:</label>
+
+                <br><br>
+
+                <label class="mb-3">Name:</label>
+
+                <br><br>
+
+                <label class="mb-3">Price:</label>
+
+                <br><br>
+
+            </div>
+
+        </div>
+
+    </form>
 
 </template>
