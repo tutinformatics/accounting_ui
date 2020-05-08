@@ -15,4 +15,22 @@ export class Items {
         this.productService.getAll()
             .then(res => this.products = res)
     }
+
+    goToProductView(productId: String, productName: String, priceDetailText: String) {
+        sessionStorage.setItem("productId", productId.toString());
+
+        if (productName == null) {
+            sessionStorage.setItem("productName", "");
+        } else {
+            sessionStorage.setItem("productName", productName.toString());
+        }
+
+        if (priceDetailText == null) {
+            sessionStorage.setItem("priceDetailText", "");
+        } else {
+            sessionStorage.setItem("priceDetailText", priceDetailText.toString());
+        }
+
+        window.location.href = "/mf-products/mf-product-view"
+    }
 }

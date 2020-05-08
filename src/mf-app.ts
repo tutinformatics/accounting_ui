@@ -33,7 +33,6 @@ export class app {
             {route:["workeffort/mf-new-workeffort"], name: 'workeffort/mf-new-workeffort', moduleId: PLATFORM.moduleName('pages/workeffort/mf-new-workeffort/mf-new-workeffort'), nav: true, title:'Add new work effort'},
 
             {route:["mf-products/mf-product-view"], name: 'mf-products/mf-product-view', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
-            {route:["mf-products/mf-change-product"], name: 'mf-products/mf-change-product', moduleId: PLATFORM.moduleName('pages/mf-products/mf-change-product/mf-change-product'), nav: true, title:'Change product'},
             {route:["mf-products/mf-products-overview"], name: 'mf-products/mf-products-overview', moduleId: PLATFORM.moduleName('pages/mf-products/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
             {route:["mf-products/mf-product-new"], name: 'mf-products/mf-product-new', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-new/new'), nav: true, title:'New product'}
 

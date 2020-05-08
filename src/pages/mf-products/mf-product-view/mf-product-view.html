@@ -10,23 +10,27 @@
 
                 <button class="btn btn-danger float-right mt-2" style="margin-bottom: 20px">Delete</button>
 
-                <a href="/mf-products/mf-change-product" class="btn btn-success float-right mt-2" style="margin-bottom: 20px; margin-right: 20px">Edit</a>
-
-
                 <h1>Product view</h1>
+
                 <br>
 
                 <label class="mb-3">Id:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="productId" disabled>
 
-                <br><br>
+                <br>
 
                 <label class="mb-3">Name:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="productName">
 
-                <br><br>
+                <br>
 
                 <label class="mb-3">Price:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="priceDetailText">
 
-                <br><br>
+                <br>
+
+                <a click.delegate="saveChanges()" class="btn btn-success float-right mt-2" style="margin-bottom: 20px">Save changes</a>
+
 
             </div>
 
