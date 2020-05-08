@@ -2,8 +2,12 @@
 
     <require from="./mf-new-order.css"></require>
 
-    <form>
-        <div class="row justify-content-center">
+
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-order/mf-active-orders" class="btn btn-success float-left mr-4" style="margin-bottom: 20px"> BACK</a>
 
             <div class="col-12 shadow-lg">
 
@@ -24,9 +28,9 @@
 
                 <br><br><br>
 
-                <button click.delegate="save()" type="button" class="btn btn-success float-right">Create</button>
+                <button click.delegate="save()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Create</button>
 
-                <button click.delegate="saveAndGoBackToActiveOrders()" type="button" class="btn btn-success float-left" style="padding-right: 5px">Create and go back to orders</button>
+                <button click.delegate="saveAndGoBackToActiveOrders()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Create and go back to orders</button>
 
 
             </div>

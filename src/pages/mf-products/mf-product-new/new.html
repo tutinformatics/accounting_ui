@@ -1,10 +1,16 @@
 <template>
 
-    <div class="row justify-content-center ">
+    <require from="./new.css"></require>
 
-        <div class="col-5 shadow-lg p-5">
+    <form class>
 
-            <h1 class="mb-5">New product</h1>
+        <div class="row">
+
+            <a href="/mf-products/mf-product-view" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <h1>New product</h1>
 
                     <label class="mb-3">Name:</label>
                     <input type="text" class="form-control mb-2 w-100" value.bind="product.productName & validate">
@@ -14,16 +20,14 @@
                     <label class="mb-3">Price:</label>
                     <input type="text" class="form-control mb-2 w-100" value.bind="product.priceDetailText & validate">
 
-                <div class="col-10 row justify-content-center mt-1">
-                    <button click.delegate="save()" class="btn btn-success w-100 float-right mt-5">Create</button>
-                </div>
+                    <button click.delegate="save()" class="btn btn-success float-right mt-2" style="margin-bottom: 20px">Create</button>
 
-                <div class="col-10 row justify-content-center mt-1">
-                    <button click.delegate="saveAndGoToProducts()" class="btn btn-success w-100 float-right mt-5">Create and go to products view</button>
-                </div>
+                    <button click.delegate="saveAndGoToProducts()" class="btn btn-success float-left mt-2" style="margin-bottom: 20px">Create and go to products view</button>
+
+            </div>
 
         </div>
 
-    </div>
+    </form>
 
 </template>
