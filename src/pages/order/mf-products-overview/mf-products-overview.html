@@ -21,14 +21,10 @@
         </thead>
 
         <tbody>
-        <tr repeat.for="invoice of invoices">
-            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
-            <td>todo</td>
-            <td>${invoice.invoiceDate}</td>
-            <td>todo</td>
-            <td>${invoice.partyId}</td>
-            <td>todo</td>
-            <td>${invoice.currencyUomId}</td>
+        <tr repeat.for="product of products">
+            <td><a href="" class="text-decoration-none ">${product.productId}</a></td>
+            <td>${product.productName}</td>
+            <td>${product.priceDetailText}</td>
 
         </tr>
         </tbody>
