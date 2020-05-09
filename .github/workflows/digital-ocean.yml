@@ -21,8 +21,11 @@ jobs:
           CI: true
       - name: Print environment variables
           run: |
-            echo $secrets.GITHUB_USERNAME
-            echo $secrets.GITHUB_TOKEN
+            echo $username
+            echo $password
+          env:
+            username: ${{ secrets.GITHUB_USERNAME }}
+            password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
