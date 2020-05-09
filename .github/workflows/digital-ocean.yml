@@ -29,7 +29,7 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: tutinformatics/accounting_ui/accounting_ui
+          name: tutinformatics/accounting_ui/manufacturing_warehouse_ui
           registry: docker.pkg.github.com
           username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
