@@ -16,7 +16,7 @@ jobs:
           node-version: '13.10'
       - name: Install npm and run unittest
         run: |
-          npm
+          npm install
           npm test
         env:
           CI: true
