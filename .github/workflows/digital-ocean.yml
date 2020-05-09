@@ -29,7 +29,7 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: TimoLoomets/accounting-ui/manufacturing-warehouse-ui
+          name: TimoLoomets/accounting_ui/manufacturing-warehouse-ui
           registry: docker.pkg.github.com
           username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
