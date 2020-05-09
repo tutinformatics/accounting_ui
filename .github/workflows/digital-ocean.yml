@@ -29,12 +29,9 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: timoloomets/accounting_ui/accounting_ui
+          name: tutinformatics/accounting_ui/accounting_ui
           registry: docker.pkg.github.com
           username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: Dockerfile
           tags: latest
-      - name: Print docker containers
-        run: |
-          docker ps
