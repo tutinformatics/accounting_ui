@@ -19,6 +19,10 @@ jobs:
           npm install
         env:
           CI: true
+      - name: Print environment variables
+          run: |
+            echo ${{ secrets.GITHUB_USERNAME }}
+            echo ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
