@@ -47,6 +47,7 @@ export class MfActiveOrders {
     }
 
     calculateProgress(order: Order) {
+        if (order.estimatedDeliveryDate == null || order.createdStamp == null) return "";
         let totalDays = new Date(parseInt(order.estimatedDeliveryDate.toString())).getTime() - new Date(parseInt(order.createdStamp.toString())).getTime();
         let daysDone = new Date(Date.now()).getTime() - new Date(parseInt(order.createdStamp.toString())).getTime();
         if (daysDone >= totalDays) return "100%";
