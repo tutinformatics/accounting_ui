@@ -18,6 +18,8 @@ export class New {
     }
 
     save() {
+        console.log("here ffs")
+        console.log(this.product.priceDetailText)
         if (this.isValidated()) {
             this.productService.create(this.product)
                 .then(() => this.product = new Product())

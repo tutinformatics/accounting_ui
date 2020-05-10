@@ -22,12 +22,12 @@
 
         <tbody>
         <tr repeat.for="order of orders">
-            <td><a href="" class="text-decoration-none ">${order.orderId}</a></td>
-            <td>todo</td>
-            <td>${order.invoiceDate}</td>
-            <td>todo</td>
-            <td>${invoice.partyId}</td>
-            <td>todo</td>
+            <td>${order.orderId}</td>
+            <td>${order.unitPrice}</td>
+            <td>${formatTime(order.createdStamp)}</td>
+            <td>${formatTime(order.estimatedDeliveryDate)}</td>
+            <td>${calculateProgress(order)}</td>
+            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId)" href="">Click for details</a></td>
             <td>${invoice.currencyUomId}</td>
 
         </tr>

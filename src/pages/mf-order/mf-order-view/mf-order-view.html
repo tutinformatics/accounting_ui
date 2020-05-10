@@ -1,42 +1,50 @@
 <template>
 
-    <div class="row justify-content-between">
-        <div class="col ml-3 mb-2">
-            <h1>Order view</h1>
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-order/mf-active-orders" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <button click.delegate="deleteOrder()" class="btn btn-danger float-right mt-2" style="margin-bottom: 20px">Delete</button>
+
+                <h1>Order view</h1>
+
+                <br>
+
+                <label class="mb-3">Id:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="orderId" disabled>
+
+                <br>
+
+                <label class="mb-3">Total price:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="unitPrice">
+
+                <br>
+
+                <label class="mb-3">Date ordered:</label>
+                <input class="form-control mb-2 w-100" value.bind="createdStamp" type="date">
+
+
+                <br>
+
+                <label class="mb-3">Estimated delivery date:</label>
+                <input class="form-control mb-2 w-100" value.bind="estimatedDeliveryDate" type="date">
+
+                <br>
+
+
+                <button click.delegate="saveChanges()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Save changes</button>
+
+                <button click.delegate="saveChangesAndGoToActiveOrders()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Save changes and go back</button>
+
+            </div>
+
         </div>
-        <div class="col ">
-            <a href="/order/mf-change-order" class="btn btn-success float-right mr-4">CHANGE</a>
-        </div>
-    </div>
 
-    <p><a href="/" class="btn btn-success mr-4">BACK</a></p>
-
-    <p>Cost:</p>
-    <p>Constains products:</p>
-    <table class="table table-striped">
-        <thead class="thead-dark">
-        <tr>
-            <td width="20%">Product name</td>
-            <td width="15%">Quantity</td>
-            <td width="20%">Item price €</td>
-            <td width="20%">Total price €</td>
-            <td width="20%">Details</td>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr repeat.for="invoice of invoices">
-            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
-            <td>todo</td>
-            <td>${invoice.invoiceDate}</td>
-            <td>todo</td>
-            <td>${invoice.partyId}</td>
-            <td>todo</td>
-            <td>${invoice.currencyUomId}</td>
-
-        </tr>
-        </tbody>
-    </table>
+    </form>
 
 </template>
 

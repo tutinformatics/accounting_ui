@@ -14,17 +14,17 @@
                 <h1>Add new order</h1>
 
                 <p><label class="form-label">Total cost:</label></p>
-                <input type="text" class="form-control header-input">
+                <input type="text" class="form-control header-input" value.bind="order.unitPrice & validate">
 
                 <br>
 
                 <p><label class="form-label">Date ordered:</label></p>
-                <input type="datetime-local">
+                <input type="date" value.bind="order.createdStamp & validate">
 
                 <br><br><br>
 
-                <p><label class="form-label">Approx arrival:</label></p>
-                <input type="datetime-local">
+                <p><label class="form-label">Estimated delivery date:</label></p>
+                <input type="date" value.bind="order.estimatedDeliveryDate & validate">
 
                 <br><br><br>
 

@@ -18,6 +18,13 @@ export class MfNewOrder {
     }
 
     save() {
+        console.log(this.order.createdStamp)
+        console.log(Date.parse(this.order.createdStamp.toString()))
+        //this.order.createdStamp = Date.parse(this.order.createdStamp.toString())
+        //console.log(this.order.estimatedDeliveryDate)
+        //this.order.estimatedDeliveryDate = Date.parse(this.order.estimatedDeliveryDate.toString())
+        this.order.orderId = this.generateNewOrderId();
+        this.order.orderItemSeqId = this.generateNewOrderItemSeqId();
         if (this.isValidated()) {
             this.orderService.create(this.order)
                 .then(() => this.order = new Order())
@@ -25,8 +32,6 @@ export class MfNewOrder {
     }
 
     saveAndGoBackToActiveOrders() {
-        console.log("Save")
-        window.console.log("Save")
         this.save()
         window.location.href = "/mf-order/mf-active-orders"
     }
@@ -37,4 +42,29 @@ export class MfNewOrder {
         }
         return true
     }
+
+    generateNewOrderItemSeqId() {
+        let name = ""
+        var chars = '0123456789'
+        for ( var j = 0; j < 10; j++) {
+            name += chars.charAt(Math.floor(Math.random() * chars.length))
+        }
+        return name
+    }
+
+    generateNewOrderId() {
+        let name = ""
+        var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        for ( var j = 0; j < 10; j++) {
+            name += chars.charAt(Math.floor(Math.random() * chars.length))
+        }
+        return name
+    }
+
+    formatTime(timeStamp: String) {
+        if (timeStamp == null) return ""
+        let date = new Date(parseInt(timeStamp.toString()));
+        return date.toDateString()
+    }
+
 }

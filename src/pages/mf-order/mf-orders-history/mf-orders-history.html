@@ -18,15 +18,15 @@
         </thead>
 
         <tbody>
-        <tr repeat.for="invoice of invoices">
-            <td><a href="" class="text-decoration-none ">${invoice.invoiceId}</a></td>
-            <td>todo</td>
-            <td>${invoice.invoiceDate}</td>
-            <td>todo</td>
-            <td>${invoice.partyId}</td>
-            <td>todo</td>
+        <tr repeat.for="order of orders">
+            <div if.bind="orderOver($order)">
+            <td>${order.orderId}</td>
+            <td>${order.unitPrice}</td>
+            <td>${formatTime(order.createdStamp)}</td>
+            <td>${formatTime(order.estimatedDeliveryDate)}</td>
+            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId)" href="">Click for details</a></td>
             <td>${invoice.currencyUomId}</td>
-
+            </div>
         </tr>
         </tbody>
     </table>
