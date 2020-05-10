@@ -17,7 +17,7 @@ export class OrderService extends Service {
     }
 
     deleteOrder(order: Order) {
-        return this.delete('/entities/OrderItem', order.toJson())
+        return this.delete('/entities/OrderItem', order.orderId, order.orderItemSeqId)
     }
 
 }

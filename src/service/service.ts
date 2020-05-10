@@ -69,8 +69,8 @@ export class Service {
         }).then(response => response.json());
     }
 
-    delete(url: string, data: any) {
-        const formattedUrl = this.formatUrl(url, data);
+    delete(url: string, orderId: string, orderItemSeqId: string) {
+        const formattedUrl = this.formatUrl(url, {orderId, orderItemSeqId});
         return this.http.fetch(formattedUrl, {
             method: RequestType.DELETE,
         }).then(response => response.json())

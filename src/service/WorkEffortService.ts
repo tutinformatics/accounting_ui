@@ -17,7 +17,8 @@ export class WorkEffortService extends Service {
     }
 
     deleteWorkEffort(workEffort: WorkEffort) {
-        return this.delete('/entities/WorkEffort', workEffort.toJson())
+        //return this.delete('/entities/WorkEffort', workEffort.toJson())
+        //TODO @Liis, create your own
     }
 
 }
