@@ -38,11 +38,11 @@ jobs:
           username: ${{ secrets.DROPLET_USERNAME }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           port: ${{ secrets.DROPLET_PORT }}
-          env:
-            DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          envs: DEPLOY_USERNAME, GITHUB_TOKEN
           script: |
             whoami
+            echo $DEPLOY_USERNAME
+            echo $GITHUB_TOKEN
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker login docker.pkg.github.com -u $DEPLOY_USERNAME -p $GITHUB_TOKEN
             sudo docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/manufacturing_warehouse_ui:latest
