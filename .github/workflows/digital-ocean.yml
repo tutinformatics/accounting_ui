@@ -38,7 +38,9 @@ jobs:
           username: ${{ secrets.DROPLET_USERNAME }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           port: ${{ secrets.DROPLET_PORT }}
-          envs: DEPLOY_USERNAME, GITHUB_TOKEN
+          env:
+            DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
             whoami
             sudo docker stop $(sudo docker ps -a -q)
