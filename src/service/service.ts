@@ -1,8 +1,9 @@
 import {autoinject} from "aurelia-framework";
 import {HttpClient, json} from "aurelia-fetch-client";
+import {RequestType} from "./constants";
 
-const bearerTokenPrefix = 'Bearer '
-const noExpirationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg'
+const bearerTokenPrefix = 'Bearer ';
+const noExpirationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg';
 
 @autoinject
 export class Service {
@@ -55,7 +56,7 @@ export class Service {
     post(url: string, data: any) {
         console.log(json(data));
         return this.http.fetch(url, {
-            method: 'post',
+            method: RequestType.POST,
             body: json(data)
         }).then(response => response.json());
     }
@@ -63,12 +64,15 @@ export class Service {
     put(url: string, data: any) {
         console.log(json(data));
         return this.http.fetch(url, {
-            method: 'put',
+            method: RequestType.PUT,
             body: json(data)
         }).then(response => response.json());
     }
 
     delete(url: string, data: any) {
-        // todo
+        const formattedUrl = this.formatUrl(url, data);
+        return this.http.fetch(formattedUrl, {
+            method: RequestType.DELETE,
+        }).then(response => response.json())
     }
 }

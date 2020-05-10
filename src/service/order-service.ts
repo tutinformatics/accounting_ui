@@ -8,10 +8,7 @@ export class OrderService extends Service {
     }
 
     create(order: Order) {
-        console.log("add this order" + order);
-        //order.orderId = "123"; // dont try this at home
-        order.orderId = this.createId();
-        order.ORDER_ITEM = this.createId();
+        order.orderId = "DEMO1002";
         return this.post('/entities/OrderItem', order.toJson())
     }
 
@@ -20,17 +17,7 @@ export class OrderService extends Service {
     }
 
     deleteOrder(order: Order) {
-        console.log("Am I even here?")
-        console.log(order)
         return this.delete('/entities/OrderItem', order.toJson())
     }
 
-    createId() {
-        let name = ""
-        var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-        for ( var j = 0; j < 10; j++) {
-            name += chars.charAt(Math.floor(Math.random() * chars.length))
-        }
-        return name
-    }
 }

@@ -52,7 +52,7 @@ export class Order extends Model {
     shipAfterDate: Date;
     changeByUserLoginId: number;
     prodCatalogId: string;
-    ORDER_ITEM: string;
+    //ORDER_ITEM: string;
     _ENTITY_NAME_ = 'OrderItem'
     /*
     description: string;

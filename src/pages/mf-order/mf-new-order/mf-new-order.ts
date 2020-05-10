@@ -23,7 +23,8 @@ export class MfNewOrder {
         //this.order.createdStamp = Date.parse(this.order.createdStamp.toString())
         //console.log(this.order.estimatedDeliveryDate)
         //this.order.estimatedDeliveryDate = Date.parse(this.order.estimatedDeliveryDate.toString())
-        this.order.orderId = this.generateNewOrderId();
+        //this.order.createdStamp = this.formatTime(this.order.createdStamp.toString())
+       // this.order.estimatedDeliveryDate = this.formatTime(this.order.estimatedDeliveryDate.toString())
         this.order.orderItemSeqId = this.generateNewOrderItemSeqId();
         if (this.isValidated()) {
             this.orderService.create(this.order)
@@ -64,7 +65,7 @@ export class MfNewOrder {
     formatTime(timeStamp: String) {
         if (timeStamp == null) return ""
         let date = new Date(parseInt(timeStamp.toString()));
-        return date.toDateString()
+        return date
     }
 
 }
