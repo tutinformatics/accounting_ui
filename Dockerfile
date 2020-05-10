@@ -1,5 +1,10 @@
 FROM node:lts-alpine as build-stage
 
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && curl -sL https://deb.nodesource.com/setup_13.x | bash - \
+    && apt-get install -y nodejs
+
   # install aurelia-cli to build the app & http-server to serve static contents
 RUN npm i -g http-server
 RUN npm i -g aurelia-cli
