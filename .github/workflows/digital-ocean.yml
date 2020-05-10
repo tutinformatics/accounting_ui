@@ -41,6 +41,6 @@ jobs:
           envs: DEPLOY_USERNAME, GITHUB_TOKEN
           script: |
             whoami
-            docker stop $(docker ps -a -q)
-            docker login docker.pkg.github.com -u $DEPLOY_USERNAME -p $GITHUB_TOKEN
-            docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/manufacturing_warehouse_ui:latest
+            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker login docker.pkg.github.com -u $DEPLOY_USERNAME -p $GITHUB_TOKEN
+            sudo docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/manufacturing_warehouse_ui:latest
