@@ -16,8 +16,7 @@ export class ProductService extends Service {
     }
 
     deleteProduct(product: Product) {
-        //return this.delete('/entities/Product', product.toJson())
-        //TODO @Liis, create your own
+        return this.deleteProductFromBack('/entities/Product', product.productId)
     }
 
 }

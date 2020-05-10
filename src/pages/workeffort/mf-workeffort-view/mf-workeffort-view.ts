@@ -34,7 +34,7 @@ export class MfWorkeffortView {
     }
 
     deleteWorkEffort() {
-        this.workEffortService.deleteWorkEffort(this.workEffort)
+        console.log(this.workEffortService.deleteWorkEffort(this.workEffort))
         window.location.href = "/workeffort/mf-workeffort"
     }
 

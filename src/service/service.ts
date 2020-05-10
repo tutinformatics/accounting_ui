@@ -75,4 +75,24 @@ export class Service {
             method: RequestType.DELETE,
         }).then(response => response.json())
     }
+
+    deleteProductFromBack(url: string, productId: string) {
+        return this.http.fetch("/entities/Product?productId=" + productId, {
+            method: "DELETE"
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+    }
+
+    deleteWorkEffortFromBack(url: string, workEffortId: string) {
+        return this.http.fetch("/entities/WorkEffort?workEffortId=" + workEffortId, {
+            method: "DELETE"
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+    }
 }
