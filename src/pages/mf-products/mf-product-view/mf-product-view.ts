@@ -49,7 +49,7 @@ export class MfProductView {
         this.product.productId = this.productId.toString()
         this.product.productName = this.productName.toString()
         this.product.priceDetailText = parseInt(this.priceDetailText.toString(), 10)
-        this.productService.deleteProduct(this.product)
+        console.log(this.productService.deleteProduct(this.product))
         window.location.href = "/mf-products/mf-products-overview"
 
     }

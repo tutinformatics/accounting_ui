@@ -17,8 +17,7 @@ export class WorkEffortService extends Service {
     }
 
     deleteWorkEffort(workEffort: WorkEffort) {
-        //return this.delete('/entities/WorkEffort', workEffort.toJson())
-        //TODO @Liis, create your own
+        return this.deleteWorkEffortFromBack('/entities/WorkEffort', workEffort.workEffortId)
     }
 
 }
