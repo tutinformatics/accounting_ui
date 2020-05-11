@@ -22,7 +22,7 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: tutinformatics/accounting_ui/manufacturing_warehouse_ui
+          name: tutinformatics/accounting_ui/accounting_ui
           registry: docker.pkg.github.com
           username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
@@ -45,4 +45,4 @@ jobs:
             echo $GITHUB_TOKEN
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker login docker.pkg.github.com -u TimoLoomets -p $GITHUB_TOKEN
-            sudo docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/manufacturing_warehouse_ui:latest
+            sudo docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/accounting_ui:latest
