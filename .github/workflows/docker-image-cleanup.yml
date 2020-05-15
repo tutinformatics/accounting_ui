@@ -2,6 +2,9 @@ name: Docker Image Cleanup
 on:
   schedule:
     - cron:  '33 * * * *'
+  push:
+    branches:
+      - manufacturing-warehouse
 jobs:
   cleanup-one-old-or-with-the-wrong-name-tag:
     runs-on: ubuntu-latest
