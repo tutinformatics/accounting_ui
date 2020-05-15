@@ -19,7 +19,7 @@ jobs:
           npm install
         env:
           CI: true
-      - name: Publish to Github Packages Registry
+      - name: Publish to Dockerhub Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: timoloomets/manufacturing
@@ -32,16 +32,18 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         with:
           host: ${{ secrets.DROPLET_IP }}
           username: ${{ secrets.DROPLET_USERNAME }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           port: ${{ secrets.DROPLET_PORT }}
-          envs: DEPLOY_USERNAME, GITHUB_TOKEN
+          envs: DOCKER_USERNAME, DOCKER_PASSWORD
           script: |
             whoami
             echo $DEPLOY_USERNAME
             echo $GITHUB_TOKEN
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker login docker.pkg.github.com -u TimoLoomets -p $GITHUB_TOKEN
-            sudo docker run -dit -p 80:80 docker.pkg.github.com/tutinformatics/accounting_ui/manufacturing_warehouse_ui_prod:latest
+            sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+            sudo docker run -dit -p 80:80 timoloomets/manufacturing:latest
