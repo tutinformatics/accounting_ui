@@ -28,6 +28,16 @@
 
                 <br><br><br>
 
+                <label class="form-label">Contains of product:</label>
+                <label repeat.for="product of products">
+                    <input type="radio" model.bind="product.productId" checked.bind="selectedProductIds">
+                    ${product.productId}
+                </label>
+                <br>
+                Selected product ID: ${selectedProductIds}
+
+                <br><br><br>
+
                 <button click.delegate="save()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Create</button>
 
                 <button click.delegate="saveAndGoBackToActiveOrders()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Create and go back to orders</button>

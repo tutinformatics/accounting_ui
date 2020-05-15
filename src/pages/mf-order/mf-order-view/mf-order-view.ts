@@ -10,6 +10,7 @@ export class MfOrderView {
     unitPrice: String;
     createdStamp: Date;
     estimatedDeliveryDate: Date;
+    containsProducts: String = "None";
 
     order = new Order();
     controller = null;
@@ -17,11 +18,11 @@ export class MfOrderView {
     constructor(private orderService: OrderService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
 
-        this.orderId = sessionStorage.getItem("orderId"); // !
+        this.orderId = sessionStorage.getItem("orderId");
 
         this.orderItemSeqId = sessionStorage.getItem("orderItemSeqId");
 
-        this.unitPrice = sessionStorage.getItem("unitPrice"); // !
+        this.unitPrice = sessionStorage.getItem("unitPrice");
 
         if (sessionStorage.getItem("createdStamp") != "") {
             this.createdStamp = new Date(parseInt(sessionStorage.getItem("createdStamp").toString()));
@@ -29,16 +30,16 @@ export class MfOrderView {
         if (sessionStorage.getItem("estimatedDeliveryDate") != "") {
             this.estimatedDeliveryDate = new Date(parseInt(sessionStorage.getItem("estimatedDeliveryDate").toString()));
         }
-        console.log(sessionStorage.getItem("estimatedDeliveryDate"))
+        if (sessionStorage.getItem("containsProducts") != "") {
+            this.containsProducts = sessionStorage.getItem("containsProducts").toString()
+        }
     }
 
     saveChanges() {
 
         this.order.orderId = this.orderId.toString();
         this.order.orderItemSeqId = this.orderItemSeqId.toString();
-        this.order.unitPrice = parseInt(this.unitPrice.toString(), 10)
-        console.log(this.order.orderId)
-        console.log(this.order.orderItemSeqId)
+        this.order.unitPrice = parseInt(this.unitPrice.toString(), 10);
         this.order.createdStamp = this.createdStamp;
         this.order.estimatedDeliveryDate = this.estimatedDeliveryDate;
 
@@ -52,16 +53,12 @@ export class MfOrderView {
     }
 
     deleteOrder() {
-        console.log("DeLETE ID FFS")
         this.order.orderId = this.orderId.toString();
         this.order.unitPrice = parseInt(this.unitPrice.toString(), 10);
         this.order.createdStamp = this.createdStamp;
         this.order.orderItemSeqId = this.orderItemSeqId.toString();
         this.order.estimatedDeliveryDate = this.estimatedDeliveryDate;
         this.orderService.deleteOrder(this.order);
-
-        //window.location.href = "/mf-order/mf-active-orders"
-
     }
 
 }

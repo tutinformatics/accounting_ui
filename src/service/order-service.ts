@@ -8,7 +8,7 @@ export class OrderService extends Service {
     }
 
     create(order: Order) {
-        order.orderId = "Demo1002";
+        order.orderId = "DEMO10090";
         return this.post('/entities/OrderItem', order.toJson())
     }
 

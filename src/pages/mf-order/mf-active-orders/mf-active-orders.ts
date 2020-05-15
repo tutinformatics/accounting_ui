@@ -5,7 +5,7 @@ import {OrderService} from "../../../service/order-service";
 @inject(OrderService)
 export class MfActiveOrders {
 
-    orders: [Order]
+    orders: [Order];
 
     constructor(private orderService: OrderService) {
         this.loadData()
@@ -16,14 +16,13 @@ export class MfActiveOrders {
             .then(res => this.orders = res)
     }
 
-    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String) {
+    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String, containsProducts: String) {
         sessionStorage.setItem("orderId", orderId.toString());
         sessionStorage.setItem("orderItemSeqId", orderItemSeqId.toString());
         if (createdStamp == null) {
             sessionStorage.setItem("createdStamp", "")
         } else {
-            sessionStorage.setItem("createdStamp", createdStamp.toString())
-            console.log(createdStamp.toString())
+            sessionStorage.setItem("createdStamp", createdStamp.toString());
         }
 
         if (estimatedDeliveryDate == null) {
@@ -35,6 +34,11 @@ export class MfActiveOrders {
             sessionStorage.setItem("unitPrice", "");
         } else {
             sessionStorage.setItem("unitPrice", unitPrice.toString());
+        }
+        if (containsProducts == null) {
+            sessionStorage.setItem("containsProducts", "")
+        } else {
+            sessionStorage.setItem("containsProducts", containsProducts.toString())
         }
 
         window.location.href = "/mf-order/mf-order-view"
