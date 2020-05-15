@@ -42,7 +42,9 @@ jobs:
           envs: DOCKER_USERNAME, DOCKER_PASSWORD
           script: |
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker rm -vf $(docker ps -aq) && sudo docker rmi -f $(docker images -aq) && sudo docker volume prune -f
+            sudo docker rm -vf $(docker ps -aq)
+            sudo docker rmi -f $(docker images -aq)
+            sudo docker volume prune -f
             sudo docker image ls
             sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             sudo docker run -dit -p 80:80 timoloomets/manufacturing:latest
