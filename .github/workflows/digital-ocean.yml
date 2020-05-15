@@ -41,10 +41,10 @@ jobs:
           port: ${{ secrets.DROPLET_PORT }}
           envs: DOCKER_USERNAME, DOCKER_PASSWORD
           script: |
-            docker rm -vf $(docker ps -aq) &&
-            docker rmi -f $(docker images -aq) &&
-            docker volume prune -f
-            docker image ls
+            sudo docker rm -vf $(docker ps -aq) &&
+            sudo docker rmi -f $(docker images -aq) &&
+            sudo docker volume prune -f
+            sudo docker image ls
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             sudo docker run -dit -p 80:80 timoloomets/manufacturing:latest
