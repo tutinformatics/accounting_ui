@@ -41,9 +41,10 @@ jobs:
           port: ${{ secrets.DROPLET_PORT }}
           envs: DOCKER_USERNAME, DOCKER_PASSWORD
           script: |
-            whoami
-            echo $DEPLOY_USERNAME
-            echo $GITHUB_TOKEN
+            docker rm -vf $(docker ps -aq) &&
+            docker rmi -f $(docker images -aq) &&
+            docker volume prune -f
+            docker image ls
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             sudo docker run -dit -p 80:80 timoloomets/manufacturing:latest
