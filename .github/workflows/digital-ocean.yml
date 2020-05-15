@@ -28,8 +28,7 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: tutinformatics/accounting_ui/manufacturing_warehouse_ui_prod
-          registry: docker.pkg.github.com
+          name: timoloomets/manufacturing
           username: ${{ secrets.DEPLOY_USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: Dockerfile
