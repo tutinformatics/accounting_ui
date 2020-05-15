@@ -19,6 +19,12 @@ jobs:
           npm install
         env:
           CI: true
+      - name: Delete Release
+        uses: WyriHaximus/github-action-delete-package@master
+        with:
+          packageVersionId: tutinformatics/accounting_ui/manufacturing_warehouse_ui_prod:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
