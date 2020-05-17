@@ -1,0 +1,64 @@
+<template>
+
+    <require from="./mf-new-order.css"></require>
+
+
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-order/mf-active-orders" class="btn btn-success float-left mr-4" style="margin-bottom: 20px"> BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <h1>Add new order</h1>
+
+                <p><label class="form-label">Total cost:</label></p>
+                <input type="number" class="form-control header-input" value.bind="order.unitPrice & validate">
+
+                <br>
+
+                <p><label class="form-label">Date ordered:</label></p>
+                <input type="date" value.bind="order.createdStamp & validate">
+
+                <br><br><br>
+
+                <p><label class="form-label">Estimated delivery date:</label></p>
+                <input type="date" value.bind="order.estimatedDeliveryDate & validate">
+
+                <br><br><br>
+
+                <p><label class="form-label">Order type id:</label></p>
+                <label repeat.for="orderType of orderTypes">
+                    <input type="radio" model.bind="orderType.orderItemTypeId" checked.bind="selectedOrderTypeId">
+                    ${orderType.orderItemTypeId}
+                </label>
+                <br>
+                Selected order type ID: ${selectedOrderTypeId}
+
+                <br><br><br>
+
+                <label class="form-label">Contains of product:</label>
+                <label repeat.for="product of products">
+                    <input type="radio" model.bind="product.productId" checked.bind="selectedProductIds">
+                    ${product.productId}
+                </label>
+                <br>
+                Selected product ID: ${selectedProductIds}
+
+                <br><br><br>
+
+                <button click.delegate="save()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Create</button>
+
+                <button click.delegate="saveAndGoBackToActiveOrders()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Create and go back to orders</button>
+
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+</template>

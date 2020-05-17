@@ -1,0 +1,35 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Orders history</h1>
+        </div>
+
+    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="10%">Order id</td>
+            <td width="15%">Total cost €</td>
+            <td width="20%">Date ordered</td>
+            <td width="20%">Date arrived</td>
+            <td width="20%">Details</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="order of orders">
+            <div if.bind="orderOver($order)">
+            <td>${order.orderId}</td>
+            <td>${order.unitPrice}</td>
+            <td>${formatTime(order.createdStamp)}</td>
+            <td>${formatTime(order.estimatedDeliveryDate)}</td>
+            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId, order.orderItemTypeId)" href="">Click for details</a></td>
+            <td>${invoice.currencyUomId}</td>
+            </div>
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+

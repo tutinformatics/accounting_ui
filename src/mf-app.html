@@ -1,0 +1,22 @@
+<template>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link
+            href="../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <require from="bootstrap/dist/css/bootstrap.css"></require>
+    <require from="./css/main.css"></require>
+    <require from="./pages/login/login"></require>
+    <require from="./components/mf-sidenav/mf-sidenav"></require>
+
+    <div if.bind="loggedIn">
+        <div class="wrapper d-flex align-items-stretch">
+            <mf-sidenav></mf-sidenav>
+            <div id="content" class="p-4 p-md-5">
+                <router-view></router-view>
+            </div>
+
+        </div>
+
+    </div>
+    <div if.bind="!loggedIn"><login></login></div>
+
+</template>

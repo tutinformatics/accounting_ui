@@ -1,0 +1,57 @@
+<template>
+
+    <require from="./mf-new-workeffort.css"></require>
+
+
+    <form>
+        <div class="row">
+
+            <a href="/workeffort/mf-workeffort" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <h1>Add new work effort</h1>
+
+                <p><label class="form-label">Type id:</label></p>
+                <select id="type" value.bind="workEffort.workEffortTypeId & validate">
+                    <option value=""></option>
+                    <option value="ROUTING">ROUTING</option>
+                    <option value="ROU_TASK">ROU_TASK</option>
+                    <option value="MEETING">MEETING</option>
+                    <option value="PUBLISH_PROPS">PUBLISH_PROPS</option>
+                    <option value="PROJECT">PROJECT</option>
+                    <option value="PHASE">PHASE</option>
+                    <option value="TASK">TASK</option>
+                </select>
+
+                <br><br>
+
+                <p><label class="form-label">Priority:</label></p>
+                <input type="text" class="form-control header-input" value.bind="workEffort.priority & validate">
+
+                <br>
+
+                <p><label class="form-label">Name:</label></p>
+                <input type="text" class="form-control header-input" value.bind="workEffort.workEffortName & validate">
+
+                <br>
+
+                <p><label class="form-label">Description:</label></p>
+                <input type="text" class="form-control header-input" value.bind="workEffort.description & validate">
+
+                <br>
+
+                <button click.delegate="save()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Create</button>
+
+                <button click.delegate="saveAndGoBackToWorkefforts()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Create and go back</button>
+
+
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+</template>

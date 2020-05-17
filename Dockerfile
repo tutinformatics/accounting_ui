@@ -1,5 +1,6 @@
 FROM node:lts-alpine as build-stage
 
+
   # install aurelia-cli to build the app & http-server to serve static contents
 RUN npm i -g http-server
 RUN npm i -g aurelia-cli

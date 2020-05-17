@@ -1,0 +1,42 @@
+<template>
+    <require from="./mf-workeffort.css"></require>
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Work efforts</h1>
+        </div>
+
+        <div class="col ">
+            <a href="/workeffort/mf-new-workeffort" class="btn btn-success float-right mr-2"> NEW</a>
+        </div>
+
+    </div>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="10%" click.delegate="sortBy('workEffortId')">Id.</td>
+            <td width="10%">Type id</td>
+            <td width="10%" click.delegate="sortBy('createdTxStamp')">Date created.</td>
+            <td width="10%">Priority</td>
+            <td width="15%">Name</td>
+            <td width="35%">Description</td>
+            <td width="10%">Percent complete</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="workEffort of workEfforts">
+            <td><a href="" class="text-decoration-none "
+                    click.delegate="goToWorkEffortView(workEffort)">${workEffort.workEffortId}</a></td>
+            <td>${workEffort.workEffortTypeId}</td>
+            <td>${convertTime(workEffort.createdTxStamp)}</td>
+            <td>${workEffort.priority}</td>
+            <td>${workEffort.workEffortName}</td>
+            <td>${workEffort.description}</td>
+            <td>${workEffort.percentComplete}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>

@@ -1,0 +1,45 @@
+<template>
+
+    <require from="./new.css"></require>
+
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-products/mf-products-overview" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <h1>New product</h1>
+
+                    <label class="mb-3">Name:</label>
+                    <input type="text" class="form-control mb-2 w-100" value.bind="product.productName & validate">
+
+                    <br>
+
+                    <label class="mb-3">Price:</label>
+                    <input type="number" class="form-control mb-2 w-100" value.bind="product.priceDetailText & validate">
+
+                    <br>
+
+                    <p><label class="form-label">Product type id:</label></p>
+                    <label repeat.for="productType of productTypes">
+                        <input type="radio" model.bind="productType.productTypeId" checked.bind="selectedProductTypeId">
+                        ${productType.productTypeId}
+                    </label>
+                    <br>
+                    Selected product type ID: ${selectedProductTypeId}
+
+                    <br><br><br>
+
+                    <button click.delegate="save()" class="btn btn-success float-right mt-2" style="margin-bottom: 20px">Create</button>
+
+                    <button click.delegate="saveAndGoToProducts()" class="btn btn-success float-left mt-2" style="margin-bottom: 20px">Create and go to products view</button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</template>

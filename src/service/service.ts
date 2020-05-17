@@ -1,8 +1,9 @@
 import {autoinject} from "aurelia-framework";
 import {HttpClient, json} from "aurelia-fetch-client";
+import {RequestType} from "./constants";
 
-const bearerTokenPrefix = 'Bearer '
-const noExpirationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg'
+const bearerTokenPrefix = 'Bearer ';
+const noExpirationToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyTG9naW5JZCI6ImFkbWluIiwiaXNzIjoiQXBhY2hlT0ZCaXoiLCJleHAiOjE1ODc4NDI5OTk5OTk3MTgsImlhdCI6MTU4Nzg0MDkxOH0.3hZCbPuEoqQOUTYws1UtPToVuCZrQfaAVYkZIkPvAVd3m1cN-scUpIYErZFGTmMMfYHTEoMlbNlTG5l2GfkDVg';
 
 @autoinject
 export class Service {
@@ -55,8 +56,59 @@ export class Service {
     post(url: string, data: any) {
         console.log(json(data));
         return this.http.fetch(url, {
-            method: 'post',
+            method: RequestType.POST,
             body: json(data)
         }).then(response => response.json());
+    }
+
+    put(url: string, data: any) {
+        console.log(json(data));
+        return this.http.fetch(url, {
+            method: RequestType.PUT,
+            body: json(data)
+        }).then(response => response.json());
+    }
+
+    delete(url: string, orderId: string, orderItemSeqId: string) {
+        const formattedUrl = this.formatUrl(url, {orderId, orderItemSeqId});
+        return this.http.fetch(formattedUrl, {
+            method: RequestType.DELETE,
+        }).then(response => response.json())
+    }
+
+    deleteOrderTypeFromBack(url: string, typeId: string) {
+        return this.http.fetch(url + '?orderItemTypeId=' + typeId, {
+            method: RequestType.DELETE
+        })
+            .then(response => response.json())
+            .then(data => {console.log(data);})
+    }
+
+    deleteProductTypeFromback(url: string, typeId: string) {
+        return this.http.fetch(url + '?productTypeId=' + typeId, {
+            method: RequestType.DELETE
+        })
+            .then(response => response.json())
+            .then(data => {console.log(data);})
+    }
+
+    deleteProductFromBack(url: string, productId: string) {
+        return this.http.fetch("/entities/Product?productId=" + productId, {
+            method: RequestType.DELETE
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+    }
+
+    deleteWorkEffortFromBack(url: string, workEffortId: string) {
+        return this.http.fetch("/entities/WorkEffort?workEffortId=" + workEffortId, {
+            method: "DELETE"
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
     }
 }

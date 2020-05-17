@@ -1,0 +1,15 @@
+h1 {
+     margin-bottom: 40px;
+ }
+
+form .header-input {
+    margin-bottom: 5px;
+}
+
+tbody button {
+    width: 100%;
+}
+
+.btn {
+    border: 1px solid #ced4da;
+}

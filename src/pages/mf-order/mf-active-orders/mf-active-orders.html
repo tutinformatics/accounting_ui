@@ -1,0 +1,38 @@
+<template>
+
+    <div class="row justify-content-between">
+        <div class="col ml-3 mb-2">
+            <h1>Active orders</h1>
+        </div>
+        <div class="col ">
+            <a href="/mf-order/mf-new-order" class="btn btn-success float-right mr-4"> NEW</a>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <td width="10%">Order id</td>
+            <td width="15%">Total cost €</td>
+            <td width="15%">Date ordered</td>
+            <td width="15%">Approx arrival</td>
+            <td width="10%">Progress</td>
+            <td width="20%">Details</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr repeat.for="order of orders">
+            <td>${order.orderId}</td>
+            <td>${order.unitPrice}</td>
+            <td>${formatTime(order.createdStamp)}</td>
+            <td>${formatTime(order.estimatedDeliveryDate)}</td>
+            <td>${calculateProgress(order)}</td>
+            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId, order.productId, order.orderItemTypeId)" href="">Click for details</a></td>
+            <td>${invoice.currencyUomId}</td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</template>
+

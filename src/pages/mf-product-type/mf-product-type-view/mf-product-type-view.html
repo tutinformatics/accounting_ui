@@ -1,0 +1,38 @@
+<template>
+
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-product-type/mf-product-type-overview" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <button click.delegate="deleteProductType()" class="btn btn-danger float-right mt-2" style="margin-bottom: 20px">Delete</button>
+
+                <h1>Product type view</h1>
+
+                <br>
+
+                <label class="mb-3">Id:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="productTypeId" disabled>
+
+                <br>
+
+                <label class="mb-3">Description:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="description">
+
+                <br>
+
+                <button click.delegate="saveChanges()" type="button" class="btn btn-success float-right" style="margin-bottom: 20px">Save changes</button>
+
+                <button click.delegate="saveChangesAndGoToProductTypeOverview()" type="button" class="btn btn-success float-left" style="margin-bottom: 20px">Save changes and go back</button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</template>
+
