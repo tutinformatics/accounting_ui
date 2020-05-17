@@ -16,7 +16,7 @@ export class OrderTypeService extends Service {
     }
 
     deleteOrderType(orderItemType: OrderItemType) {
-        return this.deleteProductFromBack('/entities/OrderItemType', orderItemType.orderItemTypeId)
+        return this.deleteOrderTypeFromBack('/entities/OrderItemType', orderItemType.orderItemTypeId)
     }
 
 }

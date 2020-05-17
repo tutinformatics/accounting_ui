@@ -22,7 +22,7 @@
 
         <tbody>
         <tr repeat.for="product of products">
-            <td><a click.delegate="goToProductView(product.productId, product.productName, product.priceDetailText)" href="" class="text-decoration-none ">${product.productId}</a></td>
+            <td><a click.delegate="goToProductView(product.productId, product.productName, product.priceDetailText, product.productTypeId)" href="" class="text-decoration-none ">${product.productId}</a></td>
             <td>${product.productName}</td>
             <td>${product.priceDetailText}</td>
 

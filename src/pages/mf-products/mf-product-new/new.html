@@ -20,6 +20,18 @@
                     <label class="mb-3">Price:</label>
                     <input type="number" class="form-control mb-2 w-100" value.bind="product.priceDetailText & validate">
 
+                    <br>
+
+                    <p><label class="form-label">Product type id:</label></p>
+                    <label repeat.for="productType of productTypes">
+                        <input type="radio" model.bind="productType.productTypeId" checked.bind="selectedProductTypeId">
+                        ${productType.productTypeId}
+                    </label>
+                    <br>
+                    Selected product type ID: ${selectedProductTypeId}
+
+                    <br><br><br>
+
                     <button click.delegate="save()" class="btn btn-success float-right mt-2" style="margin-bottom: 20px">Create</button>
 
                     <button click.delegate="saveAndGoToProducts()" class="btn btn-success float-left mt-2" style="margin-bottom: 20px">Create and go to products view</button>

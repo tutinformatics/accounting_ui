@@ -16,7 +16,7 @@ export class Items {
             .then(res => this.products = res)
     }
 
-    goToProductView(productId: String, productName: String, priceDetailText: String) {
+    goToProductView(productId: String, productName: String, priceDetailText: String, productTypeId: String) {
         sessionStorage.setItem("productId", productId.toString());
 
         if (productName == null) {
@@ -29,6 +29,12 @@ export class Items {
             sessionStorage.setItem("priceDetailText", "");
         } else {
             sessionStorage.setItem("priceDetailText", priceDetailText.toString());
+        }
+
+        if (productTypeId == null) {
+            sessionStorage.setItem("productTypeId", "");
+        } else {
+            sessionStorage.setItem("productTypeId", productTypeId.toString());
         }
 
         window.location.href = "/mf-products/mf-product-view"

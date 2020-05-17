@@ -76,9 +76,25 @@ export class Service {
         }).then(response => response.json())
     }
 
+    deleteOrderTypeFromBack(url: string, typeId: string) {
+        return this.http.fetch(url + '?orderItemTypeId=' + typeId, {
+            method: RequestType.DELETE
+        })
+            .then(response => response.json())
+            .then(data => {console.log(data);})
+    }
+
+    deleteProductTypeFromback(url: string, typeId: string) {
+        return this.http.fetch(url + '?productTypeId=' + typeId, {
+            method: RequestType.DELETE
+        })
+            .then(response => response.json())
+            .then(data => {console.log(data);})
+    }
+
     deleteProductFromBack(url: string, productId: string) {
         return this.http.fetch("/entities/Product?productId=" + productId, {
-            method: "DELETE"
+            method: RequestType.DELETE
         })
             .then(response => response.json())
             .then(data => {

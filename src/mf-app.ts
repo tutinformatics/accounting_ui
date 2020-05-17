@@ -41,6 +41,10 @@ export class app {
             {route:["mf-order-type/mf-order-type-overview"], name: 'mf-order-type/mf-order-type-overview', moduleId: PLATFORM.moduleName('pages/mf-order-type/mf-order-type-overview/mf-order-type-overview'), nav: true, title:'Order types overview'},
             {route:["mf-order-type/mf-order-type-new"], name: 'mf-order-type/mf-order-type-new', moduleId: PLATFORM.moduleName('pages/mf-order-type/mf-order-type-new/mf-order-type-new'), nav: true, title:'New order type'},
 
+            {route:["mf-product-type/mf-product-type-view"], name: 'mf-product-type/mf-product-type-view', moduleId: PLATFORM.moduleName('pages/mf-product-type/mf-product-type-view/mf-product-type-view'), nav: true, title:'Product type view'},
+            {route:["mf-product-type/mf-product-type-overview"], name: 'mf-product-type/mf-product-type-overview', moduleId: PLATFORM.moduleName('pages/mf-product-type/mf-product-type-overview/mf-product-type-overview'), nav: true, title:'Product types overview'},
+            {route:["mf-product-type/mf-product-type-new"], name: 'mf-product-type/mf-product-type-new', moduleId: PLATFORM.moduleName('pages/mf-product-type/mf-product-type-new/mf-product-type-new'), nav: true, title:'New product type'},
+
         ]);
 
         this.router = router;

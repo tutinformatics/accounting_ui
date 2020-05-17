@@ -2,24 +2,30 @@ import {inject} from "aurelia-dependency-injection";
 import {ValidationController, ValidationControllerFactory} from "aurelia-validation";
 import {Product} from "../../../model/product";
 import {ProductService} from "../../../service/product-service";
+import {ProductTypeService} from "../../../service/product-type-service";
+import {ProductType} from "../../../model/product-type";
 
-@inject(ProductService, ValidationControllerFactory, ValidationController)
+@inject(ProductService, ProductTypeService, ValidationControllerFactory, ValidationController)
 export class New {
 
     product = new Product();
     controller = null;
 
-    constructor(private productService: ProductService, validationControllerFactory) {
-        this.controller = validationControllerFactory.createForCurrentScope();
-        this.initRules()
+    selectedProductTypeId = [];
+    productTypes: [ProductType];
+
+    private loadData() {
+        this.productTypeService.getAll()
+            .then(res => this.productTypes = res);
     }
 
-    initRules() {
+    constructor(private productService: ProductService, private productTypeService: ProductTypeService, validationControllerFactory) {
+        this.loadData();
+        this.controller = validationControllerFactory.createForCurrentScope();
     }
 
     save() {
-        console.log("here ffs")
-        console.log(this.product.priceDetailText)
+        this.product.productTypeId = this.selectedProductTypeId.toString();
         if (this.isValidated()) {
             this.productService.create(this.product)
                 .then(() => this.product = new Product())

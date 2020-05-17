@@ -35,7 +35,8 @@ export class MfOrderView {
         window.location.href = "/mf-order-type/mf-order-type-overview"
     }
 
-    deleteOrder() {
+    deleteOrderType() {
+        console.log("????")
         this.orderType.orderItemTypeId = this.orderTypeId.toString();
         this.orderType.description = this.description.toString();
         this.orderTypeService.deleteOrderType(this.orderType);
