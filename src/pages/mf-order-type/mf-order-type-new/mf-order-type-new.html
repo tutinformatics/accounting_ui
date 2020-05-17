@@ -1,0 +1,33 @@
+<template>
+
+    <require from="./mf-order-type-new.css"></require>
+
+    <form class>
+
+        <div class="row">
+
+            <a href="/mf-order-type/mf-order-type-overview" class="btn btn-success float-left mr-4" style="margin-bottom: 20px">BACK</a>
+
+            <div class="col-12 shadow-lg">
+
+                <h1>New order type</h1>
+
+                <label class="mb-3">Id:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="orderType.orderItemTypeId & validate">
+
+                <br>
+
+                <label class="mb-3">Description:</label>
+                <input type="text" class="form-control mb-2 w-100" value.bind="orderType.description & validate">
+
+                <button click.delegate="save()" class="btn btn-success float-right mt-2" style="margin-bottom: 20px">Create</button>
+
+                <button click.delegate="saveAndGoToOrderTypeOverview()" class="btn btn-success float-left mt-2" style="margin-bottom: 20px">Create and go to order types overview</button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</template>

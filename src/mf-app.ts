@@ -35,7 +35,11 @@ export class app {
 
             {route:["mf-products/mf-product-view"], name: 'mf-products/mf-product-view', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-view/mf-product-view'), nav: true, title:'Product view'},
             {route:["mf-products/mf-products-overview"], name: 'mf-products/mf-products-overview', moduleId: PLATFORM.moduleName('pages/mf-products/mf-products-overview/mf-products-overview'), nav: true, title:'Products overview'},
-            {route:["mf-products/mf-product-new"], name: 'mf-products/mf-product-new', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-new/new'), nav: true, title:'New product'}
+            {route:["mf-products/mf-product-new"], name: 'mf-products/mf-product-new', moduleId: PLATFORM.moduleName('pages/mf-products/mf-product-new/new'), nav: true, title:'New product'},
+
+            {route:["mf-order-type/mf-order-type-view"], name: 'mf-order-type/mf-order-type-view', moduleId: PLATFORM.moduleName('pages/mf-order-type/mf-order-type-view/mf-order-type-view'), nav: true, title:'Order type view'},
+            {route:["mf-order-type/mf-order-type-overview"], name: 'mf-order-type/mf-order-type-overview', moduleId: PLATFORM.moduleName('pages/mf-order-type/mf-order-type-overview/mf-order-type-overview'), nav: true, title:'Order types overview'},
+            {route:["mf-order-type/mf-order-type-new"], name: 'mf-order-type/mf-order-type-new', moduleId: PLATFORM.moduleName('pages/mf-order-type/mf-order-type-new/mf-order-type-new'), nav: true, title:'New order type'},
 
         ]);
 

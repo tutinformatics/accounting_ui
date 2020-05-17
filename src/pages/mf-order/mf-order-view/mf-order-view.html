@@ -27,11 +27,15 @@
                 <label class="mb-3">Date ordered:</label>
                 <input class="form-control mb-2 w-100" value.bind="createdStamp" type="date">
 
-
                 <br>
 
                 <label class="mb-3">Estimated delivery date:</label>
                 <input class="form-control mb-2 w-100" value.bind="estimatedDeliveryDate" type="date">
+
+                <br>
+
+                <label class="mb-3">Order type id:</label>
+                <input style="cursor: pointer" click.delegate="goToOrderTypeView()" class="form-control mb-2 w-100" value.bind="orderTypeId" type="text" disabled>
 
                 <br>
 

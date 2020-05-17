@@ -18,7 +18,7 @@ export class MfOrdersHistory {
         console.log(this.orders)
     }
 
-    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String) {
+    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String, orderTypeId: String) {
         sessionStorage.setItem("orderId", orderId.toString());
         sessionStorage.setItem("orderItemSeqId", orderItemSeqId.toString());
         if (createdStamp == null) {
@@ -37,6 +37,11 @@ export class MfOrdersHistory {
             sessionStorage.setItem("unitPrice", "");
         } else {
             sessionStorage.setItem("unitPrice", unitPrice.toString());
+        }
+        if (orderTypeId == null) {
+            sessionStorage.setItem("orderTypeId", "");
+        } else {
+            sessionStorage.setItem("orderTypeId", orderTypeId.toString());
         }
 
         window.location.href = "/mf-order/mf-order-view"

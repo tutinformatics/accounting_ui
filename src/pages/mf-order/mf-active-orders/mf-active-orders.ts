@@ -16,7 +16,7 @@ export class MfActiveOrders {
             .then(res => this.orders = res)
     }
 
-    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String, containsProducts: String) {
+    goToOrderView(orderId: String, unitPrice: String, createdStamp: String, estimatedDeliveryDate: String, orderItemSeqId: String, containsProducts: String, orderTypeId: String) {
         sessionStorage.setItem("orderId", orderId.toString());
         sessionStorage.setItem("orderItemSeqId", orderItemSeqId.toString());
         if (createdStamp == null) {
@@ -39,6 +39,11 @@ export class MfActiveOrders {
             sessionStorage.setItem("containsProducts", "")
         } else {
             sessionStorage.setItem("containsProducts", containsProducts.toString())
+        }
+        if (orderTypeId == null) {
+            sessionStorage.setItem("orderTypeId", "")
+        } else {
+            sessionStorage.setItem("orderTypeId", orderTypeId.toString())
         }
 
         window.location.href = "/mf-order/mf-order-view"

@@ -24,7 +24,7 @@
             <td>${order.unitPrice}</td>
             <td>${formatTime(order.createdStamp)}</td>
             <td>${formatTime(order.estimatedDeliveryDate)}</td>
-            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId)" href="">Click for details</a></td>
+            <td><a click.delegate="goToOrderView(order.orderId, order.unitPrice, order.createdStamp, order.estimatedDeliveryDate, order.orderItemSeqId, order.orderItemTypeId)" href="">Click for details</a></td>
             <td>${invoice.currencyUomId}</td>
             </div>
         </tr>

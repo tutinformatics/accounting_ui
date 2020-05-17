@@ -4,33 +4,36 @@ import {Order} from "../../../model/order";
 import {OrderService} from "../../../service/order-service";
 import {Product} from "../../../model/product";
 import {ProductService} from "../../../service/product-service";
+import {OrderTypeService} from "../../../service/order-type-service";
+import {OrderItemType} from "../../../model/orderItemType";
 
-@inject(OrderService, ProductService, ValidationControllerFactory, ValidationController)
+@inject(OrderService, OrderTypeService, ProductService, ValidationControllerFactory, ValidationController)
 export class MfNewOrder {
 
     order = new Order();
     controller = null;
 
     products: [Product];
+    orderTypes: [OrderItemType];
     selectedProductIds = [];
+    selectedOrderTypeId = [];
 
     private loadData() {
         this.productService.getAll()
-            .then(res => this.products = res)
+            .then(res => this.products = res);
+        this.orderTypeService.getAll()
+            .then(res => this.orderTypes = res);
     }
 
-    constructor(private orderService: OrderService, private productService: ProductService, validationControllerFactory) {
+    constructor(private orderService: OrderService, private orderTypeService: OrderTypeService, private productService: ProductService, validationControllerFactory) {
         this.controller = validationControllerFactory.createForCurrentScope();
-        this.initRules();
         this.loadData();
-    }
-
-    initRules() {
     }
 
     save() {
         this.order.productId = this.selectedProductIds.toString();
         this.order.orderItemSeqId = this.generateNewOrderItemSeqId();
+        this.order.orderItemTypeId = this.selectedOrderTypeId.toString();
         if (this.isValidated()) {
             this.orderService.create(this.order)
                 .then(() => this.order = new Order())

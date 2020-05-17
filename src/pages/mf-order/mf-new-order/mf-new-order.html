@@ -28,6 +28,16 @@
 
                 <br><br><br>
 
+                <p><label class="form-label">Order type id:</label></p>
+                <label repeat.for="orderType of orderTypes">
+                    <input type="radio" model.bind="orderType.orderItemTypeId" checked.bind="selectedOrderTypeId">
+                    ${orderType.orderItemTypeId}
+                </label>
+                <br>
+                Selected order type ID: ${selectedOrderTypeId}
+
+                <br><br><br>
+
                 <label class="form-label">Contains of product:</label>
                 <label repeat.for="product of products">
                     <input type="radio" model.bind="product.productId" checked.bind="selectedProductIds">

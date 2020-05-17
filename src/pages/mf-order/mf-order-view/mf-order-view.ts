@@ -4,15 +4,19 @@ import {Order} from "../../../model/order";
 import {OrderService} from "../../../service/order-service";
 import {ProductService} from "../../../service/product-service";
 import {Product} from "../../../model/product";
+import {OrderTypeService} from "../../../service/order-type-service";
+import {OrderItemType} from "../../../model/orderItemType";
 
-@inject(OrderService, ProductService, ValidationControllerFactory, ValidationController)
+@inject(OrderService, OrderTypeService, ProductService, ValidationControllerFactory, ValidationController)
 export class MfOrderView {
     orderId: String;
     orderItemSeqId: String;
     unitPrice: String;
     createdStamp: Date;
     estimatedDeliveryDate: Date;
+    orderTypeId: String;
     products: [Product];
+    orderTypes: [OrderItemType];
 
     containsProducts: String = "None";
     order = new Order();
@@ -20,10 +24,12 @@ export class MfOrderView {
 
     private loadData() {
         this.productService.getAll()
-            .then(res => this.products = res)
+            .then(res => this.products = res);
+        this.orderTypeService.getAll()
+            .then(res => this.orderTypes = res);
     }
 
-    constructor(private orderService: OrderService, private productService: ProductService, validationControllerFactory) {
+    constructor(private orderService: OrderService, private orderTypeService: OrderTypeService, private productService: ProductService, validationControllerFactory) {
         this.loadData();
         this.controller = validationControllerFactory.createForCurrentScope();
 
@@ -41,6 +47,9 @@ export class MfOrderView {
         }
         if (sessionStorage.getItem("containsProducts") != "") {
             this.containsProducts = sessionStorage.getItem("containsProducts").toString()
+        }
+        if (sessionStorage.getItem("orderTypeId") != "") {
+            this.orderTypeId = sessionStorage.getItem("orderTypeId").toString()
         }
     }
 
@@ -97,6 +106,29 @@ export class MfOrderView {
         }
 
         window.location.href = "/mf-products/mf-product-view"
+    }
+
+    goToOrderTypeView() {
+        if (this.orderTypeId == undefined || this.orderTypeId == "") {
+            return;
+        }
+        let orderType;
+        for (let i = 0; i < this.orderTypes.length; i++) {
+            console.log("currently checking " + this.orderTypes[i].orderItemTypeId)
+            if (this.orderTypes[i].orderItemTypeId == this.orderTypeId) {
+                orderType = this.orderTypes[i];
+                break;
+            }
+        }
+        sessionStorage.setItem("orderTypeId", orderType.orderItemTypeId.toString());
+
+        if (orderType.description == null) {
+            sessionStorage.setItem("description", "");
+        } else {
+            sessionStorage.setItem("description", orderType.description.toString());
+        }
+
+        window.location.href = "/mf-order-type/mf-order-type-view"
     }
 
 }
